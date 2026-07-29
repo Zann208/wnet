@@ -34,7 +34,9 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel2);color:var(
 
 /* ---- TOP BAR ---- */
 nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navin{max-width:1440px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;align-items:center;overflow:visible;flex-wrap:wrap}
+.navin{max-width:1440px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;align-items:center;overflow:visible;flex-wrap:nowrap}
+.navin>.iconbtn{margin-left:auto}
+.navin>.tabbtn{flex:0 0 auto}
 
 .logo{display:flex;align-items:center;gap:9px;border:1px solid transparent;background:none;cursor:pointer;
   padding:4px 8px 4px 5px;border-radius:9px;transition:.13s;font-family:inherit;color:inherit}
@@ -55,7 +57,7 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,
 
 /* COURSE SWITCHER */
 #csWrap{position:relative;flex:0 0 auto}
-.logo::after{content:"▾";font-family:var(--mono);font-size:9px;color:var(--faint);margin-left:2px}
+
 #csPop{position:absolute;top:calc(100% + 10px);left:0;z-index:200;width:min(92vw,340px);background:var(--panel);
   border:1px solid var(--line2);border-radius:14px;padding:9px;z-index:95;display:none;
   box-shadow:0 24px 60px rgba(0,0,0,.55)}
@@ -332,7 +334,6 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <span class="cstx"><b>Algorithms for iSNE</b><span>269202 · ISNE</span></span>
       <span class="cssoon">OPEN ↗</span></a>
     <div class="csft"><span>SEM 1 · 2026</span><a href="https://zann208.github.io" target="_blank" rel="noopener">portfolio ↗</a></div>
-  </div>
   </div>
   </div>
   <button class="tabbtn on" data-tab="home">HOME</button>
