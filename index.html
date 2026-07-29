@@ -34,11 +34,11 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel2);color:var(
 
 /* ---- TOP BAR ---- */
 nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navin{max-width:960px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;align-items:center;overflow-x:auto}
+.navin{max-width:1440px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;align-items:center;overflow:visible;flex-wrap:wrap}
 /* COURSE SWITCHER */
 #csWrap{position:relative;flex:0 0 auto}
 .logo::after{content:"▾";font-family:var(--mono);font-size:9px;color:var(--faint);margin-left:2px}
-#csPop{position:absolute;top:calc(100% + 10px);left:0;width:min(92vw,340px);background:var(--panel);
+#csPop{position:absolute;top:calc(100% + 10px);left:0;z-index:200;width:min(92vw,340px);background:var(--panel);
   border:1px solid var(--line2);border-radius:14px;padding:9px;z-index:95;display:none;
   box-shadow:0 24px 60px rgba(0,0,0,.55)}
 #csPop.on{display:block}
