@@ -141,6 +141,7 @@ p{margin-top:9px}
 .gcard.c2 .id{color:var(--vi);border-color:color-mix(in srgb,var(--vi) 45%,transparent)}
 .gcard.c3 .id{color:var(--gr);border-color:color-mix(in srgb,var(--gr) 45%,transparent)}
 .gcard.c4 .id{color:var(--am);border-color:color-mix(in srgb,var(--am) 45%,transparent)}
+.gcard.c5 .id{color:var(--rd);border-color:color-mix(in srgb,var(--rd) 45%,transparent)}
 .gcard b{display:block;font-size:14.5px;font-weight:650}
 .gcard span{display:block;color:var(--faint);font-size:12.5px;line-height:1.4;margin-top:2px}
 .gcard .tick{margin-left:auto;color:var(--gr);font-family:var(--mono);font-size:13px;opacity:0}
@@ -170,6 +171,11 @@ tbody tr:hover{background:var(--panel2)}
 .item.c2{border-left:2px solid color-mix(in srgb,var(--vi) 55%,transparent)}
 .item.c3{border-left:2px solid color-mix(in srgb,var(--gr) 55%,transparent)}
 .item.c4{border-left:2px solid color-mix(in srgb,var(--am) 55%,transparent)}
+.item.c5{border-left:2px solid color-mix(in srgb,var(--rd) 55%,transparent)}
+.p5 h2.sec .num{color:var(--rd)}
+.box.dgr{background:color-mix(in srgb,var(--rd) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--rd) 28%,transparent)}
+.box.dgr b:first-child{color:var(--rd)}
+.panel.pr::before{background:var(--rd)}
 .tag{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto;white-space:nowrap}
 .tldr{margin-top:12px;background:var(--panel2);border-left:2px solid var(--cy);border-radius:0 8px 8px 0;padding:10px 14px;font-size:15.5px;font-weight:600}
 .box{border-radius:8px;padding:11px 14px;margin-top:11px;font-size:14.5px;line-height:1.6}
@@ -370,13 +376,13 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
-  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Four chapters. One console.</h1>
-  <p class="lede">Built from your own CH1–CH4 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Thu Htoo Zan · 670615524 · Term 1/2569.</p>
+  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Five chapters. One console.</h1>
+  <p class="lede">Built from your own CH1–CH5 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Thu Htoo Zan · 670615524 · Term 1/2569.</p>
 
   <div class="stats">
-    <div class="stat"><b>4</b><span>Chapters</span></div>
-    <div class="stat g"><b>12</b><span>Sections</span></div>
-    <div class="stat a"><b>5</b><span>Equations</span></div>
+    <div class="stat"><b>5</b><span>Chapters</span></div>
+    <div class="stat g"><b>16</b><span>Sections</span></div>
+    <div class="stat a"><b>6</b><span>Equations</span></div>
     <div class="stat v"><b id="sCards">—</b><span>Cards</span></div>
     <div class="stat"><b id="sQs">—</b><span>Quiz Qs</span></div>
   </div>
@@ -386,7 +392,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <div class="row" style="align-items:flex-start;gap:24px">
       <div class="ringwrap"><svg class="ring" viewBox="0 0 110 110"><circle class="rbg" cx="55" cy="55" r="50"/><circle class="rfg" id="ringFg" cx="55" cy="55" r="50"/></svg><div class="rtx" id="readyPct">0%</div></div>
       <div class="bars">
-        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/12</span></div>
+        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/16</span></div>
         <div class="bar"><span class="bl">CARDS</span><span class="bt"><i id="bCard"></i></span><span class="bv" id="vCard">0</span></div>
         <div class="bar"><span class="bl">BEST QUIZ</span><span class="bt"><i id="bQuiz"></i></span><span class="bv" id="vQuiz">—</span></div>
       </div>
@@ -396,7 +402,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
   <div class="panel">
     <div class="ph"><h2>The course in one line</h2></div>
-    <p>Build a wireless network: <b>lay it out</b> (layers, APs, coverage margin) → <b>obey the rules</b> (IEEE / IETF / ITU, Wi-Fi generations, frame format) → <b>get devices on</b> (scan, authenticate, associate, IP, roam) → <b>design it properly</b> (requirements, link budget, capacity, channels, validation).</p>
+    <p>Build a wireless network: <b>lay it out</b> (layers, APs, coverage margin) → <b>obey the rules</b> (IEEE / IETF / ITU, Wi-Fi generations, frame format) → <b>get devices on</b> (scan, authenticate, associate, IP, roam) → <b>design it properly</b> (requirements, link budget, capacity, channels, validation) → <b>defend it</b> (threats, WPA2/WPA3, EAP, segmentation, monitoring, response).</p>
   </div>
 
   <div class="panel pv">
@@ -405,7 +411,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
 
   <div class="panel pa">
-    <div class="ph"><h2>The 5 equations</h2><span class="badge am right">memorize</span></div>
+    <div class="ph"><h2>The 6 equations</h2><span class="badge am right">memorize</span></div>
     <div class="tscroll"><table>
       <tr><th>Eq</th><th>Formula</th><th>Plain meaning</th><th>Worked number</th></tr>
       <tr><td class="mono ok">1.1</td><td class="mono">C = B·log₂(1+SNR)</td><td>Cell capacity = bandwidth × signal quality</td><td class="mono">20 MHz @20 dB ≈ 133 Mb/s</td></tr>
@@ -413,8 +419,9 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono ok">2.1</td><td class="mono">η = R / B</td><td>Speed per hertz of spectrum</td><td class="mono">600/80 = 7.5 b/s/Hz</td></tr>
       <tr><td class="mono ok">3.1</td><td class="mono">Tsetup = Tscan+Tauth+Tassoc+Tip</td><td>Connection wait = sum of stages</td><td class="mono">60+40+20+30 = 150 ms</td></tr>
       <tr><td class="mono ok">4.1</td><td class="mono">Pr = Pt+Gt+Gr−Lp−Lm</td><td>Link budget: what actually arrives</td><td class="mono">17+3+0−76−6 = −62 dBm</td></tr>
+      <tr><td class="mono ok">5.1</td><td class="mono">Risk = Threat × Vulnerability × Impact</td><td>Which control to prioritise</td><td class="mono">segmentation cuts Impact only</td></tr>
     </table></div>
-    <p class="sub2" style="margin-top:9px">All five are live in the <b>RF LAB</b> tab — move the sliders and watch the verdict change.</p>
+    <p class="sub2" style="margin-top:9px">All six are live in the <b>RF LAB</b> tab — move the sliders and watch the verdict change.</p>
   </div>
 
   <div class="panel">
@@ -426,8 +433,8 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono">D3</td><td>2.1 · 2.2</td><td>IEEE/IETF/ITU split. Frame header sizes 24/26/30/32.</td></tr>
       <tr><td class="mono">D4</td><td>2.3 · 3.1</td><td>Capability vs suitability. The 5 connection steps.</td></tr>
       <tr><td class="mono">D5</td><td>3.2 · 3.3</td><td>PANA roles. ARP by heart. 150 ms breakdown.</td></tr>
-      <tr><td class="mono">D6</td><td>4.1 · 4.2 · 4.3</td><td>Link budget by hand. Why coverage ≠ capacity.</td></tr>
-      <tr><td class="mono">D7</td><td>Cheatsheet + drills</td><td>Only redo cards marked AGAIN. Mock exam ×2.</td></tr>
+      <tr><td class="mono">D6</td><td>4.1–4.3 · 5.1</td><td>Link budget by hand. Why coverage ≠ capacity. Passive vs active threats.</td></tr>
+      <tr><td class="mono">D7</td><td>5.2–5.4 · cheatsheet + drills</td><td>WEP's four flaws. The 4-way handshake in order. Mock exam ×2.</td></tr>
     </table></div>
     <p class="sub2" style="margin-top:10px">Daily: 20 min notes → 15 min cards → 10 min RF LAB sliders until the numbers feel obvious.</p>
   </div>
@@ -435,32 +442,36 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ MAP ============ -->
 <section class="tab" id="map"><div class="wrap">
-  <h1><span class="pre">// COURSE PIPELINE</span>How the four chapters fit together</h1>
-  <p class="lede">Each chapter answers one question about the same network. Read them as one story, not four topics.</p>
+  <h1><span class="pre">// COURSE PIPELINE</span>How the five chapters fit together</h1>
+  <p class="lede">Each chapter answers one question about the same network. Read them as one story, not five topics.</p>
 
   <div class="panel">
-    <div class="pipe">
+    <div class="pipe" style="grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr">
       <div class="pnode"><div class="ic">[1]</div><b>Architecture</b><span>how it's built</span></div>
-      <div class="parrow">──▶</div>
+      <div class="parrow">▶</div>
       <div class="pnode"><div class="ic">[2]</div><b>Standards</b><span>who makes the rules</span></div>
-      <div class="parrow">──▶</div>
+      <div class="parrow">▶</div>
       <div class="pnode"><div class="ic">[3]</div><b>Connection</b><span>how devices get on</span></div>
-      <div class="parrow">──▶</div>
+      <div class="parrow">▶</div>
       <div class="pnode"><div class="ic">[4]</div><b>Design</b><span>how to build it right</span></div>
+      <div class="parrow">▶</div>
+      <div class="pnode"><div class="ic">[5]</div><b>Security</b><span>how to defend it</span></div>
     </div>
-    <div class="box wild"><b>The through-line</b>The same lesson returns in all four chapters: <b>the headline number lies</b>. Ch1 — advertised PHY rate ≠ delivered throughput. Ch2 — a wider channel ≠ better spectrum use. Ch3 — "associated" ≠ working service. Ch4 — good signal strength ≠ good design. Learn that sentence and half the exam answers itself.</div>
+    <div class="box wild"><b>The through-line</b>The same lesson returns in all five chapters: <b>the headline number lies</b>. Ch1 — advertised PHY rate ≠ delivered throughput. Ch2 — a wider channel ≠ better spectrum use. Ch3 — "associated" ≠ working service. Ch4 — good signal strength ≠ good design. Ch5 — a strong cipher name ≠ a secure network. Learn that sentence and half the exam answers itself.</div>
   </div>
 
   <div class="panel pv">
     <div class="ph"><h2>Ideas that appear in more than one chapter</h2><span class="badge right">exam favourites</span></div>
     <div class="tscroll"><table>
-      <tr><th>Idea</th><th>Ch 1</th><th>Ch 2</th><th>Ch 3</th><th>Ch 4</th></tr>
-      <tr><td><b>Coverage margin</b></td><td class="ok">M = Pr − Pmin</td><td>—</td><td>—</td><td class="ok">Pr from link budget</td></tr>
-      <tr><td><b>Air time is the real resource</b></td><td class="ok">overhead frames, slow clients</td><td class="ok">OFDMA, aggregation</td><td class="ok">scanning costs air time</td><td class="ok">capacity dimensioning</td></tr>
-      <tr><td><b>Roaming</b></td><td class="ok">overlap, sticky clients</td><td>—</td><td class="ok">L2/L3 mobility, 150 ms</td><td class="ok">roaming validation</td></tr>
-      <tr><td><b>Old devices cost you</b></td><td class="ok">mixed a/b/g/n/ac/ax</td><td class="ok">backward compatibility</td><td>—</td><td class="ok">baseline client class</td></tr>
-      <tr><td><b>Frames</b></td><td class="ok">3 families, encapsulation</td><td class="ok">exact field layout</td><td class="ok">data frames prove service</td><td>—</td></tr>
-      <tr><td><b>Channel width / reuse</b></td><td class="ok">20 MHz in 2.4</td><td class="ok">η = R/B</td><td>—</td><td class="ok">1 · 6 · 11 reuse</td></tr>
+      <tr><th>Idea</th><th>Ch 1</th><th>Ch 2</th><th>Ch 3</th><th>Ch 4</th><th>Ch 5</th></tr>
+      <tr><td><b>Coverage margin</b></td><td class="ok">M = Pr − Pmin</td><td>—</td><td>—</td><td class="ok">Pr from link budget</td><td>—</td></tr>
+      <tr><td><b>Air time is the real resource</b></td><td class="ok">overhead frames</td><td class="ok">OFDMA</td><td class="ok">scanning costs air time</td><td class="ok">capacity dimensioning</td><td class="ok">jamming / airtime flood</td></tr>
+      <tr><td><b>Roaming</b></td><td class="ok">overlap, sticky clients</td><td>—</td><td class="ok">L2/L3, 150 ms</td><td class="ok">roaming validation</td><td class="ok">deauth abuse steers clients</td></tr>
+      <tr><td><b>Old devices cost you</b></td><td class="ok">mixed a/b/g/n/ac/ax</td><td class="ok">backward compatibility</td><td>—</td><td class="ok">baseline client class</td><td class="ok">legacy modes weaken crypto</td></tr>
+      <tr><td><b>Frames</b></td><td class="ok">3 families</td><td class="ok">field layout</td><td class="ok">data frames prove service</td><td>—</td><td class="ok">spoofed management frames</td></tr>
+      <tr><td><b>ARP</b></td><td class="ok">why IPv4 needs it</td><td>—</td><td class="ok">roaming + gratuitous ARP</td><td>—</td><td class="ok">ARP spoofing &amp; defences</td></tr>
+      <tr><td><b>802.1X / EAP / PANA</b></td><td>—</td><td>—</td><td class="ok">access methods</td><td>—</td><td class="ok">method choice, PAA→EP path</td></tr>
+      <tr><td><b>Channel width / reuse</b></td><td class="ok">20 MHz in 2.4</td><td class="ok">η = R/B</td><td>—</td><td class="ok">1 · 6 · 11</td><td class="ok">channel anomaly detection</td></tr>
     </table></div>
   </div>
 
@@ -472,12 +483,13 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono">A2</td><td>Chapter 2 exercises</td><td>Answer only one problem</td><td class="wn">not decided — 5 options</td></tr>
       <tr><td class="mono">A3?</td><td>Chapter 3 exercises</td><td>likely same format</td><td class="mono">6 candidates ready</td></tr>
       <tr><td class="mono">A4?</td><td>Chapter 4 exercises</td><td>likely same format</td><td class="mono">5 candidates ready</td></tr>
+      <tr><td class="mono">A5?</td><td>Chapter 5 exercises</td><td>likely same format</td><td class="mono">6 candidates ready</td></tr>
     </table></div>
-    <p class="sub2" style="margin-top:9px">Every exercise from all four chapters has a hint or outline in its chapter section — and A1 / A2 have full pages in <b>ASSIGNMENTS</b>.</p>
+    <p class="sub2" style="margin-top:9px">Every exercise from all five chapters has a hint or outline in its chapter section — and A1 / A2 have full pages in <b>ASSIGNMENTS</b>.</p>
   </div>
 
   <div class="panel pa">
-    <div class="ph"><h2>If you only remember six things</h2></div>
+    <div class="ph"><h2>If you only remember eight things</h2></div>
     <ul class="pts">
       <li><b>PHY and MAC are one system.</b> Most real problems live in their interaction, not in one layer.</li>
       <li><b>Coverage is margin, not reach.</b> A place is covered when the app still works with room to spare.</li>
@@ -485,12 +497,14 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <li><b>Association is not service.</b> Management frames prove you joined; data frames prove it works.</li>
       <li><b>Standards are assumptions.</b> Pick by fit (suitability), not by newest (capability).</li>
       <li><b>Link budget ≠ capacity.</b> One cell can have great signal and still be far too small for 80 users.</li>
+      <li><b>The wall is not the boundary.</b> Propagation range is. Anyone in range is already at your edge.</li>
+      <li><b>Crypto fails operationally, not mathematically.</b> WEP died of IV reuse and static keys; PEAP dies of "do not validate".</li>
     </ul>
   </div>
 </div></section>
 <!-- ============ CHAPTERS ============ -->
 <section class="tab" id="notes"><div class="wrap">
-  <h1><span class="pre">// CHAPTER NOTES</span>12 sections, in plain words</h1>
+  <h1><span class="pre">// CHAPTER NOTES</span>16 sections, in plain words</h1>
   <p class="lede">Each section: a one-line summary, <b>short form</b> for revision, examples, and a <b>long form</b> you open only when you want depth. Use <b>‹ ›</b> in the bar above or <b>J / K</b> to move.</p>
 
   <!-- ===== 1.1 ===== -->
@@ -988,11 +1002,240 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </div></details>
     <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t43"> mark done</label><button class="btn" data-drill="4">drill ch4 cards →</button></div>
   </article>
+  <!-- ===== 5.1 ===== -->
+  <article class="item c5" id="t51">
+    <div class="ph"><span class="badge rd">5.1</span><h3>The threat landscape</h3><span class="tag">CH5 · Security</span></div>
+    <p class="tldr">Radio does not stop at the wall. Anyone inside propagation range is already standing inside your network's edge.</p>
+
+    <div class="box wild"><b>Key idea</b>In wired networks the door and the wall define the boundary. In wireless, <b>propagation range</b> defines it. The four classic threat families are <b>eavesdropping · rogue AP · spoofing · jamming</b>.</div>
+
+    <h4>Passive threats</h4>
+    <p><b>Short form:</b> traffic analysis, metadata collection, and interception of weakly protected frames. Hard to detect because <b>the attacker never transmits</b>.</p>
+    <p>Even when the payload is encrypted, an observer still learns from frame timing, traffic volume, identifiers and roaming patterns. In a hospital, bursts near a ward reveal operational tempo; in a factory, repeating telemetry cycles reveal the process. So metadata deserves protection too.</p>
+    <div class="box trap"><b>Watch out — passive feeds active</b>By learning network names, channels, client density and authentication methods, an attacker prepares a <b>targeted</b> impersonation or denial-of-service attack later. Treat passive collection as stage one of the intrusion chain: encrypt, but also keep beacons, identifiers and unnecessary management information lean.</div>
+
+    <h4>Active threats</h4>
+    <p><b>Short form:</b> deauthentication abuse, replay, impersonation, protocol downgrade, denial of service. The attacker <b>injects, modifies or suppresses</b> communication, so integrity and availability are directly hit.</p>
+    <div class="tscroll"><table>
+      <tr><th>Attack</th><th>What it targets</th><th>How it works</th></tr>
+      <tr><td class="mono no">Rogue AP / evil twin</td><td>Trust establishment</td><td>Advertises a familiar SSID; users equate a known name with legitimacy</td></tr>
+      <tr><td class="mono no">Deauth / disassoc abuse</td><td>Continuity</td><td>Forces clients off legitimate APs — to disrupt, or to steer them to the attacker</td></tr>
+      <tr><td class="mono no">Jamming / airtime flood</td><td>The medium itself</td><td>Raises the noise floor or consumes transmission opportunities</td></tr>
+      <tr><td class="mono no">Replay</td><td>State validation</td><td>Re-sends captured frames where freshness control is weak</td></tr>
+      <tr><td class="mono no">ARP spoofing</td><td>Post-join IPv4 trust</td><td>False ARP replies claim the attacker's MAC owns the gateway IP</td></tr>
+    </table></div>
+    <div class="box anl"><b>Think of it like</b>An evil twin is someone printing a copy of your café's sign and putting it on the building next door. Customers walk in confidently — the sign looked right. That is why "recognisable SSID = legitimate" is a dangerous instinct.</div>
+    <div class="box dgr"><b>ARP spoofing — the Ch3 link</b>WPA2/WPA3 encrypt frames <b>over the radio path</b>, but they do not validate ARP mappings <b>between authorised clients in the same broadcast domain</b>. Defences: client isolation on guest WLANs, smaller broadcast domains, dynamic ARP inspection, DHCP snooping, static bindings for critical infrastructure, and alerting on rapid or inconsistent IP-to-MAC changes.</div>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t51"> mark done</label><button class="btn" data-drill="5">drill ch5 cards →</button></div>
+  </article>
+
+  <!-- ===== 5.2 ===== -->
+  <article class="item c5" id="t52">
+    <div class="ph"><span class="badge rd">5.2</span><h3>WPS, WEP, WPA2 and WPA3</h3><span class="tag">CH5 · Security</span></div>
+    <p class="tldr">The story of Wi-Fi crypto is one long lesson: a cipher name is not a security architecture.</p>
+
+    <div class="eq"><span class="eqn">EQ 5.1</span>Risk = Threat × Vulnerability × Impact<small>Not a physical law — an analytical model for prioritising controls. Drive any factor toward zero and the residual risk falls.</small></div>
+    <div class="box wild"><b>Key idea</b>You usually cannot change the <b>threat</b> (attackers exist). You reduce <b>vulnerability</b> with patching, strong protocols and validation, and you reduce <b>impact</b> with segmentation and least privilege. That is why segmentation is a risk control even though it stops no attack. <span class="mono">(Exercise 2.)</span></div>
+
+    <h4>WPS — convenience that changes the threat model</h4>
+    <p><b>Short form:</b> Wi-Fi Protected Setup lets a device join without typing the passphrase. <b>PIN mode</b> uses a short numeric PIN; <b>push-button mode</b> opens a short enrolment window. Both create an <b>alternate path</b> into a network whose passphrase may be strong.</p>
+    <div class="tscroll"><table>
+      <tr><th>Mode / issue (Table 5.1)</th><th>Security concern</th><th>Treatment</th></tr>
+      <tr><td class="mono no">PIN mode</td><td>Small numeric secret; historically weak validation lets attackers confirm parts of the PIN separately</td><td class="ok">Disable — especially on enterprise and campus networks</td></tr>
+      <tr><td class="mono wn">Push-button</td><td>Temporarily accepts any nearby device during the window</td><td class="ok">Only with physical oversight; disable when not needed</td></tr>
+      <tr><td class="mono no">Credential exposure</td><td>Successful enrolment can hand over WLAN access</td><td class="ok">Treat WPS as an admission path, not a harmless convenience</td></tr>
+      <tr><td class="mono no">Enterprise use</td><td>No identity, accounting or policy control</td><td class="ok">Prefer EAP, certificates, MDM profiles, device registration</td></tr>
+    </table></div>
+    <div class="box trap"><b>Watch out</b>Push-button is not "always broken" — the problem is that it <b>temporarily relaxes normal admission expectations</b>. Acceptable in a home where you can see the device; risky in an apartment block, office or classroom.</div>
+
+    <h4>WEP — the cautionary tale</h4>
+    <p><b>Short form:</b> RC4 stream cipher + a <b>static shared key</b> + a <b>24-bit IV</b> sent in the clear + a <b>CRC-32</b> integrity check. Every one of those four choices failed.</p>
+    <div class="tscroll"><table>
+      <tr><th>Step</th><th>What happens</th></tr>
+      <tr><td class="mono">1</td><td>Sender combines the public 24-bit <b>IV</b> with the <b>shared secret key</b></td></tr>
+      <tr><td class="mono">2</td><td>That material feeds <b>RC4</b>, which generates a keystream</td></tr>
+      <tr><td class="mono">3</td><td>Plaintext <b>XOR</b> keystream = ciphered message, sent with the IV visible</td></tr>
+      <tr><td class="mono">4</td><td>Receiver repeats the same generation with the received IV and shared key, then XORs to recover the plaintext</td></tr>
+    </table></div>
+    <div class="box wild"><b>What an IV actually is</b>An initialization vector is <b>not</b> a password or a key. It is a per-frame value mixed with the key so repeated encryption does not produce the same keystream. It is sent in the clear on purpose — the receiver needs it. Transmitting an IV is normal and fine. WEP's sin was that its IV was <b>too small</b> (24 bits = 16,777,216 values) and <b>combined with the key badly</b>.</div>
+    <div class="box dgr"><b>Why that kills it</b>On a busy WLAN the IV space is revisited, so IVs repeat. Repeated IVs mean the same or related keystream protects different frames — statistical evidence that recovers the key. Tools such as aircrack-ng automate the comparison, and replaying ARP requests forces the AP to generate fresh encrypted frames <b>fast</b>, accelerating collection. Try the IV-collision calculator in RF LAB.</div>
+    <p><b>The shared static key problem:</b> the same WEP key sits on the AP and on every client, typed in manually. One lost laptop, one departing employee, one leaked value — and the whole WLAN key must be changed everywhere. Key slots did not give per-user or per-session separation.</p>
+    <div class="box trap"><b>And the integrity check</b>CRC-32 detects <b>accidental</b> bit errors. It is not a cryptographic MAC, so an attacker could modify an encrypted frame in controlled ways and fix up the checksum. WEP offered no real tamper or replay protection.</div>
+    <div class="box wild"><b>The real lesson</b>WEP did not fail because the key was short. Longer WEP keys kept every structural flaw: exposed short IV, weak per-packet key construction, static shared credentials, non-cryptographic integrity. That is exactly why the next generation introduced per-session key derivation, replay protection, real message integrity and proper authentication.</div>
+
+    <h4>WPA2 and AES-CCMP</h4>
+    <p><b>Short form:</b> WPA2 replaces WEP's structure with <b>AES-CCMP</b> and, crucially, separates the <b>long-term credential</b> from the <b>temporary session keys</b>. Fresh working keys are derived during association, tied to one client, one AP, one session.</p>
+    <p><b>Long form of the acronym:</b> Advanced Encryption Standard with <b>C</b>ounter Mode and <b>C</b>ipher Block Chaining <b>M</b>essage Authentication Code <b>P</b>rotocol. AES is the block cipher; counter mode turns it into a keystream for confidentiality; CBC-MAC produces a <b>MIC</b> for integrity.</p>
+    <div class="tscroll"><table>
+      <tr><th>Function (Table 5.2)</th><th>How CCMP provides it</th><th>Benefit</th></tr>
+      <tr><td class="mono ok">Confidentiality</td><td>AES counter mode encrypts the payload with keys derived at association</td><td>Listeners cannot read protected data</td></tr>
+      <tr><td class="mono ok">Integrity</td><td>CBC-MAC produces a MIC over payload + selected header fields</td><td>Tampering is detected</td></tr>
+      <tr><td class="mono ok">Replay defence</td><td>Packet numbers in the nonce, checked by the receiver</td><td>Old captured frames are rejected</td></tr>
+      <tr><td class="mono ok">Per-frame uniqueness</td><td>Changing nonce material every frame</td><td>No WEP-style IV reuse</td></tr>
+      <tr><td class="mono ok">Session binding</td><td>Temporal keys from the handshake, not the password itself</td><td>Compromise stays contained to one association</td></tr>
+    </table></div>
+    <div class="box trap"><b>Not everything is encrypted</b>The payload is encrypted; selected header fields are <b>authenticated as additional data</b> so addressing and control information cannot be altered silently. The MIC binds payload + header info + nonce + traffic key together.</div>
+    <p><b>TKIP</b> was the bridge: it kept RC4-era hardware working and added per-packet key mixing plus a better integrity check than WEP — but it was a transition, not the goal. A WPA2 network should avoid legacy mixed modes, because <b>the WLAN is only as strong as the weakest protection policy permits</b>.</p>
+
+    <h4>Personal vs Enterprise</h4>
+    <div class="tscroll"><table>
+      <tr><th>Feature (Table 5.4)</th><th>WPA2-Personal (PSK)</th><th>WPA2-Enterprise</th></tr>
+      <tr><td>Authentication</td><td>One shared passphrase on AP and clients</td><td class="ok">Per user / device via 802.1X + EAP</td></tr>
+      <tr><td>Where the PMK comes from</td><td>Derived from passphrase + network name</td><td class="ok">Derived from successful EAP authentication</td></tr>
+      <tr><td>Scale</td><td>Home, small office, simple guest</td><td class="ok">Campus, enterprise, government</td></tr>
+      <tr><td>Accountability</td><td class="no">Weak — many users, one secret</td><td class="ok">Sessions tie to identities</td></tr>
+      <tr><td>Revocation</td><td class="no">Change the passphrase everywhere</td><td class="ok">Disable one account or certificate</td></tr>
+      <tr><td>Main risk</td><td class="wn">Weak/shared passphrase → offline guessing</td><td class="wn">Misconfigured EAP or weak certificate validation</td></tr>
+    </table></div>
+    <div class="box wild"><b>Key idea</b>The difference is <b>not the cipher</b> — both can use AES-CCMP. The difference is how the client is authenticated and how the master key is established.</div>
+
+    <h4>The three roles, and who checks the password</h4>
+    <p>In WPA2-Enterprise the client is the <b>supplicant</b>, the AP is the <b>authenticator</b>, and RADIUS is the <b>authentication server</b>. The AP mostly <b>relays</b>: EAP travels over the air inside EAPOL, and the AP wraps it in RADIUS toward the server. Credentials live in an identity system — a RADIUS user database, LDAP, Active Directory, a certificate authority/PKI, MDM or an MFA service.</p>
+    <div class="box rl"><b>Example — what the server actually checks</b>With <b>EAP-TLS</b>: the certificate chain, expiry, revocation status, subject identity and policy mapping. With <b>PEAP / EAP-TTLS</b>: the client first validates the <i>server</i> certificate and builds a TLS tunnel, and only then are inner credentials checked against a directory. The reusable password is never exposed to the AP — or to an evil twin.</div>
+    <div class="box dgr"><b>The key never travels to the AP</b>After EAP succeeds, both sides derive a <b>Master Session Key</b>; the client computes the <b>PMK</b> locally and RADIUS sends AP-side key material in a protected Access-Accept. Your password or private key is never stored on the access point.</div>
+    <details><summary>▸ long form — deploying a RADIUS-backed WLAN (Table 5.3)</summary><div class="dbody">
+      <p><b>1 · Platform and identity source.</b> FreeRADIUS with a local file or LDAP for a lab; Network Policy Server with Active Directory in a Windows shop; redundant or cloud RADIUS for large institutions. <i>Pitfall: treating RADIUS as separate from the identity lifecycle.</i></p>
+      <p><b>2 · Certificate trust.</b> Install the server certificate, distribute the trusted CA, define the expected server name; add a client-certificate lifecycle if using EAP-TLS. <i>Pitfall: letting clients skip server-certificate validation — that is exactly what an evil twin needs.</i></p>
+      <p><b>3 · Register the network devices.</b> Every AP, controller or gateway must be defined as a RADIUS client by IP/range with a strong shared secret (or RadSec). Open the firewall paths; add redundant servers. <i>Pitfall: weak shared secrets, blocked ports, single-server dependence.</i></p>
+      <p><b>4 · Policy.</b> Which EAP methods are accepted, which identity store is consulted — then what success <i>returns</i>: VLAN, role, ACL, session timeout, accounting. This is where one SSID can serve faculty, students, guests and contractors differently. <i>Pitfall: accepting weak methods or returning overly broad access.</i></p>
+      <p><b>5 · WLAN and supplicants.</b> SSID set to WPA2/WPA3-Enterprise with 802.1X, server addresses and secrets; client profiles specifying SSID, EAP method, trusted root CA, expected server identity. Managed environments push these by MDM rather than asking users to pick security settings. <i>Pitfall: relying on users to choose.</i></p>
+      <p><b>6 · Test and monitor.</b> Pilot group, inspect success and failure logs, confirm certificate validation, check VLAN/role assignment, test roaming, capture EAPOL and RADIUS. Then watch accounting, failure rates, certificate expiry and help-desk tickets. <i>Pitfall: assuming association success proves policy and validation are correct.</i></p>
+    </div></details>
+
+    <h4>The four-way handshake</h4>
+    <p><b>Short form:</b> before it starts, both sides already hold the <b>PMK</b> (from the passphrase, or from EAP). The handshake proves both sides possess it <b>without sending it</b>, derives a fresh <b>PTK</b>, installs data keys, and delivers the <b>GTK</b> for broadcast/multicast.</p>
+    <div class="tscroll"><table>
+      <tr><th>Msg</th><th>Direction</th><th>Contents</th><th>Purpose</th></tr>
+      <tr><td class="mono ok">1</td><td>AP → client</td><td><b>ANonce</b></td><td>AP's fresh random contribution</td></tr>
+      <tr><td class="mono ok">2</td><td>Client → AP</td><td><b>SNonce</b> + MIC</td><td>Client derives the PTK and proves it knows the right keying material</td></tr>
+      <tr><td class="mono ok">3</td><td>AP → client</td><td><b>GTK</b> + install instruction + MIC</td><td>AP verifies the MIC, derives the same PTK, delivers the group key</td></tr>
+      <tr><td class="mono ok">4</td><td>Client → AP</td><td>Acknowledgment + MIC</td><td>Key installation confirmed; protected data can flow</td></tr>
+    </table></div>
+    <div class="box wild"><b>Why nonces?</b>A <b>nonce</b> is a value meant to be used once. ANonce and SNonce ensure that even when the same PMK is reused, <b>every association derives a different PTK</b>. The PTK is bound to the PMK <i>and</i> both nonces <i>and</i> both MAC addresses — so session keys are never just a reusable copy of the long-term credential.</div>
+    <div class="tscroll"><table>
+      <tr><th>Term (Table 5.5)</th><th>Meaning</th><th>Role</th></tr>
+      <tr><td class="mono">Nonce</td><td>Fresh single-use value</td><td>Stops repeated sessions producing identical keys</td></tr>
+      <tr><td class="mono">ANonce / SNonce</td><td>Authenticator / supplicant nonce</td><td>Each side's contribution to PTK derivation</td></tr>
+      <tr><td class="mono">MIC</td><td>Message integrity code</td><td>Proves the sender holds correct key material and nothing was altered</td></tr>
+      <tr><td class="mono">PTK</td><td>Pairwise Transient Key</td><td>Protects unicast traffic for one client–AP pair</td></tr>
+      <tr><td class="mono">GTK</td><td>Group Temporal Key</td><td>Protects broadcast and multicast frames</td></tr>
+      <tr><td class="mono">Replay counter</td><td>Monotonic counter</td><td>Rejects replayed frames and handshake messages</td></tr>
+    </table></div>
+    <div class="box trap"><b>WPA2 is strong, not automatic</b>Personal: a weak passphrase still falls to <b>offline dictionary guessing</b> once the handshake is captured. Enterprise: strength depends on EAP method choice, certificate validation, server identity checking and credential lifecycle. And both rely on clients and APs implementing key installation and replay handling correctly.</div>
+    <p><b>WPA3-Enterprise</b> is not just a cipher upgrade — it is a posture: managed credentials, key establishment hardened against known attack paths, and protected management frames that reduce spoofing and session disruption. A campus laptop can be required to validate the institution's authentication server <i>before</i> credentials are exchanged, and policy can differ by staff/student/contractor after success. Treat WPA3 as part of <b>identity governance</b>, not a checkbox.</p>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t52"> mark done</label><button class="btn" data-drill="5">drill ch5 cards →</button></div>
+  </article>
+
+  <!-- ===== 5.3 ===== -->
+  <article class="item c5" id="t53">
+    <div class="ph"><span class="badge rd">5.3</span><h3>EAP, EDHOC, PANA and segmentation</h3><span class="tag">CH5 · Security</span></div>
+    <p class="tldr">Who vouches for whom — and how far a compromise is allowed to travel.</p>
+
+    <h4>EAP — a family, not a protocol</h4>
+    <p><b>Short form:</b> EAP carries authentication between supplicant, authenticator and authentication server. The AP mostly relays; the identity platform decides. Methods split into two families: <b>certificate-first</b>, and <b>tunnel-first then inner credentials</b>.</p>
+    <div class="tscroll"><table>
+      <tr><th>Method (Table 5.7)</th><th>Credential model</th><th>Main strength</th><th>Main concern</th></tr>
+      <tr><td class="mono ok">EAP-TLS</td><td>Client <b>and</b> server certificates</td><td>Strong mutual authentication; high resistance to credential theft</td><td class="wn">PKI lifecycle and certificate onboarding</td></tr>
+      <tr><td class="mono">PEAP</td><td>Server certificate + protected inner password</td><td>Familiar password integration with directories</td><td class="wn">Depends heavily on server-certificate validation</td></tr>
+      <tr><td class="mono">EAP-TTLS</td><td>Server certificate + flexible inner method</td><td>Broad compatibility with mixed back ends</td><td class="wn">Complexity; risk of a weak inner method</td></tr>
+      <tr><td class="mono">EAP-FAST</td><td>PAC-based protected tunnel</td><td>Less certificate dependence in some deployments</td><td class="wn">PAC provisioning; weaker assurance if poorly managed</td></tr>
+    </table></div>
+    <div class="box rl"><b>Example — the certificate menu on your phone</b>When you join a campus network with PEAP, the phone asks which CA to trust or whether to validate the server certificate. That does <b>not</b> mean you need a personal client certificate — that would be EAP-TLS. It means the device must validate the <b>server</b> certificate protecting the outer tunnel. Choose "do not validate" and the protection largely evaporates: a rogue AP plus a fake authentication server can then harvest the inner username and password.</div>
+    <div class="box wild"><b>Key idea</b>The design question is never "which EAP methods exist" but <b>"which method fits this organisation's trust architecture, device-management maturity and threat model."</b> A university with mature PKI and managed laptops → EAP-TLS. A mixed BYOD environment on directory passwords → PEAP/EAP-TTLS while working toward certificates.</div>
+
+    <h4>PANA security considerations</h4>
+    <p><b>Short form:</b> PANA carries EAP over IP (Ch 3), so the strength of the decision is <b>the strength of the chosen EAP method</b>. Once a PANA security association exists, protected messages resist modification and replay — but PANA authenticates <b>access signalling</b>; it does not encrypt user traffic or remove denial-of-service risk.</p>
+    <div class="box trap"><b>Two soft spots</b><ul>
+      <li><b>Discovery and startup</b> happen before session keys exist — attackers can spoof discovery data, force state allocation or burn processing capacity. Needs conservative state allocation, retransmission control, session identifiers, sequence validation and rate monitoring.</li>
+      <li><b>The PAA→EP path.</b> If the authentication agent and enforcement point are separate devices, their exchange of identity, authorization state, filters and keys must be authenticated and replay-protected — otherwise an attacker who cannot defeat EAP may forge an authorization update or keep stale access alive. <span class="mono">(Exercise 6.)</span></li>
+    </ul></div>
+
+    <h4>EDHOC — key exchange for tiny devices</h4>
+    <p><b>Short form:</b> <b>E</b>phemeral <b>D</b>iffie-<b>H</b>ellman <b>O</b>ver <b>COSE</b> — a compact authenticated key exchange for constrained devices and links (sensors, meters, actuators, LoRaWAN). Three messages, binary CBOR encoding, fresh ephemeral keys every run.</p>
+    <ol class="steps">
+      <li>Initiator proposes cryptographic parameters and sends an ephemeral Diffie-Hellman public value.</li>
+      <li>Responder sends its own ephemeral public value plus authentication evidence.</li>
+      <li>Initiator completes authentication and key confirmation → shared secret material, often exported to <b>OSCORE</b> so CoAP messages stay protected end-to-end through proxies and gateways.</li>
+    </ol>
+    <div class="box wild"><b>Why "ephemeral" matters</b>Each run uses fresh temporary key material, so compromising a long-term credential later does not automatically expose every past session. Credentials can be raw public keys, certificates or pre-shared keys — the choice must match manufacturing, onboarding and replacement processes, not just cryptographic taste.</div>
+    <div class="box anl"><b>Think of it like</b>WPA2/WPA3 is a security guard at the building door. EDHOC + OSCORE is a tamper-proof envelope around the letter itself — it still protects the contents after the letter leaves the building, passes through the mailroom, and crosses town.</div>
+    <div class="box dgr"><b>MQTT follows the same layering</b>A Wi-Fi sensor reaches its MQTT broker only after association, IP and routing succeed. WPA2/WPA3 protects the <b>local radio hop</b> — it does not authenticate the broker, authorise topics, or protect messages after they leave the WLAN. Secure MQTT: TLS, validate broker certificates, strong client credentials or certificates, restrict publish/subscribe per topic, rotate on device replacement. Watch for retained messages, anonymous access, wildcard topics and bridge connections that quietly move data between security domains.</div>
+
+    <h4>Segmentation and policy enforcement</h4>
+    <p><b>Short form:</b> segmentation limits the <b>blast radius</b>. Authenticated connectivity must not imply unrestricted reachability.</p>
+    <div class="box rl"><b>Example — the hospital</b>Clinician tablets, infusion pumps, guest phones and building sensors all use nearby APs. Flat network: compromising one guest phone opens a path toward clinical systems. Segmented: guests get internet-only, medical devices get narrow application segments, facilities sensors get a constrained management network, staff reach clinical services under defined policy. <b>The medium is shared; the trust is not.</b></div>
+    <div class="box wild"><b>Key idea — and the incident argument</b>Too coarse and critical systems stay exposed; too granular and administration becomes brittle. Beyond blocking normal-time reachability, segmentation gives defenders <b>manoeuvring room during abnormal operation</b>: an isolated compromised camera fleet can be quarantined without taking down unrelated business systems.</div>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t53"> mark done</label><button class="btn" data-drill="5">drill ch5 cards →</button></div>
+  </article>
+
+  <!-- ===== 5.4 ===== -->
+  <article class="item c5" id="t54">
+    <div class="ph"><span class="badge rd">5.4</span><h3>Monitoring, response and the worked case</h3><span class="tag">CH5 · Security</span></div>
+    <p class="tldr">Raw events matter less than their operational context — and containment should be as narrow as it can be while still working.</p>
+
+    <div class="tscroll"><table>
+      <tr><th>Control (Table 5.8)</th><th>Primary objective</th><th>Example use</th></tr>
+      <tr><td class="mono ok">WPA3-Enterprise</td><td>Confidentiality and access control</td><td>Campus WLAN</td></tr>
+      <tr><td class="mono ok">Network segmentation</td><td>Containment</td><td>Separating IoT devices</td></tr>
+      <tr><td class="mono ok">WIDS / WIPS</td><td>Detection and prevention</td><td>Rogue AP detection</td></tr>
+      <tr><td class="mono ok">Certificate management</td><td>Identity assurance</td><td>Enterprise onboarding</td></tr>
+    </table></div>
+
+    <h4>Detection</h4>
+    <p><b>Short form:</b> rogue AP detection, channel anomaly analysis, failed-authentication correlation, traffic-baseline deviation. Combine <b>radio evidence with network telemetry</b> — attacks that look ambiguous from one vantage point become obvious when correlated.</p>
+    <div class="box rl"><b>Example</b>A suspicious beacon might be a rogue AP, a neighbouring tenant, or a legitimate device misconfigured. Radio fingerprinting alone rarely decides. Confidence comes from matching beacons against <b>wired-port state, controller inventory, certificate-validation failures and switch authentication logs</b>. Likewise a spike in failed authentications may be brute force — or expired credentials, or one broken supplicant.</div>
+    <div class="box wild"><b>Baselines before the crisis</b>Know which channels are normally busy, where crowds gather, what failure rates are normal, and which device classes appear when. Without a baseline, "anomaly detection" is just noise.</div>
+    <p><b>WIDS</b> listens for rogue APs, spoofed management frames, odd probe behaviour, devices on prohibited channels. <b>WIPS</b> adds enforcement: classify a device as unauthorised, trigger containment, coordinate across sensors and controllers.</p>
+    <div class="box trap"><b>Watch out — policy, not sensor count</b>Over-aggressive prevention disrupts neighbouring networks and trains operators to ignore alerts. Under-tuned monitoring is a noisy event feed. Mature deployments define what counts as <b>rogue / misconfigured / external / authorised</b>, attach a response playbook to each, and confirm that automatic containment is legally and operationally appropriate.</div>
+
+    <h4>Port mirroring (SPAN) — seeing the wired side</h4>
+    <p><b>Short form:</b> tell the switch to copy packets from a port, VLAN or subinterface to an analyzer port running Wireshark — without sitting inline with production traffic. Useful for DHCP failures, ARP spoofing, odd DNS, malware callbacks, MQTT traffic, or checking that clients land in the expected VLAN.</p>
+    <ol class="steps">
+      <li>Identify the uplink/access port connecting the AP or Wi-Fi router to the wired network.</li>
+      <li>Decide direction: ingress, egress, or both.</li>
+      <li>Use a dedicated destination port for the analyzer — not one carrying ordinary traffic.</li>
+      <li>Capture in a controlled window; record time, source port, SSID/VLAN under test and the client device.</li>
+      <li><b>Remove the mirror session afterwards</b> so it stops consuming switch resources and exposing data.</li>
+    </ol>
+    <div class="box trap"><b>Limitations that catch people out</b><ul>
+      <li>If the AP <b>tunnels</b> traffic to a controller, the local port shows CAPWAP — not individual client packets. If it bridges locally, you see the client IP traffic directly.</li>
+      <li>Encrypted payloads stay encrypted: you get metadata, addresses, ports, certificates, timing and negotiation — not content.</li>
+      <li>Mirroring can <b>oversubscribe</b> the analyzer port if the source carries more than the destination can take.</li>
+    </ul>It is a targeted diagnostic and forensic tool used with authorization and privacy controls — not a permanent replacement for logs, flow telemetry or WIDS/WIPS.</div>
+
+    <h4>Response</h4>
+    <p><b>Short form:</b> isolation → credential revocation → forensic capture → service restoration. Written procedures cut confusion because the team already knows which steps preserve evidence, which contain spread, and which restore service.</p>
+    <div class="box dgr"><b>Containment is a trade-off</b>As narrow as possible while still effective. A broad shutdown stops the attack fast — and may also cut voice, safety systems or building management that ride the same WLAN.</div>
+    <p><b>Then disciplined recovery:</b> preserve controller logs, radio captures, client events and inventory records; re-onboard from trusted state; rotate keys and credentials; validate restored configuration; communicate with affected users.</p>
+    <div class="box wild"><b>Certificates are an operational control, not paperwork</b>They let the network verify servers, users and devices without shared passwords. But the network can only trust them if <b>issuance, renewal, revocation and trust-anchor distribution</b> all work. "A certificate that is never revoked after device loss is not much better than a forgotten password." Lose a tablet from a high-trust segment → revoke one certificate, leave every other device alone. <span class="mono">(Exercise 4.)</span></div>
+
+    <h4>Worked example — the evil twin on the staff SSID</h4>
+    <p>A department on two floors runs staff, student, guest and lab-instrument SSIDs. Users report intermittent disconnections near the meeting rooms; admins see failed authentications rising in the same area. It could be congestion, a software defect, or an attack.</p>
+    <ol class="steps">
+      <li><b>Radio evidence:</b> sensors confirm repeated <b>deauthentication frames</b> on the affected channels.</li>
+      <li><b>Controller logs:</b> staff devices drop from legitimate APs, then try to reassociate with an <b>unknown transmitter advertising a familiar name</b>.</li>
+      <li><b>Inventory:</b> switch records show <b>no authorised AP</b> on the expected wired ports → the device is rogue and independently connected.</li>
+      <li><b>Conclusion:</b> correlating radio + identity + inventory separates an <b>evil-twin campaign</b> from ordinary interference.</li>
+      <li><b>Containment:</b> review credentials from suspicious events, confirm certificate validation is still enforced on managed devices, apply WIPS classification/suppression where policy allows, and physically inspect the floor to remove the hardware.</li>
+      <li><b>Blast radius:</b> because guest and lab systems are <b>segmented</b> from staff, exposure stays limited even if some users associated.</li>
+      <li><b>Recovery:</b> rotate potentially exposed credentials, reinforce onboarding guidance, re-check neighbouring APs so coverage and roaming remain healthy.</li>
+    </ol>
+    <div class="box wild"><b>The chapter's closing point</b>Wireless security works when <b>identity protection, segmentation, monitoring and response</b> reinforce each other as one operational model — not as four separate products.</div>
+    <details><summary>▸ chapter 5 exercises</summary><div class="dbody">
+      <p><b>1</b> Classify three attacks as passive or active and justify → passive: eavesdropping, traffic analysis (attacker never transmits). Active: deauth abuse, evil twin, ARP spoofing, jamming, replay (attacker injects/modifies/suppresses).</p>
+      <p><b>2</b> Eq 5.1 and segmentation → segmentation does not touch <b>threat</b>; it cuts <b>impact</b> by containing the blast radius, so residual risk falls even though attackers are unchanged.</p>
+      <p><b>3</b> Monitoring plan for rogue APs in a university building → sensors for beacons and spoofed management frames; correlate with wired-port state, controller inventory, certificate-validation failures, switch auth logs; define baselines; classify rogue/misconfigured/external/authorised; attach playbooks; tune to avoid false positives.</p>
+      <p><b>4</b> Why certificate validation and onboarding are architectural → they decide whether an evil twin can harvest credentials, whether revocation actually works, and how much trust the network may place in an endpoint. It is the trust anchor of the whole authentication path, not admin housekeeping.</p>
+      <p><b>5</b> Incident-response outline for a suspected evil twin → detect (deauth + unknown transmitter + inventory mismatch) → contain narrowly (credential review, enforce validation, WIPS classification, physical removal) → preserve evidence → recover (rotate credentials, re-onboard, verify coverage/roaming) → review.</p>
+      <p><b>6</b> Controls when PAA and EP are separate → authenticate and integrity/replay-protect the PAA→EP exchange of identity, authorization state, filters and keys; least-privilege filtering; session expiration; monitoring; plus a PaC–EP security association if the data plane needs cryptographic protection.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t54"> mark done</label><button class="btn" data-drill="5">drill ch5 cards →</button></div>
+  </article>
 </div></section>
 
 <!-- ============ RF LAB ============ -->
 <section class="tab" id="lab"><div class="wrap">
-  <h1><span class="pre">// RF LAB</span>The five equations, live</h1>
+  <h1><span class="pre">// RF LAB</span>The six equations, live</h1>
   <p class="lede">Move the sliders until the numbers stop being surprising. Every tool shows its working the way you would write it on an exam paper.</p>
 
   <div class="panel pa">
@@ -1063,6 +1306,39 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <p id="spMsg" style="margin-top:11px;font-family:var(--mono);font-size:13.5px;font-weight:650"></p>
     <div class="row"><button class="btn" id="spNew">new scenario</button><span class="badge cy" id="spScore">0 / 0</span></div>
   </div>
+
+  <div class="panel pr">
+    <div class="ph"><h2>Risk model</h2><span class="badge rd right">EQ 5.1</span></div>
+    <p class="sub2">Risk = Threat × Vulnerability × Impact. Rate each 1–5 and watch which control actually moves the number.</p>
+    <div class="sl"><label>Threat</label><input type="range" id="rkT" min="1" max="5" step="1" value="4"><span class="v" id="vRkT">4</span></div>
+    <div class="sl"><label>Vulnerability</label><input type="range" id="rkV" min="1" max="5" step="1" value="4"><span class="v" id="vRkV">4</span></div>
+    <div class="sl"><label>Impact</label><input type="range" id="rkI" min="1" max="5" step="1" value="5"><span class="v" id="vRkI">5</span></div>
+    <div class="work" id="rkWork"></div>
+    <div class="res" id="rkRes"></div>
+    <div class="row"><button class="btn" id="rkSeg">apply segmentation</button><button class="btn" id="rkPatch">apply WPA3 + validation</button><button class="btn no2" id="rkReset">reset</button></div>
+    <div class="box wild"><b>The exam point</b>You cannot lower <b>Threat</b> — attackers exist regardless. Hardening (WPA3-Enterprise, certificate validation, disable WPS) lowers <b>Vulnerability</b>; segmentation and least privilege lower <b>Impact</b>. That is how a control which blocks no attack still reduces risk.</div>
+  </div>
+
+  <div class="panel pr">
+    <div class="ph"><h2>WEP IV collision</h2><span class="badge rd right">§5.2.1.1</span></div>
+    <p class="sub2">A 24-bit IV has 2²⁴ = 16,777,216 values. See how quickly a busy WLAN repeats one.</p>
+    <div class="sl"><label>frames / second</label><input type="range" id="ivF" min="50" max="3000" step="50" value="500"><span class="v" id="vIvF">500</span></div>
+    <div class="work" id="ivWork"></div>
+    <div class="res r-no" id="ivRes"></div>
+    <div class="box dgr"><b>Why it matters</b>Repeated IVs mean related RC4 keystream protects different frames — the statistical opening that recovers a WEP key. And an attacker does not have to wait: replaying ARP requests forces the AP to pump out fresh encrypted frames as fast as it can.</div>
+  </div>
+
+  <div class="panel pr">
+    <div class="ph"><h2>Passive or active?</h2><span class="badge rd right">EXERCISE 1</span></div>
+    <p class="sub2">Classify the attack. Passive = the attacker never transmits.</p>
+    <p id="paQ" style="font-weight:650;font-size:16px;margin-top:12px"></p>
+    <div class="row" id="paOpts">
+      <button class="btn" data-pa="p">Passive</button>
+      <button class="btn" data-pa="a">Active</button>
+    </div>
+    <p id="paMsg" style="margin-top:11px;font-family:var(--mono);font-size:13.5px;font-weight:650"></p>
+    <div class="row"><button class="btn" id="paNew">new attack</button><span class="badge cy" id="paScore">0 / 0</span></div>
+  </div>
 </div></section>
 <!-- ============ DRILLS ============ -->
 <section class="tab" id="drills"><div class="wrap">
@@ -1108,6 +1384,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono ok">2.1</td><td class="mono">η = R / B</td><td>Spectral efficiency</td><td class="mono">600/80 = 7.5 · 800/160 = 5</td></tr>
       <tr><td class="mono ok">3.1</td><td class="mono">Tsetup = Tscan+Tauth+Tassoc+Tip</td><td>Time-to-service</td><td class="mono">60+40+20+30 = 150 ms</td></tr>
       <tr><td class="mono ok">4.1</td><td class="mono">Pr = Pt+Gt+Gr−Lp−Lm</td><td>Link budget</td><td class="mono">17+3+0−76−6 = −62 dBm</td></tr>
+      <tr><td class="mono ok">5.1</td><td class="mono">Risk = Threat × Vulnerability × Impact</td><td>Control prioritisation</td><td class="mono">hardening cuts V · segmentation cuts I</td></tr>
     </table></div>
   </div>
 
@@ -1128,6 +1405,12 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td>Worked roaming handoff</td><td class="mono">60+40+20+30 = 150 ms (voice: borderline)</td></tr>
       <tr><td>Classroom link budget / worked design</td><td class="mono">−62 dBm · but 80 users still need more cells</td></tr>
       <tr><td>Typical Pmin design threshold</td><td class="mono">−67 dBm (as used in both worked examples)</td></tr>
+      <tr><td>WEP IV size / value space</td><td class="mono no">24 bits = 16,777,216 — too small, repeats on busy WLANs</td></tr>
+      <tr><td>WEP cipher / integrity</td><td class="mono no">RC4 stream cipher · CRC-32 (not a cryptographic MAC)</td></tr>
+      <tr><td>WPA2 cipher</td><td class="mono ok">AES-CCMP (counter mode + CBC-MAC)</td></tr>
+      <tr><td>Four-way handshake order</td><td class="mono ok">ANonce → SNonce+MIC → GTK+MIC → ACK+MIC</td></tr>
+      <tr><td>Key names</td><td class="mono">PMK (master) → PTK (unicast, per session) · GTK (broadcast/multicast)</td></tr>
+      <tr><td>Where the PMK comes from</td><td class="mono">Personal: passphrase + SSID · Enterprise: successful EAP (via MSK)</td></tr>
     </table></div>
   </div>
 
@@ -1180,6 +1463,46 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </table></div>
   </div>
 
+  <div class="panel pr">
+    <div class="ph"><h2>Security tables</h2><span class="badge rd right">CH5</span></div>
+    <h4>WEP vs WPA2 — why it changed</h4>
+    <div class="tscroll"><table>
+      <tr><th></th><th>WEP</th><th>WPA2</th></tr>
+      <tr><td>Cipher</td><td class="no">RC4 stream</td><td class="ok">AES-CCMP (block, counter mode)</td></tr>
+      <tr><td>Per-frame value</td><td class="no">24-bit IV, repeats</td><td class="ok">Packet number in the nonce</td></tr>
+      <tr><td>Key model</td><td class="no">One static key for everyone</td><td class="ok">PMK → fresh PTK per session</td></tr>
+      <tr><td>Integrity</td><td class="no">CRC-32 (accidental errors only)</td><td class="ok">MIC via CBC-MAC</td></tr>
+      <tr><td>Replay defence</td><td class="no">None</td><td class="ok">Packet-number checking</td></tr>
+      <tr><td>If one device leaks</td><td class="no">Whole WLAN key must change</td><td class="ok">Contained to one session/account</td></tr>
+    </table></div>
+    <h4>Threats — passive vs active</h4>
+    <div class="tscroll"><table>
+      <tr><th>Passive (attacker never transmits)</th><th>Active (attacker injects / modifies / suppresses)</th></tr>
+      <tr><td>Eavesdropping · traffic analysis · metadata and identifier collection</td><td>Rogue AP / evil twin · deauth &amp; disassoc abuse · jamming · replay · downgrade · ARP spoofing</td></tr>
+    </table></div>
+    <h4>EAP methods</h4>
+    <div class="tscroll"><table>
+      <tr><th>EAP-TLS</th><th>PEAP</th><th>EAP-TTLS</th><th>EAP-FAST</th></tr>
+      <tr><td class="ok">Client + server certs — strongest</td><td>Server cert + inner password</td><td>Server cert + flexible inner method</td><td>PAC-based tunnel</td></tr>
+      <tr><td class="wn">PKI lifecycle burden</td><td class="wn">Dies if validation is off</td><td class="wn">Weak inner method risk</td><td class="wn">PAC provisioning</td></tr>
+    </table></div>
+    <h4>Four-way handshake</h4>
+    <div class="tscroll"><table>
+      <tr><th>1 AP → STA</th><th>2 STA → AP</th><th>3 AP → STA</th><th>4 STA → AP</th></tr>
+      <tr><td>ANonce</td><td>SNonce + MIC</td><td>GTK + install + MIC</td><td class="ok">ACK + MIC</td></tr>
+    </table></div>
+    <h4>The 802.1X three roles</h4>
+    <div class="tscroll"><table>
+      <tr><th>Supplicant</th><th>Authenticator</th><th>Authentication server</th></tr>
+      <tr><td>Client device (holds credentials)</td><td>AP / controller — mostly <b>relays</b> EAP</td><td class="ok">RADIUS — checks against LDAP / AD / PKI / MDM</td></tr>
+    </table></div>
+    <h4>Controls → objectives</h4>
+    <div class="tscroll"><table>
+      <tr><th>WPA3-Enterprise</th><th>Segmentation</th><th>WIDS / WIPS</th><th>Certificate management</th></tr>
+      <tr><td>Confidentiality + access control</td><td class="ok">Containment</td><td>Detection + prevention</td><td>Identity assurance</td></tr>
+    </table></div>
+  </div>
+
   <div class="panel pv">
     <div class="ph"><h2>"X is not Y" — the whole course</h2><span class="badge vi right">one-liners</span></div>
     <ul class="pts">
@@ -1192,6 +1515,10 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <li><b>A good link budget is not enough capacity</b> — 80 users need air time, not just signal.</li>
       <li><b>A predictive model is not validation</b> — measure the built network.</li>
       <li><b>Newest standard is not best standard</b> — capability vs suitability.</li>
+      <li><b>A long IV is not a secret</b> — it may be public, but it must be big enough and combined with the key properly.</li>
+      <li><b>A checksum is not integrity</b> — CRC-32 catches accidents; a MIC catches attackers.</li>
+      <li><b>Authenticated is not authorised</b> — segmentation decides what a valid user may actually reach.</li>
+      <li><b>Encryption is not validation</b> — WPA2 protects the radio hop but never checks ARP mappings or the MQTT broker.</li>
     </ul>
   </div>
 </div></section>
@@ -1199,7 +1526,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 <!-- ============ TERMS ============ -->
 <section class="tab" id="terms"><div class="wrap">
   <h1><span class="pre">// GLOSSARY</span>Short form → long form → meaning</h1>
-  <p class="lede">Every acronym in the four chapters. Type to filter.</p>
+  <p class="lede">Every acronym in the five chapters. Type to filter.</p>
   <input class="fld" id="acroF" placeholder="search… e.g. CAPWAP, PANA, OFDMA, margin" style="margin-top:14px">
   <div class="panel"><div class="tscroll"><table id="acroT">
     <tr><th style="width:104px">Short</th><th style="width:270px">Long</th><th>What it actually means</th></tr>
@@ -1255,6 +1582,43 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <tr><td class="mono ok">Hidden node</td><td>—</td><td>Two clients that hear the AP but not each other, so they collide</td></tr>
     <tr><td class="mono ok">Gratuitous ARP</td><td>—</td><td>Announcement: "this IP is now at this MAC"</td></tr>
     <tr><td class="mono ok">Proxy ARP</td><td>—</td><td>Infrastructure answers ARP on a client's behalf to save air time</td></tr>
+    <tr><td class="mono ok">WEP</td><td>Wired Equivalent Privacy</td><td>Obsolete: RC4 + static key + 24-bit IV + CRC-32</td></tr>
+    <tr><td class="mono ok">RC4</td><td>Rivest Cipher 4</td><td>Stream cipher used by WEP; keystream XORed with plaintext</td></tr>
+    <tr><td class="mono ok">IV</td><td>Initialization Vector</td><td>Per-frame value mixed with the key — public, but must be large and unique</td></tr>
+    <tr><td class="mono ok">XOR</td><td>Exclusive OR</td><td>The bitwise operation combining plaintext with the keystream</td></tr>
+    <tr><td class="mono ok">CRC-32</td><td>Cyclic Redundancy Check</td><td>Error detection only — not tamper resistance</td></tr>
+    <tr><td class="mono ok">TKIP</td><td>Temporal Key Integrity Protocol</td><td>The WEP→WPA2 bridge: per-packet key mixing on RC4 hardware</td></tr>
+    <tr><td class="mono ok">AES</td><td>Advanced Encryption Standard</td><td>The block cipher underneath CCMP</td></tr>
+    <tr><td class="mono ok">CCMP</td><td>Counter Mode with CBC-MAC Protocol</td><td>WPA2 frame protection: confidentiality + integrity + replay defence</td></tr>
+    <tr><td class="mono ok">MIC</td><td>Message Integrity Code</td><td>Proves a message was made with the right key and not altered</td></tr>
+    <tr><td class="mono ok">PMK</td><td>Pairwise Master Key</td><td>Master key from the passphrase or from EAP; never sent over the air</td></tr>
+    <tr><td class="mono ok">PTK</td><td>Pairwise Transient Key</td><td>Per-session unicast key from PMK + both nonces + both MACs</td></tr>
+    <tr><td class="mono ok">GTK</td><td>Group Temporal Key</td><td>Shared key for broadcast and multicast frames</td></tr>
+    <tr><td class="mono ok">MSK</td><td>Master Session Key</td><td>Key material derived during EAP, from which the PMK comes</td></tr>
+    <tr><td class="mono ok">ANonce / SNonce</td><td>Authenticator / Supplicant nonce</td><td>Each side's fresh random contribution to the PTK</td></tr>
+    <tr><td class="mono ok">Nonce</td><td>Number used once</td><td>Makes every association derive different keys</td></tr>
+    <tr><td class="mono ok">WPS</td><td>Wi-Fi Protected Setup</td><td>PIN or push-button onboarding — an alternate way in; disable it</td></tr>
+    <tr><td class="mono ok">RADIUS</td><td>Remote Authentication Dial-In User Service</td><td>The enterprise authentication server that checks credentials</td></tr>
+    <tr><td class="mono ok">RadSec</td><td>RADIUS over TLS</td><td>Protected transport instead of a plain shared secret</td></tr>
+    <tr><td class="mono ok">EAPOL</td><td>EAP over LAN</td><td>How EAP travels over the wireless link to the AP</td></tr>
+    <tr><td class="mono ok">EAP-TLS</td><td>EAP Transport Layer Security</td><td>Certificates on both sides — strongest mainstream choice</td></tr>
+    <tr><td class="mono ok">PEAP</td><td>Protected EAP</td><td>Server cert builds a tunnel; password checked inside it</td></tr>
+    <tr><td class="mono ok">EAP-TTLS</td><td>EAP Tunneled TLS</td><td>Like PEAP but with more flexible inner methods</td></tr>
+    <tr><td class="mono ok">EAP-FAST</td><td>EAP Flexible Authentication via Secure Tunneling</td><td>Tunnel built from a PAC instead of certificates</td></tr>
+    <tr><td class="mono ok">PAC</td><td>Protected Access Credential</td><td>The shared credential EAP-FAST provisions to clients</td></tr>
+    <tr><td class="mono ok">PKI / CA</td><td>Public Key Infrastructure / Certificate Authority</td><td>Issues, renews and revokes the certificates the network trusts</td></tr>
+    <tr><td class="mono ok">LDAP / AD</td><td>Lightweight Directory Access Protocol / Active Directory</td><td>Where user accounts and groups actually live</td></tr>
+    <tr><td class="mono ok">MDM</td><td>Mobile Device Management</td><td>Pushes supplicant profiles and trust anchors to devices</td></tr>
+    <tr><td class="mono ok">MFA</td><td>Multi-Factor Authentication</td><td>Extra proof beyond a password</td></tr>
+    <tr><td class="mono ok">EDHOC</td><td>Ephemeral Diffie-Hellman Over COSE</td><td>Compact authenticated key exchange for constrained IoT devices</td></tr>
+    <tr><td class="mono ok">COSE / CBOR</td><td>CBOR Object Signing and Encryption / Concise Binary Object Representation</td><td>Compact binary security objects for small devices</td></tr>
+    <tr><td class="mono ok">OSCORE</td><td>Object Security for Constrained RESTful Environments</td><td>Protects CoAP messages end-to-end through proxies</td></tr>
+    <tr><td class="mono ok">CoAP</td><td>Constrained Application Protocol</td><td>Lightweight REST-style protocol for IoT</td></tr>
+    <tr><td class="mono ok">WIDS / WIPS</td><td>Wireless Intrusion Detection / Prevention System</td><td>Listens for rogue APs and spoofed frames / adds enforcement</td></tr>
+    <tr><td class="mono ok">SPAN</td><td>Switched Port Analyzer (port mirroring)</td><td>Copies switch traffic to an analyzer port for capture</td></tr>
+    <tr><td class="mono ok">DAI</td><td>Dynamic ARP Inspection</td><td>Switch feature that validates ARP replies against DHCP bindings</td></tr>
+    <tr><td class="mono ok">Evil twin</td><td>—</td><td>Rogue AP advertising a familiar SSID to harvest credentials</td></tr>
+    <tr><td class="mono ok">Blast radius</td><td>—</td><td>How far a single compromise can spread — what segmentation limits</td></tr>
   </table></div></div>
 </div></section>
 
@@ -1301,13 +1665,21 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
 
   <div class="panel">
-    <div class="ph"><span class="badge cy">A3 / A4</span><h2>If the same format continues</h2></div>
-    <p>Chapter 3 has <b>6</b> exercises and Chapter 4 has <b>5</b>. Hints and outlines for every one are already inside their chapter sections — open <b>3.3</b> and <b>4.3</b> and expand the exercise blocks at the bottom.</p>
-    <div class="box rl"><b>Fastest picks if you want the A1 shape again</b>Ch 3 → problem 3 (802.1X vs PSK: define both, compare on security and manageability) or problem 4 (four PANA roles, one paragraph each). Ch 4 → problem 2 (a requirements checklist, which is a list not an essay) or problem 4 (why signal strength alone isn't good design — you already have all the material).</div>
+    <div class="ph"><span class="badge cy">A3 / A4 / A5</span><h2>If the same format continues</h2></div>
+    <p>Chapter 3 has <b>6</b> exercises, Chapter 4 has <b>5</b>, Chapter 5 has <b>6</b>. Hints and outlines for every one are already inside their chapter sections — open <b>3.3</b>, <b>4.3</b> and <b>5.4</b> and expand the exercise blocks at the bottom.</p>
+    <div class="box rl"><b>Fastest picks if you want the A1 shape again</b>Ch 3 → problem 3 (802.1X vs PSK: define both, compare on security and manageability) or problem 4 (four PANA roles, one paragraph each). Ch 4 → problem 2 (a requirements checklist, which is a list not an essay) or problem 4 (why signal strength alone isn't good design). Ch 5 → problem 1 (classify three attacks passive/active — define both, then three short justifications: identical structure to your A1) or problem 2 (Eq 5.1 and segmentation, which is one clean idea).</div>
+    <details><summary>▸ A5 candidate outlines — chapter 5</summary><div class="dbody">
+      <p><b>1 · Classify three attacks.</b> Define passive (attacker never transmits) vs active (injects, modifies or suppresses). Then: eavesdropping/traffic analysis = passive; deauthentication abuse = active; evil twin or ARP spoofing = active. Close with why passive is harder to detect and why it feeds later active attacks.</p>
+      <p><b>2 · Eq 5.1 and segmentation.</b> Risk = Threat × Vulnerability × Impact. Segmentation leaves Threat and Vulnerability untouched but cuts <b>Impact</b> by limiting the blast radius, so residual risk falls. Use the hospital example.</p>
+      <p><b>3 · Rogue-AP monitoring plan.</b> Sensors + baselines + correlation (wired-port state, controller inventory, certificate failures, switch auth logs) + classification categories + playbooks + tuning to avoid alert fatigue.</p>
+      <p><b>4 · Certificates as architecture.</b> They decide whether an evil twin can harvest credentials, whether revocation works, and how much trust the network can place in an endpoint — so issuance, renewal, revocation and trust-anchor distribution are architectural, not clerical.</p>
+      <p><b>5 · Evil-twin response outline.</b> Detect → contain narrowly → preserve evidence → recover (rotate credentials, re-onboard, verify coverage) → review. Note the containment trade-off: broad shutdowns also kill voice and building systems.</p>
+      <p><b>6 · PAA and EP on separate devices.</b> Authenticate and integrity/replay-protect their exchange of identity, authorization state, filters and keys; add least-privilege filtering, session expiry, monitoring, and a PaC–EP security association if the data plane needs protection.</p>
+    </div></details>
   </div>
 </div></section>
 
-<div class="footer">// built from CH1 · CH2 · CH3 · CH4 handouts — 269430 wireless &amp; broadband computer networks · term 1/2569</div>
+<div class="footer">// built from CH1 · CH2 · CH3 · CH4 · CH5 handouts — 269430 wireless &amp; broadband computer networks · term 1/2569</div>
 <script>
 var store={get:function(k,d){try{var v=localStorage.getItem("wn_"+k);return v?JSON.parse(v):d}catch(e){return d}},
            set:function(k,v){try{localStorage.setItem("wn_"+k,JSON.stringify(v))}catch(e){}}};
@@ -1324,8 +1696,12 @@ var TOPICS={
  "33":["Mobility &amp; continuity","L2/L3, ARP, the 150 ms handoff","3"],
  "41":["Requirements","measurable targets, constraints","4"],
  "42":["Link budget &amp; capacity","Pr = Pt+Gt+Gr−Lp−Lm","4"],
- "43":["Channels &amp; validation","1·6·11 reuse, interference, proof","4"]};
-var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design"};
+ "43":["Channels &amp; validation","1·6·11 reuse, interference, proof","4"],
+ "51":["Threat landscape","passive vs active, rogue AP, ARP spoofing","5"],
+ "52":["WPS · WEP · WPA2 · WPA3","IV reuse, AES-CCMP, 4-way handshake","5"],
+ "53":["EAP · EDHOC · PANA","method choice, IoT keys, segmentation","5"],
+ "54":["Monitoring &amp; response","WIDS/WIPS, SPAN, the evil-twin case","5"]};
+var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security"};
 
 /* ================= CARDS ================= */
 var CARDS=[];function C(t,q,a){CARDS.push({t:t,q:q,a:a})}
@@ -1437,6 +1813,67 @@ C("4","What does validation consist of?","Active tests, passive monitoring, roam
 C("4","Why validate when you already have predictive models?","Because traffic peaks, roaming behaviour and environmental noise differ from the model. Validation is the empirical stage that confirms the objectives are met.");
 C("4","The worked classroom link budget?","Pr = 17 + 3 + 0 − 76 − 6 = −62 dBm — comfortably above a −67 dBm threshold.");
 C("4","The punchline of the classroom example?","An acceptable link budget does not imply acceptable capacity. −62 dBm is fine, but 80 synchronised users may still need more cells.");
+C("5","Why is the wireless threat model different?","Radio propagates past walls, so the real observation boundary is propagation range — not the building. Any point in range is a possible attack position.");
+C("5","Passive vs active threats?","Passive: traffic analysis, metadata collection, interception — the attacker never transmits, so detection is hard. Active: deauth abuse, replay, impersonation, downgrade, denial of service.");
+C("5","What can an attacker learn even from encrypted traffic?","Frame timing, traffic volume, identifiers and roaming patterns — enough to reveal operational tempo or process cycles. Metadata needs protection too.");
+C("5","Why are passive threats part of the intrusion chain?","Learning network names, channels, client density and authentication methods lets the attacker prepare targeted impersonation or denial-of-service attacks later.");
+C("5","What is an evil twin?","A rogue AP advertising a familiar SSID to lure users. It works because people equate a recognisable network name with legitimacy.");
+C("5","What does deauthentication abuse achieve?","It forces clients off legitimate APs — either to disrupt service or to steer devices toward attacker-controlled infrastructure.");
+C("5","Does WPA2 stop ARP spoofing between clients?","No. It protects frames over the radio path but does not validate ARP mappings among authorised clients in the same broadcast domain.");
+C("5","Defences against ARP spoofing on a WLAN?","Client isolation on guest networks, smaller broadcast domains, dynamic ARP inspection, DHCP snooping, static bindings for critical infrastructure, and monitoring for rapid IP-to-MAC changes.");
+C("5","The risk model equation?","Risk = Threat × Vulnerability × Impact. Not a physical law — an analytical model for prioritising controls.");
+C("5","Which factor does segmentation reduce?","Impact. It leaves the threat source untouched but limits the blast radius, so residual risk falls.");
+C("5","What is WPS and why is it risky?","Wi-Fi Protected Setup onboards devices without typing the passphrase. It creates an alternate admission path: PIN mode has a small guessable secret, push-button mode opens a window where any nearby device may enrol.");
+C("5","WPS recommendation for enterprise?","Disable it. Use WPA2/WPA3-Enterprise with EAP, certificate provisioning, MDM profiles or controlled device registration instead.");
+C("5","What four things did WEP get wrong?","RC4 with a static shared key · a 24-bit IV that repeats · weak IV-key combination · CRC-32 integrity that is not a cryptographic MAC.");
+C("5","What is an initialization vector?","A per-frame value combined with the secret key so repeated encryption does not produce the same keystream. It is not secret — it is sent in the clear because the receiver needs it.");
+C("5","Why is a 24-bit IV too small?","It gives only 16,777,216 values, so a busy WLAN revisits them. Repeated IVs mean related keystream protects different frames, giving attackers the statistics needed to recover the key.");
+C("5","How does WEP encryption work, step by step?","IV + shared key → RC4 keystream → plaintext XOR keystream = ciphertext (IV sent openly). The receiver regenerates the keystream from the IV and key, then XORs to recover the plaintext.");
+C("5","How did attackers speed up WEP key recovery?","By replaying ARP requests, forcing the AP to generate many fresh encrypted frames quickly, so IVs were collected far faster than by passive listening alone.");
+C("5","What is wrong with a shared static WEP key?","The same key sits on the AP and every client. One lost device or departing user compromises the whole WLAN, and there is no per-user or per-session separation.");
+C("5","Why wasn't a longer WEP key the fix?","Longer keys kept every structural flaw: exposed short IV, weak per-packet key construction, static shared credentials and non-cryptographic integrity checking.");
+C("5","What does AES-CCMP stand for?","Advanced Encryption Standard with Counter Mode and Cipher Block Chaining Message Authentication Code Protocol — AES for confidentiality, CBC-MAC for the integrity code.");
+C("5","The five security functions of CCMP?","Confidentiality (counter mode), integrity (MIC via CBC-MAC), replay defence (packet numbers), per-frame uniqueness (changing nonce), session binding (temporal keys, not the password).");
+C("5","Is every part of a protected 802.11 frame encrypted?","No. The payload is encrypted; selected header fields are authenticated as additional data so addressing and control information cannot be changed silently.");
+C("5","What was TKIP?","The transitional mechanism between WEP and WPA2 — per-packet key mixing and better integrity on RC4-era hardware. A bridge, not the goal.");
+C("5","WPA2-Personal vs WPA2-Enterprise — the real difference?","Not the cipher (both use AES-CCMP). It is how the client is authenticated and where the PMK comes from: a shared passphrase vs successful 802.1X/EAP authentication.");
+C("5","The three roles in WPA2-Enterprise?","Client = supplicant · access point = authenticator (mostly relays EAP) · RADIUS = authentication server that evaluates credentials.");
+C("5","Does the AP ever see your enterprise password?","No. The AP relays EAP inside RADIUS. The server verifies credentials and returns derived key material, so the password or private key is never stored on the AP.");
+C("5","What is the PMK and where does it come from?","The Pairwise Master Key. Personal: derived from the passphrase and network name. Enterprise: derived from the EAP result (via the Master Session Key).");
+C("5","What does the four-way handshake achieve?","It proves both sides hold the PMK without sending it, derives a fresh PTK, installs data keys, and distributes the GTK for broadcast and multicast.");
+C("5","The four handshake messages in order?","1 AP sends ANonce · 2 client sends SNonce + MIC · 3 AP sends GTK + install instruction + MIC · 4 client acknowledges with MIC.");
+C("5","What is a nonce and why does WPA2 use two?","A value used once. ANonce and SNonce ensure that even with the same PMK, every association derives a different PTK — bound also to both MAC addresses.");
+C("5","PTK vs GTK?","PTK = Pairwise Transient Key, protects unicast traffic for one client–AP pair. GTK = Group Temporal Key, protects broadcast and multicast frames.");
+C("5","Biggest weakness of WPA2-Personal?","A weak passphrase can be recovered by offline dictionary guessing once an attacker captures the handshake.");
+C("5","What makes WPA3-Enterprise more than a cipher upgrade?","Managed credentials, key establishment hardened against known attacks, and protected management frames — a security posture tied to identity governance.");
+C("5","EAP in one line?","A framework carrying authentication between supplicant, authenticator and authentication server, so the AP relays while the identity platform decides.");
+C("5","The two families of EAP methods?","Certificate-first methods (EAP-TLS) and tunnel-first methods that carry inner credentials (PEAP, EAP-TTLS, EAP-FAST).");
+C("5","Why is EAP-TLS considered strongest?","Certificates on both sides give genuine mutual authentication with no reusable password sent anywhere — which defeats evil-twin credential harvesting. Cost: full PKI lifecycle.");
+C("5","Does PEAP need a client certificate?","No. It needs a server certificate to build the tunnel; the inner credential is usually a password. The certificate menu on your phone is about validating the server.");
+C("5","What breaks PEAP in practice?","Choosing 'do not validate' or accepting any server certificate. A rogue AP plus a fake authentication server can then capture the inner username and password.");
+C("5","EAP-TTLS vs PEAP?","TTLS is more flexible about inner authentication methods, useful for mixed legacy back ends — but flexibility invites weak inner method choices and configuration inconsistency.");
+C("5","What is EAP-FAST's PAC?","A Protected Access Credential used to build the tunnel instead of certificates. It reduces PKI dependence but adds PAC provisioning and lifecycle risk.");
+C("5","The right question about EAP methods?","Not 'which methods exist' but 'which method fits this organisation's trust architecture, device-management maturity and threat model'.");
+C("5","PANA security — what does it depend on?","The chosen EAP method. PANA authenticates access signalling; it does not encrypt user traffic or remove denial-of-service risk on the link.");
+C("5","Why is PANA discovery a weak point?","Early messages occur before session keys exist, so attackers can spoof discovery data, force state allocation or burn processing capacity. Needs conservative state handling and rate monitoring.");
+C("5","What must be protected if PAA and EP are separate devices?","Their exchange of identity, authorization state, filters and keying material — authenticated and replay-protected, or an attacker may forge authorization or keep stale access alive.");
+C("5","What is EDHOC?","Ephemeral Diffie-Hellman Over COSE — a compact three-message authenticated key exchange for constrained devices and links, using binary CBOR encoding.");
+C("5","Why 'ephemeral' in EDHOC?","Each run uses fresh temporary key material, so a later compromise of long-term credentials does not automatically expose past sessions.");
+C("5","What does EDHOC hand off to?","Exported key material for OSCORE, so CoAP messages stay protected end-to-end even across proxies, brokers and gateways.");
+C("5","Why isn't WPA2 enough for MQTT?","It protects the local radio hop only. It does not authenticate the broker, authorise topics, or protect messages after they leave the WLAN — that needs TLS, broker certificate validation and topic permissions.");
+C("5","What does segmentation actually buy you?","A smaller blast radius: authenticated connectivity stops implying unrestricted reachability, and defenders gain room to quarantine during an incident.");
+C("5","The segmentation design tension?","Too coarse and critical systems stay exposed; too granular and administration becomes brittle. Privileges should follow role, device posture and service need.");
+C("5","WIDS vs WIPS?","WIDS detects — rogue APs, spoofed management frames, odd probes, prohibited channels. WIPS adds enforcement: classification, containment, coordinated response.");
+C("5","Why can't rogue-AP detection rely on radio alone?","A strange beacon may be a rogue, a neighbour, or a misconfigured legitimate device. Confidence comes from correlating with wired-port state, controller inventory and authentication logs.");
+C("5","Why define baselines before an incident?","Knowing normal channel load, crowd patterns and failure rates lets analysts separate meaningful deviation from ordinary variation.");
+C("5","Risk of over-aggressive WIPS?","It can disrupt legitimate neighbouring networks and generate false positives that train operators to ignore alerts.");
+C("5","What is port mirroring / SPAN for?","Copying switch traffic to an analyzer port so you can capture with Wireshark without sitting inline — useful for DHCP failures, ARP spoofing, odd DNS or MQTT checks.");
+C("5","Main limitation of mirroring an AP's uplink?","If the AP tunnels traffic to a controller you see CAPWAP, not client packets. Encrypted payloads stay encrypted, and the analyzer port can be oversubscribed.");
+C("5","The four response steps?","Isolation → credential revocation → forensic capture → service restoration, guided by documented procedures.");
+C("5","Why should containment be narrow?","Broad shutdowns stop the attack fast but may also cut voice, safety or building-management services riding the same WLAN.");
+C("5","Why is certificate management a security control?","Trust only holds if issuance, renewal, revocation and trust-anchor distribution work. A certificate never revoked after device loss is no better than a forgotten password.");
+C("5","How was the evil twin in the worked example identified?","By correlating three sources: repeated deauth frames on affected channels, controller logs showing reassociation to an unknown transmitter with a familiar name, and switch inventory showing no authorised AP on those ports.");
+C("5","Why did the evil-twin incident stay contained?","Guest and laboratory systems were segmented from the staff network, so the likely blast radius remained limited even if some users associated.");
 
 /* ================= QUIZ BANK ================= */
 var QB=[];function Q(t,q,o,a,w){QB.push({t:t,q:q,o:o,a:a,w:w})}
@@ -1482,6 +1919,27 @@ Q("4","Why is validation still required when predictive models exist?",["Regulat
 Q("4","The classic non-overlapping 2.4 GHz channel plan is…",["1 · 5 · 9","1 · 6 · 11","2 · 7 · 12","All 13 channels"],1,"1, 6 and 11 do not overlap, so they can be reused across a floor plan.");
 Q("4","Designing only around AP transmit power risks…",["Too many channels","Weak client uplinks and asymmetric failure","Excess battery drain on the AP","Nothing important"],1,"The user hears the AP but cannot reliably transmit back — a classic asymmetric failure.");
 Q("4","Interference management is most effective when it is…",["A single strong tool","Layered: channels, power, antennas and policy","Left to clients","Only about channel width"],1,"No single mechanism suffices across offices, auditoriums, warehouses and outdoor sites.");
+Q("5","Which attack is PASSIVE?",["Deauthentication flooding","Traffic analysis of encrypted frames","Evil-twin access point","ARP spoofing"],1,"Passive means the attacker never transmits — which is exactly why it is hard to detect.");
+Q("5","Why is an evil twin effective?",["It jams the channel","Users equate a familiar SSID with legitimacy","It breaks AES","It disables DHCP"],1,"A recognisable network name is treated as proof of identity, especially when certificate warnings are ignored.");
+Q("5","Does WPA2 encryption prevent ARP spoofing between authorised clients?",["Yes, fully","No — it protects the radio hop but does not validate ARP mappings","Only on 5 GHz","Only with WPS enabled"],1,"Defend with client isolation, dynamic ARP inspection, DHCP snooping and smaller broadcast domains.");
+Q("5","Risk = Threat × Vulnerability × Impact. Segmentation reduces…",["Threat","Vulnerability","Impact","Nothing"],2,"It cannot remove attackers or bugs, but it shrinks the blast radius — so residual risk falls.");
+Q("5","How big is the WEP IV space?",["2¹⁶ = 65,536","2²⁴ = 16,777,216","2³² = 4.3 billion","2⁶⁴"],1,"24 bits is far too small for a busy WLAN, so IVs repeat and keystream material becomes related.");
+Q("5","In WEP, the initialization vector is…",["A secret second key","Sent in the clear so the receiver can rebuild the keystream","Never transmitted","The same as the passphrase"],1,"An IV need not be secret — it must be large enough, unique, and combined with the key soundly.");
+Q("5","WEP's integrity check used CRC-32, which is inadequate because it…",["Is too slow","Detects accidental errors but not deliberate tampering","Requires certificates","Only works on 2.4 GHz"],1,"An attacker could modify a frame and fix the checksum. A MIC is the cryptographic answer.");
+Q("5","What does the second C in AES-CCMP contribute?",["Compression","CBC-MAC — the message integrity code","Channel bonding","Certificate checking"],1,"Counter mode gives confidentiality; CBC-MAC produces the MIC that detects tampering.");
+Q("5","How does CCMP prevent replay?",["By changing SSID","Packet numbers in the nonce, checked by the receiver","By disabling broadcast","With CRC-32"],1,"A stale packet number causes the receiver to discard a replayed frame rather than accept it.");
+Q("5","The real difference between WPA2-Personal and WPA2-Enterprise is…",["The data cipher","How the client is authenticated and where the PMK comes from","The frequency band","The channel width"],1,"Both can use AES-CCMP. Personal derives the PMK from a passphrase; Enterprise from successful EAP.");
+Q("5","In WPA2-Enterprise, the access point mostly…",["Checks the password itself","Relays EAP between client and RADIUS server","Stores user certificates","Issues IP addresses"],1,"The client is the supplicant, the AP the authenticator, and RADIUS the authentication server.");
+Q("5","Which message starts the four-way handshake?",["Client sends SNonce","AP sends ANonce","AP sends GTK","Client sends the PMK"],1,"Order: ANonce → SNonce+MIC → GTK+MIC → ACK+MIC. The PMK is never sent.");
+Q("5","What is the GTK used for?",["Unicast traffic to one client","Broadcast and multicast frames","Certificate signing","RADIUS transport"],1,"The PTK protects unicast for one client–AP pair; the GTK covers group traffic.");
+Q("5","Why do ANonce and SNonce exist?",["To identify the SSID","So every association derives a different PTK","To compress frames","To speed up roaming"],1,"Fresh nonces plus both MAC addresses bind the session keys to that specific association.");
+Q("5","A staff phone using PEAP shows a certificate menu. That usually means…",["Every user needs a personal client certificate","The device must validate the SERVER certificate for the tunnel","PEAP is broken","The network uses WEP"],1,"Client certificates are the EAP-TLS pattern. PEAP's certificate is normally server-side.");
+Q("5","Which EAP method gives the strongest mutual authentication?",["EAP-FAST","PEAP-MSCHAPv2","EAP-TLS","Open authentication"],2,"Certificates on both sides mean no reusable password ever travels — defeating evil-twin harvesting.");
+Q("5","EDHOC is designed for…",["Campus WLAN controllers","Constrained IoT devices and links","Cellular core networks","Ethernet switches"],1,"Compact authenticated Diffie-Hellman over COSE, often exporting keys to OSCORE for CoAP.");
+Q("5","Which is TRUE about WPS?",["It strengthens WPA2","It creates an alternate admission path and should usually be disabled","It replaces RADIUS","It only exists on 6 GHz"],1,"PIN mode is guessable and push-button mode opens an enrolment window — convenience changes the threat model.");
+Q("5","A WIPS differs from a WIDS because it…",["Detects only","Adds enforcement actions such as containment","Requires WEP","Runs on the client"],1,"Detection versus detection-plus-response — and its value depends on disciplined policy, not sensor count.");
+Q("5","Mirroring an AP's switch port shows only CAPWAP. Why?",["The capture failed","The AP tunnels client traffic to a controller","Mirroring never works on Wi-Fi","The payload is unencrypted"],1,"With central tunnelling you see the tunnel; with local bridging you see client IP traffic directly.");
+Q("5","In the worked evil-twin case, what confirmed it was NOT ordinary interference?",["High channel utilisation alone","Deauth frames plus reassociation to an unknown transmitter plus no authorised AP on the wired ports","A single user complaint","Slow DHCP"],1,"Correlating radio evidence with identity and inventory data is what produced the diagnosis.");
 
 /* ================= TABS ================= */
 var tabs=document.querySelectorAll(".tabbtn");
@@ -1524,12 +1982,12 @@ function refreshReady(){
   var nt=doneSet.length;
   var kn=0;CARDS.forEach(function(c){if(knownSet.indexOf(cardId(c))>-1)kn++});
   var best=store.get("quizBest",-1);
-  var t=nt/12,c=kn/CARDS.length,q=best<0?0:best/15;
+  var t=nt/16,c=kn/CARDS.length,q=best<0?0:best/15;
   var pct=Math.round((t+c+q)/3*100);
   el.textContent=pct+"%";
   document.getElementById("ringFg").style.strokeDashoffset=314*(1-pct/100);
   document.getElementById("bTop").style.width=(t*100)+"%";
-  document.getElementById("vTop").textContent=nt+"/12";
+  document.getElementById("vTop").textContent=nt+"/16";
   document.getElementById("bCard").style.width=(c*100)+"%";
   document.getElementById("vCard").textContent=kn+"/"+CARDS.length;
   document.getElementById("bQuiz").style.width=(q*100)+"%";
@@ -1545,7 +2003,7 @@ document.querySelectorAll(".dn").forEach(function(c){
     if(c.checked&&i<0)doneSet.push(c.dataset.k);
     if(!c.checked&&i>-1)doneSet.splice(i,1);
     store.set("done",doneSet);refreshReady();syncMarks();
-    if(c.checked&&doneSet.length===12)boom();
+    if(c.checked&&doneSet.length===16)boom();
   });
 });
 document.getElementById("sCards").textContent=CARDS.length;
@@ -1670,7 +2128,7 @@ function chip(v,l){
   chipRow.appendChild(b);
 }
 chip("all","ALL");chip("weak","WEAK");
-["1","2","3","4"].forEach(function(k){chip(k,"CH"+k)});
+["1","2","3","4","5"].forEach(function(k){chip(k,"CH"+k)});
 build();
 document.querySelectorAll("[data-drill]").forEach(function(b){
   b.addEventListener("click",function(){
@@ -1861,6 +2319,99 @@ document.querySelectorAll("#spOpts .btn").forEach(function(b){
   });
 });
 document.getElementById("spNew").addEventListener("click",spNew);spNew();
+/* risk model */
+function rk(){
+  var T=n("rkT"),V=n("rkV"),I=n("rkI"),R=T*V*I;
+  document.getElementById("vRkT").textContent=T;
+  document.getElementById("vRkV").textContent=V;
+  document.getElementById("vRkI").textContent=I;
+  document.getElementById("rkWork").innerHTML=
+    "<b>Risk</b> = Threat × Vulnerability × Impact<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= "+T+" × "+V+" × "+I+" = <b>"+R+"</b> &nbsp;(max 125)<br>"+
+    "hardening → lowers <b>V</b> &nbsp;·&nbsp; segmentation → lowers <b>I</b> &nbsp;·&nbsp; nothing you deploy lowers <b>T</b>";
+  var r=document.getElementById("rkRes");
+  if(R>=60){r.className="res r-no";r.innerHTML="RISK "+R+"<small>Unacceptable for a managed network. Attack both factors you control: harden the protocol stack and cut the blast radius.</small>"}
+  else if(R>=25){r.className="res r-mid";r.innerHTML="RISK "+R+"<small>Elevated. Prioritise whichever factor is highest — that is the whole point of the model.</small>"}
+  else {r.className="res r-ok";r.innerHTML="RISK "+R+"<small>Residual risk is contained. The threat did not disappear; the damage it can do did.</small>"}
+}
+["rkT","rkV","rkI"].forEach(function(i){document.getElementById(i).addEventListener("input",rk)});rk();
+document.getElementById("rkSeg").addEventListener("click",function(){
+  var e=document.getElementById("rkI");e.value=Math.max(1,parseInt(e.value,10)-2);rk();
+});
+document.getElementById("rkPatch").addEventListener("click",function(){
+  var e=document.getElementById("rkV");e.value=Math.max(1,parseInt(e.value,10)-2);rk();
+});
+document.getElementById("rkReset").addEventListener("click",function(){
+  document.getElementById("rkT").value=4;document.getElementById("rkV").value=4;document.getElementById("rkI").value=5;rk();
+});
+/* WEP IV collision */
+function iv(){
+  var f=n("ivF"),space=16777216;
+  var half=Math.sqrt(Math.PI/2*space);           /* ~50% chance of a repeat */
+  var tHalf=half/f, tFull=space/f;
+  function fmt(s){
+    if(s<90)return s.toFixed(0)+" seconds";
+    if(s<5400)return (s/60).toFixed(1)+" minutes";
+    if(s<172800)return (s/3600).toFixed(1)+" hours";
+    return (s/86400).toFixed(1)+" days";
+  }
+  document.getElementById("vIvF").textContent=f;
+  document.getElementById("ivWork").innerHTML=
+    "IV space = 2²⁴ = <b>16,777,216</b> values<br>"+
+    "50% chance of a repeat after ≈ √(π/2 × 2²⁴) ≈ <b>"+Math.round(half).toLocaleString()+" frames</b><br>"+
+    "at "+f+" frames/s → first likely collision in <b>"+fmt(tHalf)+"</b><br>"+
+    "full space exhausted in <b>"+fmt(tFull)+"</b>";
+  document.getElementById("ivRes").innerHTML="≈ "+fmt(tHalf)+" TO THE FIRST IV REPEAT<small>Only ~5,000 frames — a coffee-break, not a lifetime. That is why a 24-bit IV was fatal.</small>";
+}
+document.getElementById("ivF").addEventListener("input",iv);iv();
+/* passive or active */
+var PA=[
+ ["Capturing beacons and probe requests to map which devices are present.","p","No transmission by the attacker — pure observation. Passive."],
+ ["Flooding deauthentication frames to knock clients off their AP.","a","The attacker injects frames to suppress service. Active."],
+ ["Analysing the timing and volume of encrypted traffic near a ward.","p","Metadata analysis reveals operational tempo without decrypting anything. Passive."],
+ ["Running an AP that advertises the campus SSID to harvest credentials.","a","Evil twin — the attacker transmits and impersonates infrastructure. Active."],
+ ["Sending false ARP replies claiming to own the gateway IP.","a","ARP spoofing injects forged mappings to intercept traffic. Active."],
+ ["Recording frames now to attempt WEP key recovery offline later.","p","Collection alone is passive — though it prepares an active attack afterwards."],
+ ["Replaying a captured encrypted frame hoping it is accepted as fresh.","a","Replay requires transmitting. Active — and what packet numbers defend against."],
+ ["Raising the noise floor across a channel so nothing gets through.","a","Jamming attacks the medium directly. Active."],
+ ["Collecting SSID names, channels and client density before an operation.","p","Reconnaissance without transmitting. Passive, and stage one of the intrusion chain."],
+ ["Forcing a client to negotiate a weaker legacy security mode.","a","A downgrade attack manipulates the exchange. Active."]
+];
+var paI=-1,paOK=0,paN=0;
+function paNew(){
+  paI=Math.floor(Math.random()*PA.length);
+  document.getElementById("paQ").textContent=PA[paI][0];
+  document.getElementById("paMsg").textContent="";
+  document.querySelectorAll("#paOpts .btn").forEach(function(b){b.disabled=false;b.classList.remove("on")});
+}
+document.querySelectorAll("#paOpts .btn").forEach(function(b){
+  b.addEventListener("click",function(){
+    if(paI<0||b.disabled)return;
+    var ok=b.dataset.pa===PA[paI][1];
+    paN++;if(ok)paOK++;
+    document.querySelectorAll("#paOpts .btn").forEach(function(x){x.disabled=true});
+    b.classList.add("on");
+    document.getElementById("paMsg").innerHTML=(ok?'<span class="ok">✓ correct — </span>':'<span class="no">✗ no — </span>')+PA[paI][2];
+    document.getElementById("paScore").textContent=paOK+" / "+paN;
+  });
+});
+document.getElementById("paNew").addEventListener("click",paNew);paNew();
+
+/* ================= COURSE SWITCHER ================= */
+(function(){
+  var wrap=document.getElementById("csWrap"),btn=document.getElementById("logoBtn"),pop=document.getElementById("csPop");
+  if(!wrap||!btn||!pop)return;
+  function close(){pop.classList.remove("on");btn.setAttribute("aria-expanded","false")}
+  btn.addEventListener("click",function(e){
+    e.stopPropagation();
+    var open=!pop.classList.contains("on");
+    pop.classList.toggle("on",open);
+    btn.setAttribute("aria-expanded",open?"true":"false");
+  });
+  document.addEventListener("click",function(e){if(!wrap.contains(e.target))close()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+  var self=document.getElementById("csSelf");
+  if(self)self.addEventListener("click",function(e){e.preventDefault();close();showTab("home",true)});
+})();
 
 /* ================= GLOSSARY FILTER ================= */
 document.getElementById("acroF").addEventListener("input",function(){
@@ -1924,19 +2475,6 @@ document.addEventListener("keydown",function(e){
 
 showTab(store.get("lastTab","home"));
 refreshReady();
-
-(function(){
-  var p=document.getElementById("csPop"),b=document.getElementById("logoBtn");
-  if(!p||!b)return;
-  b.addEventListener("click",function(e){e.stopPropagation();
-    var on=p.classList.toggle("on");b.setAttribute("aria-expanded",on?"true":"false")});
-  document.addEventListener("click",function(){p.classList.remove("on")});
-  p.addEventListener("click",function(e){e.stopPropagation()});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")p.classList.remove("on")});
-  var self=p.querySelector('[data-cs="self"]');
-  if(self)self.addEventListener("click",function(e){e.preventDefault();p.classList.remove("on");
-    if(typeof showTab==="function"){showTab("home",true)}else{window.scrollTo({top:0,behavior:"smooth"})}});
-})();
 </script>
 </body>
 </html>
