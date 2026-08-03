@@ -10,13 +10,13 @@ One HTML file. No framework, no build step, no dependencies, no network calls.
 
 | Section | What it does |
 |---|---|
-| **Map** | All four chapters on one page so you can see how RF planning fits together |
-| **Chapters** | 12 sections rewritten in plain words — short form and long form for each idea |
-| **RF Lab** | Live calculators for the five core equations, including link budget and coverage margin |
-| **Drills** | 108 flashcards and a 42-question mock exam |
+| **Map** | All five chapters on one page so you can see how the pieces fit together |
+| **Chapters** | 16 sections rewritten in plain words — short form and long form for each idea |
+| **RF Lab** | Live calculators for the six core equations, plus risk, IV-collision and classification drills |
+| **Drills** | 169 flashcards and a 63-question mock exam |
 | **Cheatsheet / Terms** | Every formula and number in one place, plus the acronym glossary |
 
-Covers layers and frame formats, APs and controllers, coverage margin and cell sizing, the IEEE/IETF/ITU standards and Wi-Fi generations, scanning/authentication/association and roaming, then requirements, link budget, capacity, channel reuse and validation.
+Covers layers and frame formats, APs and controllers, coverage margin and cell sizing, the IEEE/IETF/ITU standards and Wi-Fi generations, scanning/authentication/association and roaming, requirements, link budget, capacity, channel reuse and validation, then the threat landscape, WEP/WPA2/WPA3 and EAP, segmentation, monitoring and incident response.
 
 ## Tech
 
