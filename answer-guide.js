@@ -32,20 +32,26 @@ style.textContent='\
 .agcode{font:700 11px var(--mono);color:var(--cy);border:1px solid color-mix(in srgb,var(--cy) 55%,var(--line));border-radius:5px;padding:3px 7px}\
 .agch{font:10px var(--mono);color:var(--faint);text-transform:uppercase}\
 .agq{font-weight:700;font-size:15px;line-height:1.45;margin:5px 0 10px}\
-.agans{border-left:3px solid var(--gr);background:color-mix(in srgb,var(--gr) 7%,var(--panel));padding:9px 11px;border-radius:0 7px 7px 0;margin:8px 0;color:var(--ink)}\
-.agans b{color:var(--gr);font-family:var(--mono);font-size:11px;text-transform:uppercase}\
-.agexp{color:var(--dim);font-size:13.5px;line-height:1.55;margin-top:9px}\
+.agopts{display:grid;gap:7px;margin:10px 0}\
+.agopt{display:grid;grid-template-columns:28px 1fr auto;gap:9px;align-items:start;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:9px 10px;font-size:13px;line-height:1.45}\
+.agopt .letter{font:700 11px var(--mono);color:var(--dim);padding-top:1px}\
+.agopt .mark{font:700 10px var(--mono);white-space:nowrap;padding-top:1px}\
+.agopt.good{border-color:color-mix(in srgb,var(--gr) 70%,var(--line));background:color-mix(in srgb,var(--gr) 8%,var(--panel))}\
+.agopt.good .letter,.agopt.good .mark{color:var(--gr)}\
+.agopt.bad{border-color:color-mix(in srgb,var(--rd) 35%,var(--line));opacity:.78}\
+.agopt.bad .letter,.agopt.bad .mark{color:var(--rd)}\
+.agexp{color:var(--dim);font-size:13.5px;line-height:1.55;margin-top:10px;padding:10px 11px;border-left:3px solid var(--gr);background:color-mix(in srgb,var(--gr) 5%,var(--panel));border-radius:0 7px 7px 0}\
 .agexp b{color:var(--ink)}\
 .agmemory{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--faint);font-size:12px;line-height:1.5}\
 .agmemory b{color:var(--am);font-family:var(--mono);font-size:10px;text-transform:uppercase}\
 .agempty{padding:20px;text-align:center;border:1px dashed var(--line2);border-radius:9px;color:var(--faint)}\
-@media(max-width:620px){.agcount{width:100%;margin-left:0}.agsearch{min-width:100%}}';
+@media(max-width:620px){.agcount{width:100%;margin-left:0}.agsearch{min-width:100%}.agopt{grid-template-columns:24px 1fr}.agopt .mark{grid-column:2}}';
 document.head.appendChild(style);
 
 var panel=document.createElement("div");
 panel.className="panel ag";panel.id="answerGuide";
-panel.innerHTML='<div class="ph"><span class="badge cy">STUDY GUIDE</span><h2>150 Answer Guide</h2><span class="badge cy right">RIGHT ANSWERS ONLY</span></div>'+ 
-'<p class="sub2">Read the complete question bank as revision notes: <b>question → correct answer → explanation → memory cue</b>. Each memory cue is built from that exact question, not a repeated chapter template.</p>'+ 
+panel.innerHTML='<div class="ph"><span class="badge cy">STUDY GUIDE</span><h2>150 Answer Guide</h2><span class="badge cy right">ALL ANSWER CHOICES</span></div>'+ 
+'<p class="sub2">Every question now shows <b>all four choices</b>. The correct choice is marked <b>✓ CORRECT</b> and the other three are marked <b>✕ WRONG</b>, followed by the explanation and memory cue.</p>'+ 
 '<div class="agtools"><button class="chip on" data-ag="all">ALL 150</button><button class="chip" data-ag="1">CH1 · 30</button><button class="chip" data-ag="2">CH2 · 30</button><button class="chip" data-ag="3">CH3 · 30</button><button class="chip" data-ag="4">CH4 · 30</button><button class="chip" data-ag="5">CH5 · 30</button><input class="agsearch" id="agSearch" type="search" placeholder="Search question, answer, or topic…"><span class="agcount" id="agCount">150 / 150</span></div>'+ 
 '<div class="aglist" id="agList"></div>';
 
@@ -77,16 +83,24 @@ function memory(q){
   var answer=String(q.o&&q.o[q.a]||""),keys=keywords(q.q);
   return q.__code+" — see “"+keys+"” → remember “"+answer+"”. "+shortReason(q);
 }
+function optionsHtml(q){
+  var letters=["A","B","C","D"],h="";
+  q.o.forEach(function(opt,i){
+    var ok=i===q.a;
+    h+='<div class="agopt '+(ok?'good':'bad')+'"><span class="letter">'+letters[i]+'.</span><span>'+esc(opt)+'</span><span class="mark">'+(ok?'✓ CORRECT':'✕ WRONG')+'</span></div>';
+  });
+  return '<div class="agopts">'+h+'</div>';
+}
 function render(){
   var src=active==="all"?ALL:banks[active]||[],t=term.toLowerCase();
-  var rows=src.filter(function(q){if(!t)return true;return [q.__code,q.q,q.o&&q.o[q.a],q.w,memory(q),CHNAME&&CHNAME[q.t]].join(" ").toLowerCase().indexOf(t)>-1;});
+  var rows=src.filter(function(q){if(!t)return true;return [q.__code,q.q].concat(q.o||[]).concat([q.w,memory(q),CHNAME&&CHNAME[q.t]]).join(" ").toLowerCase().indexOf(t)>-1;});
   var h="";
   rows.forEach(function(q){
     h+='<article class="agcard">'+
       '<div class="aghead"><span class="agcode">'+esc(q.__code)+'</span><span class="agch">CH'+esc(q.t)+' · '+esc(CHNAME[q.t])+'</span></div>'+ 
       '<div class="agq">'+esc(q.q)+'</div>'+ 
-      '<div class="agans"><b>✓ Correct answer</b><br>'+esc(q.o[q.a])+'</div>'+ 
-      '<div class="agexp"><b>Why this is correct:</b> '+esc(explanation(q))+'</div>'+ 
+      optionsHtml(q)+ 
+      '<div class="agexp"><b>Why the correct answer wins:</b> '+esc(explanation(q))+'</div>'+ 
       '<div class="agmemory"><b>Remember:</b> '+esc(memory(q))+'</div>'+ 
     '</article>';
   });
