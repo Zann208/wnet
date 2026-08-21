@@ -28,16 +28,16 @@ css.textContent='\
 #notes code{white-space:normal}\
 .chapter-anchor{scroll-margin-top:78px}\
 .chapter-anchor.chapter-focus{outline:2px solid color-mix(in srgb,var(--cy) 60%,transparent);outline-offset:7px;border-radius:5px}\
-#chapterIndex{position:sticky;top:55px;z-index:48;margin:16px 0 22px;padding:9px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line2);border-radius:11px}\
-.chiTitle{font:700 9px var(--mono);letter-spacing:1.1px;text-transform:uppercase;color:var(--faint);margin:0 3px 6px}\
+#chapterIndex{position:relative;top:auto;z-index:1;margin:16px 0 22px;padding:10px 11px;background:var(--panel);border:1px solid var(--line2);border-radius:11px;box-shadow:none}\
+.chiTitle{font:700 9px var(--mono);letter-spacing:1.1px;text-transform:uppercase;color:var(--faint);margin:0 3px 7px}\
 .chiRows{display:grid;gap:5px}\
 .chiRow{display:flex;gap:5px;align-items:center;overflow-x:auto;scrollbar-width:none}.chiRow::-webkit-scrollbar{display:none}\
 .chiChapter{flex:0 0 43px;border:0;background:transparent;color:var(--gr);font:800 10px var(--mono);text-align:left;padding:5px 4px}\
-.chiBtn{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);color:var(--dim);border-radius:6px;padding:5px 8px;font:700 9.5px var(--mono);cursor:pointer}.chiBtn:hover{border-color:var(--cy);color:var(--cy)}\
+.chiBtn{flex:0 0 auto;border:1px solid var(--line);background:var(--panel2);color:var(--dim);border-radius:6px;padding:5px 8px;font:700 9.5px var(--mono);cursor:pointer}.chiBtn:hover{border-color:var(--cy);color:var(--cy)}\
 .aglearn{margin-top:10px;border:1px solid var(--cy);background:transparent;color:var(--cy);border-radius:7px;padding:7px 10px;font:700 10px var(--mono);letter-spacing:.45px;cursor:pointer}.aglearn:hover{background:color-mix(in srgb,var(--cy) 8%,transparent)}\
 #backToGuide{position:fixed;right:16px;bottom:18px;z-index:58;display:none;border:1px solid var(--cy);background:color-mix(in srgb,var(--panel) 96%,transparent);backdrop-filter:blur(10px);color:var(--cy);border-radius:8px;padding:8px 11px;font:700 10px var(--mono);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.28)}\
 #backToGuide.on{display:block}\
-@media(max-width:760px){#notes .panel{padding:19px 17px;margin-top:18px}#chapterIndex{top:51px;margin-left:-4px;margin-right:-4px}.chiTitle{display:none}.chiRows{gap:3px}.chiRow{gap:4px}.chiChapter{flex-basis:38px}.chiBtn{padding:5px 7px}#backToGuide{right:10px;bottom:76px}}';
+@media(max-width:760px){#notes .panel{padding:19px 17px;margin-top:18px}#chapterIndex{margin:14px 0 18px;padding:8px}.chiTitle{display:none}.chiRows{gap:3px}.chiRow{gap:4px}.chiChapter{flex-basis:38px}.chiBtn{padding:5px 7px}#backToGuide{right:10px;bottom:76px}}';
 document.head.appendChild(css);
 
 var chapterNames={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security"};
@@ -64,7 +64,6 @@ function findSection(sec){
 }
 var targets={};Object.keys(sectionNames).forEach(function(sec){var el=findSection(sec);if(el){el.classList.add("chapter-anchor");el.dataset.courseSection=sec;targets[sec]=el;}});
 
-/* Compact chapter index */
 var idx=document.createElement("div");idx.id="chapterIndex";idx.innerHTML='<div class="chiTitle">Chapter quick navigation</div><div class="chiRows"></div>';
 var rows=idx.querySelector(".chiRows");
 ["1","2","3","4","5"].forEach(function(ch){
@@ -131,6 +130,5 @@ function wireGuide(){
 wireGuide();
 var ag=document.getElementById("agList");if(ag)new MutationObserver(function(){wireGuide()}).observe(ag,{childList:true,subtree:true});
 
-/* Hide the return button whenever Chapters is not active. */
 var obs=new MutationObserver(function(){if(!notes.classList.contains("on"))back.classList.remove("on")});obs.observe(notes,{attributes:true,attributeFilter:["class"]});
 })();
