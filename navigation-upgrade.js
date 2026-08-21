@@ -2,12 +2,62 @@
 (function(){
 if(window.__wnNavigationUpgradeLoaded)return;window.__wnNavigationUpgradeLoaded=true;
 
-/* Reset stale persistent scroll positions from earlier visits.
-   Keep scroll memory only for the current page session. */
+/* Section switching must never visibly animate through the page.
+   Each tab remembers only its position during the current page session. */
+var navStyle=document.createElement("style");
+navStyle.textContent='html.wn-instant-tabs{scroll-behavior:auto!important}';
+document.head.appendChild(navStyle);
+document.documentElement.classList.add("wn-instant-tabs");
+
+function instantScroll(y){
+  y=Math.max(0,Number(y)||0);
+  var root=document.documentElement,old=root.style.scrollBehavior;
+  root.style.scrollBehavior="auto";
+  window.scrollTo(0,y);
+  root.style.scrollBehavior=old;
+}
+
 try{if(window.store&&store.set)store.set("scrollMem",{});}catch(e){}
 try{scrollMem={};}catch(e){}
-try{saveScroll=function(){if(window.curTab||typeof curTab!=="undefined"){var id=(typeof curTab!=="undefined"?curTab:window.curTab);if(id)scrollMem[id]=window.scrollY;}};}catch(e){}
-setTimeout(function(){window.scrollTo({top:0,left:0,behavior:"auto"});},0);
+try{
+  saveScroll=function(){
+    var id=(typeof curTab!=="undefined")?curTab:null;
+    if(id)scrollMem[id]=window.scrollY;
+  };
+}catch(e){}
+
+/* Replace the original tab switcher. The original used scrollTo({behavior:'auto'}),
+   but the page CSS has scroll-behavior:smooth, so 'auto' still animated. */
+try{
+  showTab=function(id,toTop){
+    if(id!==curTab)saveScroll();
+    curTab=id;
+    restoring=true;
+
+    document.querySelectorAll("section.tab").forEach(function(s){s.classList.toggle("on",s.id===id)});
+    tabs.forEach(function(b){b.classList.toggle("on",b.dataset.tab===id)});
+
+    var rail=(id==="notes");
+    document.body.classList.toggle("hasrail",rail);
+    var sb=document.getElementById("sbT");if(sb)sb.style.display=rail?"":"none";
+    if(!rail&&typeof closeSb==="function")closeSb();
+    if(rail&&typeof buildRail==="function")buildRail();
+
+    instantScroll(toTop?0:(scrollMem[id]||0));
+
+    /* A second instant correction after layout settles prevents height changes
+       from nudging the restored position, but it is still never animated. */
+    requestAnimationFrame(function(){
+      instantScroll(toTop?0:(scrollMem[id]||0));
+      restoring=false;
+      if(rail&&typeof syncRail==="function")syncRail();
+    });
+    if(id==="home"&&typeof refreshReady==="function")refreshReady();
+  };
+}catch(e){}
+
+/* Start clean after a reload. */
+instantScroll(0);
 
 var drills=document.getElementById("drills");
 if(!drills)return;
@@ -60,7 +110,7 @@ document.body.appendChild(nav);
 function jumpTo(el){
   if(!el)return;
   var y=el.getBoundingClientRect().top+window.scrollY-72;
-  window.scrollTo({top:Math.max(0,y),behavior:"smooth"});
+  instantScroll(y);
 }
 function visibleCards(){return Array.from(document.querySelectorAll("#agList .agcard"));}
 function syncSlider(reset){
@@ -72,7 +122,7 @@ function syncSlider(reset){
 function selectGuideChapter(ch){
   var b=document.querySelector('[data-ag="'+ch+'"]');
   if(b)b.click();
-  setTimeout(function(){syncSlider(true);jumpTo(document.getElementById("answerGuide"));},80);
+  setTimeout(function(){syncSlider(true);jumpTo(document.getElementById("answerGuide"));},30);
 }
 
 nav.querySelectorAll("[data-jump]").forEach(function(b){
@@ -91,12 +141,11 @@ var slider=document.getElementById("djSlider"),sliderTimer=0;
 slider.addEventListener("input",function(){
   syncSlider(false);
   clearTimeout(sliderTimer);
-  sliderTimer=setTimeout(function(){var cards=visibleCards(),i=parseInt(slider.value,10)-1;if(cards[i])jumpTo(cards[i]);},55);
+  sliderTimer=setTimeout(function(){var cards=visibleCards(),i=parseInt(slider.value,10)-1;if(cards[i])jumpTo(cards[i]);},20);
 });
 
-/* If the answer-guide filter changes by its own buttons, keep the scrubber accurate. */
 if(guide){
-  guide.addEventListener("click",function(e){if(e.target&&e.target.matches&&e.target.matches("[data-ag]"))setTimeout(function(){syncSlider(true);},40);});
+  guide.addEventListener("click",function(e){if(e.target&&e.target.matches&&e.target.matches("[data-ag]"))setTimeout(function(){syncSlider(true);},30);});
 }
 
 function activeTab(){var s=document.querySelector("section.tab.on");return s?s.id:"";}
@@ -105,7 +154,6 @@ var mo=new MutationObserver(updateVisibility);
 document.querySelectorAll("section.tab").forEach(function(s){mo.observe(s,{attributes:true,attributeFilter:["class"]});});
 updateVisibility();
 
-/* Keyboard convenience inside Drills: [ and ] move one visible guide card. */
 document.addEventListener("keydown",function(e){
   if(activeTab()!=="drills"||e.target.matches("input,textarea,select"))return;
   if(e.key!=="["&&e.key!=="]")return;
