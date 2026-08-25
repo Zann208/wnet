@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>WNET // 269430 RF Console</title>
+<title>WNET RF Console</title>
 <style>html,body{margin:0;min-height:100%;background:#060a12;color:#e6edf7;font:14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}#boot{min-height:100vh;display:grid;place-items:center;color:#8fa3c0;letter-spacing:.08em}a{color:#22d3ee}</style>
 </head>
 <body>
@@ -28,6 +28,7 @@ var addon='<script src="./midterm-q1.js?v=20260817"><\/script>'+
 '<script src="./chapter-layout.js?v=20260821-strongsplit"><\/script>'+ 
 '<script src="./question-study.js?v=20260822-exact"><\/script>'+ 
 '<script src="./course-switcher-hackathon.js?v=20260825"><\/script>'+ 
+'<script src="./course-code-privacy.js?v=20260825"><\/script>'+ 
 '<script src="./wifi-logo.js?v=20260817"><\/script>';
 if(html.indexOf("</body>")>-1)html=html.replace("</body>",addon+"</body>");else html+=addon;
 document.open();document.write(html);document.close();
