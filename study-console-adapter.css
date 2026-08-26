@@ -1,0 +1,10 @@
+body[data-study-console="wnet"]{background-image:none!important}
+body[data-study-console="wnet"] .wrap{width:min(100% - 32px,1120px)!important;max-width:1120px!important}
+body[data-study-console="wnet"] #sb{background:var(--sc-surface)!important;border-color:var(--sc-line)!important}
+body[data-study-console="wnet"] #sbT{background:var(--sc-surface)!important;color:var(--sc-text)!important;border-color:var(--sc-line)!important}
+body[data-study-console="wnet"] h1 .pre{font-family:inherit!important;color:var(--sc-accent)!important;letter-spacing:.03em!important}
+body[data-study-console="wnet"] .stats,body[data-study-console="wnet"] .stat{filter:saturate(.45)}
+body[data-study-console="wnet"] .ph{background:var(--sc-surface-2)!important;border-color:var(--sc-line)!important}
+body[data-study-console="wnet"] .pipe{gap:8px!important}
+body[data-study-console="wnet"] .pnode{background:var(--sc-surface)!important;border-color:var(--sc-line)!important}
+@media(max-width:760px){body[data-study-console="wnet"] .wrap{width:calc(100% - 20px)!important}body[data-study-console="wnet"] .pipe{grid-template-columns:1fr!important}body[data-study-console="wnet"] .parrow{transform:rotate(90deg)}}
