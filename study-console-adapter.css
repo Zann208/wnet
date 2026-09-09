@@ -1,10 +1,16 @@
 body[data-study-console="wnet"]{background-image:none!important}
-body[data-study-console="wnet"] .wrap{width:min(100% - 32px,1120px)!important;max-width:1120px!important}
+body[data-study-console="wnet"] .wrap{width:min(100% - 32px,1200px)!important;max-width:1200px!important}
 body[data-study-console="wnet"] #sb{background:var(--sc-surface)!important;border-color:var(--sc-line)!important}
 body[data-study-console="wnet"] #sbT{background:var(--sc-surface)!important;color:var(--sc-text)!important;border-color:var(--sc-line)!important}
 body[data-study-console="wnet"] h1 .pre{font-family:inherit!important;color:var(--sc-accent)!important;letter-spacing:.03em!important}
-body[data-study-console="wnet"] .stats,body[data-study-console="wnet"] .stat{filter:saturate(.45)}
 body[data-study-console="wnet"] .ph{background:var(--sc-surface-2)!important;border-color:var(--sc-line)!important}
 body[data-study-console="wnet"] .pipe{gap:8px!important}
 body[data-study-console="wnet"] .pnode{background:var(--sc-surface)!important;border-color:var(--sc-line)!important}
 @media(max-width:760px){body[data-study-console="wnet"] .wrap{width:calc(100% - 20px)!important}body[data-study-console="wnet"] .pipe{grid-template-columns:1fr!important}body[data-study-console="wnet"] .parrow{transform:rotate(90deg)}}
+
+/* The subject tabs stay reachable without wrapping into overlapping rows. */
+body[data-study-console="wnet"] .navin{overflow-x:auto;scrollbar-width:thin}
+body[data-study-console="wnet"] .navin>.tabbtn{flex:0 0 auto}
+body[data-study-console="wnet"] #drillJump{background:var(--sc-surface);box-shadow:var(--sc-shadow)}
+body[data-study-console="wnet"] .djbtn{min-height:40px;font:600 .875rem var(--sc-sans)}
+body[data-study-console="wnet"] .djtitle,body[data-study-console="wnet"] .djhint,body[data-study-console="wnet"] .djrange label{font-family:var(--sc-sans);font-size:.75rem;letter-spacing:0}
