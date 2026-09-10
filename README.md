@@ -1,6 +1,6 @@
 # WNET — Wireless Networks Study Console
 
-Offline, single-file study console for **269430 Wireless & Broadband Computer Networks** at Chiang Mai University.
+Offline, single-file study console for **Wireless & Broadband Computer Networks** at Chiang Mai University.
 
 **→ [Live](https://zann208.github.io/wnet/)** · part of [my semester consoles](https://zann208.github.io/study)
 
@@ -31,4 +31,4 @@ git clone https://github.com/Zann208/wnet.git && open wnet/index.html
 The explanations are my own restatement of the course material, written for comprehension. Lecture handouts and figures belong to the course instructor and are not redistributed here.
 
 ---
-Built by **Zann** — [portfolio](https://zann208.github.io) · [email](mailto:thuhtoozan_1@cmu.ac.th)
+[Study Console](https://zann208.github.io/study/)
