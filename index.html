@@ -9,7 +9,7 @@
 :root{
   --bg:#060a12; --bg2:#0a0f1c; --panel:#0d1524; --panel2:#111b2e;
   --ink:#e6edf7; --dim:#8fa3c0; --faint:#5d708e;
-  --cy:#22d3ee; --gr:#34d399; --am:#fbbf24; --rd:#f87171; --vi:#a78bfa;
+  --cy:#22d3ee; --gr:#34d399; --am:#fbbf24; --rd:#f87171; --vi:#a78bfa; --sk:#38bdf8; --pk:#f472b6; --or:#fb923c;
   --line:#1e2b44; --line2:#2b3d5c;
   --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -17,7 +17,7 @@
 body.light{
   --bg:#eef2f8; --bg2:#e6ecf5; --panel:#ffffff; --panel2:#f4f7fc;
   --ink:#0f1b2d; --dim:#4f6180; --faint:#7c8ca6;
-  --cy:#0891b2; --gr:#059669; --am:#b45309; --rd:#dc2626; --vi:#7c3aed;
+  --cy:#0891b2; --gr:#059669; --am:#b45309; --rd:#dc2626; --vi:#7c3aed; --sk:#0369a1; --pk:#be185d; --or:#c2410c;
   --line:#d3dceb; --line2:#bcc9de;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -177,6 +177,18 @@ tbody tr:hover{background:var(--panel2)}
 .box.dgr{background:color-mix(in srgb,var(--rd) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--rd) 28%,transparent)}
 .box.dgr b:first-child{color:var(--rd)}
 .panel.pr::before{background:var(--rd)}
+.badge.sk{color:var(--sk);border-color:var(--sk)}.badge.pk{color:var(--pk);border-color:var(--pk)}.badge.or{color:var(--or);border-color:var(--or)}
+.gcard.c6 .id{color:var(--sk);border-color:color-mix(in srgb,var(--sk) 45%,transparent)}
+.gcard.c7 .id{color:var(--pk);border-color:color-mix(in srgb,var(--pk) 45%,transparent)}
+.gcard.c8 .id{color:var(--or);border-color:color-mix(in srgb,var(--or) 45%,transparent)}
+.item.c6{border-left:2px solid color-mix(in srgb,var(--sk) 55%,transparent)}
+.item.c7{border-left:2px solid color-mix(in srgb,var(--pk) 55%,transparent)}
+.item.c8{border-left:2px solid color-mix(in srgb,var(--or) 55%,transparent)}
+#notes article.item.c6>.ph{border-left-color:var(--sk)}
+#notes article.item.c7>.ph{border-left-color:var(--pk)}
+#notes article.item.c8>.ph{border-left-color:var(--or)}
+.p6 h2.sec .num{color:var(--sk)}.p7 h2.sec .num{color:var(--pk)}.p8 h2.sec .num{color:var(--or)}
+.panel.p6::before{background:var(--sk)}.panel.p7::before{background:var(--pk)}.panel.p8::before{background:var(--or)}
 .tag{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto;white-space:nowrap}
 .tldr{margin-top:12px;background:var(--panel2);border-left:2px solid var(--cy);border-radius:0 8px 8px 0;padding:10px 14px;font-size:15.5px;font-weight:600}
 .box{border-radius:8px;padding:11px 14px;margin-top:11px;font-size:14.5px;line-height:1.6}
@@ -381,13 +393,13 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
-  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Five chapters. One console.</h1>
-  <p class="lede">Built from your own CH1–CH5 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Term 1/2569.</p>
+  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Eight chapters. One console.</h1>
+  <p class="lede">Built from your own CH1–CH8 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Term 1/2569.</p>
 
   <div class="stats">
-    <div class="stat"><b>5</b><span>Chapters</span></div>
-    <div class="stat g"><b>16</b><span>Sections</span></div>
-    <div class="stat a"><b>6</b><span>Equations</span></div>
+    <div class="stat"><b>8</b><span>Chapters</span></div>
+    <div class="stat g"><b>27</b><span>Sections</span></div>
+    <div class="stat a"><b>10</b><span>Equations</span></div>
     <div class="stat v"><b id="sCards">—</b><span>Cards</span></div>
     <div class="stat"><b id="sQs">—</b><span>Quiz Qs</span></div>
   </div>
@@ -397,7 +409,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <div class="row" style="align-items:flex-start;gap:24px">
       <div class="ringwrap"><svg class="ring" viewBox="0 0 110 110"><circle class="rbg" cx="55" cy="55" r="50"/><circle class="rfg" id="ringFg" cx="55" cy="55" r="50"/></svg><div class="rtx" id="readyPct">0%</div></div>
       <div class="bars">
-        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/16</span></div>
+        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/27</span></div>
         <div class="bar"><span class="bl">CARDS</span><span class="bt"><i id="bCard"></i></span><span class="bv" id="vCard">0</span></div>
         <div class="bar"><span class="bl">BEST QUIZ</span><span class="bt"><i id="bQuiz"></i></span><span class="bv" id="vQuiz">—</span></div>
       </div>
@@ -447,7 +459,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ MAP ============ -->
 <section class="tab" id="map"><div class="wrap">
-  <h1><span class="pre">// COURSE PIPELINE</span>How the five chapters fit together</h1>
+  <h1><span class="pre">// COURSE PIPELINE</span>How the eight chapters fit together</h1>
   <p class="lede">Each chapter answers one question about the same network. Read them as one story, not five topics.</p>
 
   <div class="panel">
@@ -480,6 +492,26 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </table></div>
   </div>
 
+  <div class="panel p7">
+    <div class="ph"><h2>Chapters 6–8: the wired and low-power side</h2><span class="badge pk right">new</span></div>
+    <div class="pipe" style="grid-template-columns:1fr auto 1fr auto 1fr">
+      <div class="pnode"><div class="ic">[6]</div><b>LPWAN</b><span>tiny devices, long reach</span></div>
+      <div class="parrow">▶</div>
+      <div class="pnode"><div class="ic">[7]</div><b>Broadband architecture</b><span>access, aggregation, core</span></div>
+      <div class="parrow">▶</div>
+      <div class="pnode"><div class="ic">[8]</div><b>Broadband design</b><span>forecast, topology, operate</span></div>
+    </div>
+    <div class="box wild"><b>The through-line</b>Again the headline number lies, and the shared resource moves. Ch6: coverage and battery matter more than speed, and scaling breaks at the airtime and downlink you forgot. Ch7: fiber has huge capacity, yet oversubscription, splitter loss and policy decide what users get. Ch8: availability and operations decide whether the design holds after launch.</div>
+    <div class="tscroll"><table>
+      <tr><th>Idea</th><th>Ch 6</th><th>Ch 7</th><th>Ch 8</th><th>Earlier chapters</th></tr>
+      <tr><td><b>Shared resource is the real limit</b></td><td class="ok">airtime, downlink windows</td><td class="ok">O = N·R / Ruplink, PON slots</td><td class="ok">busy-hour forecast</td><td class="ok">Ch4 air time and capacity</td></tr>
+      <tr><td><b>Overhead eats the budget</b></td><td class="ok">ACKs, joins, retries</td><td class="ok">connector and splitter loss</td><td>—</td><td class="ok">Ch1 overhead frames</td></tr>
+      <tr><td><b>Segmentation and separation</b></td><td class="ok">IoT segment for ECHONET</td><td class="ok">VRFs, label stacks</td><td class="ok">logical topology</td><td class="ok">Ch5 blast radius</td></tr>
+      <tr><td><b>Policy over raw speed</b></td><td class="ok">duty-cycle rules</td><td class="ok">BGP LOCAL_PREF</td><td class="ok">SLA tiers</td><td class="ok">Ch2 suitability vs capability</td></tr>
+      <tr><td><b>Fit beats newest</b></td><td class="ok">NB-IoT vs LTE-M vs LoRaWAN</td><td class="ok">fiber vs hybrid vs wireless</td><td class="ok">phased vs full rollout</td><td class="ok">Ch2 standards choice</td></tr>
+    </table></div>
+  </div>
+
   <div class="panel pg">
     <div class="ph"><h2>Assignment map</h2></div>
     <div class="tscroll"><table>
@@ -489,8 +521,11 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono">A3?</td><td>Chapter 3 exercises</td><td>likely same format</td><td class="mono">6 candidates ready</td></tr>
       <tr><td class="mono">A4?</td><td>Chapter 4 exercises</td><td>likely same format</td><td class="mono">5 candidates ready</td></tr>
       <tr><td class="mono">A5?</td><td>Chapter 5 exercises</td><td>likely same format</td><td class="mono">6 candidates ready</td></tr>
+      <tr><td class="mono">A6?</td><td>Chapter 6 exercises</td><td>likely same format</td><td class="mono">6 candidates ready</td></tr>
+      <tr><td class="mono">A7?</td><td>Chapter 7 exercises</td><td>likely same format</td><td class="mono">11 candidates ready</td></tr>
+      <tr><td class="mono">A8?</td><td>Chapter 8 exercises</td><td>likely same format</td><td class="mono">5 candidates ready</td></tr>
     </table></div>
-    <p class="sub2" style="margin-top:9px">Every exercise from all five chapters has a hint or outline in its chapter section — and A1 / A2 have full pages in <b>ASSIGNMENTS</b>.</p>
+    <p class="sub2" style="margin-top:9px">Every exercise from all eight chapters has a hint or outline in its chapter section — and A1 / A2 have full pages in <b>ASSIGNMENTS</b>.</p>
   </div>
 
   <div class="panel pa">
@@ -509,7 +544,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 </div></section>
 <!-- ============ CHAPTERS ============ -->
 <section class="tab" id="notes"><div class="wrap">
-  <h1><span class="pre">// CHAPTER NOTES</span>16 sections, in plain words</h1>
+  <h1><span class="pre">// CHAPTER NOTES</span>27 sections, in plain words</h1>
   <p class="lede">Each section: a one-line summary, <b>short form</b> for revision, examples, and a <b>long form</b> you open only when you want depth. Use <b>‹ ›</b> in the bar above or <b>J / K</b> to move.</p>
 
   <!-- ===== 1.1 ===== -->
@@ -1236,11 +1271,474 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </div></details>
     <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t54"> mark done</label><button class="btn" data-drill="5">drill ch5 cards →</button></div>
   </article>
+
+  <!-- ===== 6.1 ===== -->
+  <article class="item c6" id="t61">
+    <div class="ph"><span class="badge sk">6.1</span><h3>LPWAN goals, traffic and energy</h3><span class="tag">CH6 · LPWAN</span></div>
+    <p class="tldr">An LPWAN is judged by how long a small device can sit unattended and still be heard from far away. Peak speed barely matters.</p>
+
+    <h4>Coverage and battery beat throughput</h4>
+    <p><b>Short form:</b> broadband wireless is graded on speed and latency. LPWAN is graded on <b>range, battery life and cost per device</b>, so it gives up throughput on purpose. Design starts from the application's reporting pattern, not from the radio's bit rate.</p>
+    <div class="box anl"><b>Think of it like</b>A water-meter reader versus a courier van. The van is fast and carries a lot, but it needs fuel every day. The meter reader walks slowly with a notebook and still finishes the year without refuelling.</div>
+    <div class="box wild"><b>Key idea</b>Lifecycle counts as part of the engineering. A radio that is slightly better but doubles the battery-replacement visits is the worse design in practice.</div>
+
+    <h4>Traffic characteristics</h4>
+    <p><b>Short form:</b> small payloads, sent rarely, mostly <b>uplink</b>. A device wakes, measures, sends and goes back to sleep. Timing can be periodic (smart meter), event-driven (alarm) or a mix (asset tracker that changes behaviour when it moves).</p>
+    <ul class="pts">
+      <li><b>Overhead matters more than usual.</b> With a few bytes of payload, headers, joins, ACKs and retries can eat a large share of airtime and energy.</li>
+      <li>The right question is how much useful information you get per unit of battery energy and airtime, not how many bits per second the link can carry.</li>
+      <li><b>Periodic vs alarm-driven:</b> a river sensor with a 12-byte hourly reading values endurance and reach. A vaccine cold-chain monitor sends routine updates too, but the rare alarm must arrive reliably and on time.</li>
+    </ul>
+    <div class="box dgr"><b>Characterise traffic before choosing technology</b>Two "LPWAN" applications can have totally different success criteria. Pick the technology after you know the pattern.</div>
+
+    <h4>Preamble and CAD</h4>
+    <p><b>Short form:</b> a low-power receiver cannot stay awake all the time. The <b>preamble</b> is a known pattern at the start of a frame that lets a receiver notice a packet, line up its timing and get ready for the payload. <b>CAD (channel activity detection)</b> is a very short wake-up to check whether such a pattern is on the air. Nothing there, back to sleep. Something there, stay awake and receive.</p>
+    <ul class="pts">
+      <li><b>Longer preamble</b> → easier for a sleepy receiver to catch, but more transmitter airtime and energy.</li>
+      <li><b>More frequent CAD</b> → quicker response to downlink, but more receiver energy.</li>
+      <li><b>Less frequent CAD</b> → saves power, but needs a longer preamble or risks missed packets.</li>
+    </ul>
+    <p><b>Worked numbers:</b> CAD every 2 s with 20 ms awake costs 20/2000 = <b>1%</b> of time. Every 1 s it costs 20/1000 = <b>2%</b>, so receiver listening cost doubles. In return the preamble might drop from 1.2 s to about 0.6 s, which saves transmitter airtime. Tune CAD interval and preamble length <b>together</b>.</p>
+    <div class="box trap"><b>Common slip</b>Treating preamble as wasted overhead. In a duty-cycled system it is the thing that makes intermittent reception possible at all.</div>
+
+    <h4>Energy: Eq 6.1</h4>
+    <p><b>Short form:</b> <b>L = E<sub>battery</sub> / P<sub>avg</sub></b>. With a fixed battery, lifetime goes up only when average power goes down. Average power is a weighted mix of sleep, sensing, transmit, receive and retries, so what you control is <b>how often and how long</b> the expensive states happen.</p>
+    <div class="box anl"><b>Worked example</b>Battery 2400 mAh at 3.6 V ≈ 8.64 Wh. Sleep 5 µA, active 40 mA, duty cycle 0.1%. Average current ≈ 0.999×0.005 + 0.001×40 ≈ 0.045 mA, so life ≈ 2400 / 0.045 ≈ 53,000 h ≈ <b>6 years</b>. Raise the duty cycle to 1% and the average current is about 0.405 mA, giving only <b>0.7 years</b>. A tenfold duty-cycle change cut the life by roughly nine times. The RF Lab has this calculator.</div>
+    <ul class="pts">
+      <li>Poor link quality causes retransmissions, which raise average power. A winter fade can break an 8-year battery target.</li>
+      <li>Levers: transmit less, process locally and send only meaningful events, avoid downlink dependence, keep coverage margin so retries stay rare.</li>
+    </ul>
+    <details><summary>▸ chapter 6 exercises 1, 4, 6 (energy, traffic, CAD)</summary><div class="dbody">
+      <p><b>1</b> Duty cycling and lifetime (Eq 6.1) → L = E/Pavg. Duty cycling lowers Pavg by keeping the radio asleep most of the time, so L rises. Show the numbers (0.1% vs 1%). Caveat: the sleep current sets a floor, and retries or long listening windows push Pavg back up.</p>
+      <p><b>4</b> Alarm-driven vs periodic metering → periodic: predictable, can be scheduled and staggered, so airtime and battery are easy to plan. Alarm: long silence, then urgent bursts that may arrive together, so reliability, latency and collision handling matter more. Design consequence: separate routine telemetry from critical exception events.</p>
+      <p><b>6</b> CAD interval and preamble length (Fig 6.2) → shorter CAD interval: faster response, more receiver energy. Longer preamble: better detection by a sleeping receiver, more transmitter airtime. They trade off against each other, and regulatory airtime limits cap the preamble side.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t61"> mark done</label><button class="btn" data-drill="6">drill ch6 cards →</button></div>
+  </article>
+
+  <!-- ===== 6.2 ===== -->
+  <article class="item c6" id="t62">
+    <div class="ph"><span class="badge sk">6.2</span><h3>LPWAN technologies: unlicensed vs cellular</h3><span class="tag">CH6 · LPWAN</span></div>
+    <p class="tldr">The real split is who owns the network. Unlicensed means you run it yourself. Cellular means an operator runs it for you.</p>
+
+    <div class="tscroll"><table>
+      <tr><th>Technology</th><th>Spectrum</th><th>Strength</th><th>Limitation</th></tr>
+      <tr><td class="mono ok">LoRaWAN</td><td>Unlicensed</td><td>Flexible private deployment</td><td>Duty-cycle constraints</td></tr>
+      <tr><td class="mono ok">Sigfox</td><td>Unlicensed</td><td>Very low energy messaging</td><td>Limited payload flexibility</td></tr>
+      <tr><td class="mono ok">NB-IoT</td><td>Licensed</td><td>Strong operator coverage</td><td>Operator dependency</td></tr>
+      <tr><td class="mono ok">LTE-M</td><td>Licensed</td><td>Better mobility support than LoRaWAN</td><td>Higher complexity</td></tr>
+    </table></div>
+
+    <h4>Unlicensed LPWAN</h4>
+    <p><b>Short form:</b> low barrier to entry. You place gateways where <em>you</em> need coverage, on your own schedule, with no operator. Good for factories, campuses, ports, farms and utilities that want local control. The price is <b>uncertainty</b>: shared spectrum means unpredictable interference, and <b>regulatory duty-cycle limits</b> cap how often you can transmit and how freely you can send acknowledgments.</p>
+    <ul class="pts">
+      <li>LoRaWAN performance depends on gateway placement, spreading-factor behaviour and channel occupancy. A campus energy-metering project may need only a few well-placed gateways; a dense city with many independent systems needs more tuning.</li>
+      <li>Treat radio planning as an ongoing operational task, not a one-time install.</li>
+    </ul>
+
+    <h4>Cellular LPWAN (NB-IoT, LTE-M)</h4>
+    <p><b>Short form:</b> licensed spectrum (less outside interference), operator-run sites for wide reach, and built-in subscriber identity for managing huge fleets. Chosen when devices are spread across regions or move, and you would rather buy a managed service than build gateways.</p>
+    <ul class="pts">
+      <li><b>NB-IoT:</b> low-rate, stationary or delay-tolerant devices that need deep coverage and tight energy use. Think a gas meter in a basement.</li>
+      <li><b>LTE-M:</b> somewhat higher data rate, lower latency, mobility support. Think a medical asset tracker being carried around.</li>
+      <li><b>Costs:</b> dependence on operator coverage, tariffs and network evolution; module certification and SIM provisioning are more involved.</li>
+    </ul>
+    <div class="box wild"><b>Key idea</b>Never say one technology is "best". Match it to the application's mobility, ownership model, spectrum environment and service guarantees. Static rural monitoring can use cheap private gateways; tracking moving assets nationwide favours the operator.</div>
+    <div class="box trap"><b>Don't mix up</b>NB-IoT is for stationary, delay-tolerant, deep-coverage use. LTE-M is the one with mobility and higher rate. LoRaWAN is the one with duty-cycle limits. Sigfox is the one with limited payload flexibility.</div>
+    <details><summary>▸ chapter 6 exercise 2 (rural environmental monitoring)</summary><div class="dbody">
+      <p><b>2</b> Unlicensed vs licensed for rural monitoring → unlicensed (LoRaWAN): own gateways, no subscription per device, you decide the coverage, but you handle interference, duty-cycle limits and maintenance. Licensed (NB-IoT): no gateways to build and clean spectrum, but you depend on operator coverage in remote areas plus module and subscription cost. Static, delay-tolerant sensors in a district often suit private gateways; if the operator already covers the area well, NB-IoT removes the operating work.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t62"> mark done</label><button class="btn" data-drill="6">drill ch6 cards →</button></div>
+  </article>
+
+  <!-- ===== 6.3 ===== -->
+  <article class="item c6" id="t63">
+    <div class="ph"><span class="badge sk">6.3</span><h3>Architecture, applications and scalability</h3><span class="tag">CH6 · LPWAN</span></div>
+    <p class="tldr">LPWAN is an end-to-end pipeline. A packet that reaches the gateway has not yet reached a working service.</p>
+
+    <h4>The pipeline</h4>
+    <svg class="topo" viewBox="0 0 720 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LPWAN architecture: sensors to gateway to network server to applications">
+      <g font-family="ui-monospace,monospace" font-size="13" font-weight="700" text-anchor="middle">
+        <rect x="20" y="35" width="130" height="50" rx="9" fill="none" stroke="#38bdf8" stroke-width="2"/><text x="85" y="65" fill="#38bdf8">Sensors</text>
+        <rect x="210" y="35" width="130" height="50" rx="9" fill="none" stroke="#34d399" stroke-width="2"/><text x="275" y="65" fill="#34d399">Gateway / BS</text>
+        <rect x="400" y="35" width="130" height="50" rx="9" fill="none" stroke="#fbbf24" stroke-width="2"/><text x="465" y="65" fill="#fbbf24">Network server</text>
+        <rect x="590" y="35" width="110" height="50" rx="9" fill="none" stroke="#a78bfa" stroke-width="2"/><text x="645" y="65" fill="#a78bfa">Applications</text>
+        <g stroke="#94a3b8" stroke-width="2" fill="#94a3b8"><line x1="150" y1="60" x2="205" y2="60"/><path d="M205 55l8 5-8 5z"/><line x1="340" y1="60" x2="395" y2="60"/><path d="M395 55l8 5-8 5z"/><line x1="530" y1="60" x2="585" y2="60"/><path d="M585 55l8 5-8 5z"/></g>
+      </g>
+    </svg>
+    <p><b>Short form:</b> three concerns kept apart. <b>Field communication</b> (simple, low-energy devices), <b>network coordination</b> (gateways turn weak sporadic transmissions into steady upstream traffic; the server handles identity, deduplication, security policy and queuing) and <b>application integration</b>. A good radio link can still end in a failed service if the backend routing, event processing or security is poor.</p>
+
+    <h4>MQTT and ECHONET Lite over Wi-Fi</h4>
+    <ul class="pts">
+      <li><b>MQTT:</b> publish/subscribe. Devices publish to named <b>topics</b> on a <b>broker</b>; applications subscribe. Sensors and consumers are decoupled. Over Wi-Fi the path is 802.11 frame → IP → TCP → MQTT, so Wi-Fi quality still affects delay, loss recovery, battery and reconnects. Local broker = low latency and works through Internet outages; cloud broker = easy wide-area integration; hybrids bridge selected topics.</li>
+      <li><b>ECHONET Lite:</b> an application protocol for home automation and energy. Appliances are <b>objects with properties</b> a controller can read, write or get notified about (air conditioners, batteries, EV chargers, meters). Wi-Fi is only the IP path. Local discovery and control matter because it should work without the cloud.</li>
+      <li><b>Security for ECHONET:</b> Wi-Fi encryption keeps outsiders off the radio link but does not decide which authenticated client may control which appliance. Put energy devices on an IoT segment, restrict controllers, disable unneeded remote access, update firmware, monitor discovery/control traffic, and authenticate both sides of any cloud gateway.</li>
+      <li><b>Why Wi-Fi at all?</b> More throughput and lower delay than LPWAN, at the cost of more energy and denser infrastructure.</li>
+    </ul>
+
+    <h4>Monitoring applications</h4>
+    <p><b>Short form:</b> water level, soil moisture, air quality, tank fill, pump status and equipment temperature change over minutes or hours, so breadth (many cheap points) beats high-rate streams from a few. Keep <b>ordinary telemetry</b> and <b>critical exception events</b> distinct even when they share a fleet: an hourly tank report can still need an urgent overflow alarm.</p>
+
+    <h4>Scalability</h4>
+    <p><b>Short form:</b> capacity depends on <b>gateway density, channel occupancy, acknowledgment policy and uplink/downlink asymmetry</b>, not on coverage radius alone. Assess both energy and airtime efficiency.</p>
+    <ul class="pts">
+      <li><b>Uplink bias:</b> LPWANs are built for devices that report. Downlink windows are scarcer, cost more airtime and depend on when a device is awake. So commands, firmware updates and acknowledgment-heavy workflows scale badly.</li>
+      <li><b>Pilot trap:</b> 50 devices rarely collide, 50,000 do. Synchronised reporting (rush hour for parking sensors) creates bursts. Fix by staggering transmissions, placing gateways well, ACKing sparingly, and planning from the mature-deployment traffic model.</li>
+    </ul>
+    <div class="box dgr"><b>Failure story</b>Pilot works → city-wide rollout → collisions rise → retries raise average power → battery life shrinks. The scaling problem shows up as an energy problem.</div>
+    <details><summary>▸ chapter 6 exercises 3 and 5 (uplink bias, pilot to scale)</summary><div class="dbody">
+      <p><b>3</b> Why optimise uplink more → devices are reporters, downlink needs the receiver awake (energy) and uses scarce airtime, and a protocol that must answer every uplink does not scale. Design around rare, high-value downlink.</p>
+      <p><b>5</b> Pilot to tens of thousands → contention and collisions grow, retransmissions burn battery, gateways and backend load increase, synchronised reporting makes bursts, and downlink/ACK habits that were harmless at 300 devices now saturate. Redesign: staggering, gateway density, fewer ACKs, backend capacity, and device management at scale.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t63"> mark done</label><button class="btn" data-drill="6">drill ch6 cards →</button></div>
+  </article>
+
+  <!-- ===== 7.1 ===== -->
+  <article class="item c7" id="t71">
+    <div class="ph"><span class="badge pk">7.1</span><h3>Access, aggregation and core layers</h3><span class="tag">CH7 · Broadband</span></div>
+    <p class="tldr">Broadband is a hierarchy. Many slow customer links feed a metro aggregation network, which feeds a fast IP core. Fiber is what holds the layers together.</p>
+
+    <svg class="topo" viewBox="0 0 720 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broadband hierarchy: customer to access to aggregation to core">
+      <g font-family="ui-monospace,monospace" font-size="13" font-weight="700" text-anchor="middle">
+        <rect x="200" y="12" width="320" height="38" rx="9" fill="none" stroke="#f472b6" stroke-width="2"/><text x="360" y="36" fill="#f472b6">Core: transport, interconnect, reachability</text>
+        <rect x="150" y="68" width="420" height="38" rx="9" fill="none" stroke="#fbbf24" stroke-width="2"/><text x="360" y="92" fill="#fbbf24">Aggregation / metro: consolidate and apply policy</text>
+        <rect x="100" y="124" width="520" height="38" rx="9" fill="none" stroke="#34d399" stroke-width="2"/><text x="360" y="148" fill="#34d399">Access: fiber, cable, DSL, fixed wireless, PON</text>
+        <text x="360" y="182" fill="#94a3b8" font-weight="600" font-size="12">Customer premises / end users</text>
+      </g>
+    </svg>
+
+    <h4>Why fiber is the structural backbone</h4>
+    <p><b>Short form:</b> whatever the last-mile medium is (copper, coax, radio), the traffic of many users has to move over metropolitan distances, and only optical fiber does that economically. Fiber gives huge bandwidth, low attenuation, immunity to electromagnetic interference and long reach without regeneration. It also separates the <b>cable plant's life</b> (decades) from the <b>electronics' life</b> (upgrade by swapping optics, wavelengths or split strategy).</p>
+
+    <h4>Access networks</h4>
+    <p><b>Short form:</b> access connects users to the provider edge. Options are fiber, cable, DSL, fixed wireless and PON. Fiber to the home also holds up over long local-loop distances where copper would collapse.</p>
+    <div class="box anl"><b>PON in one line</b>One OLT port in the central office shares a feeder fiber through a <b>passive splitter</b> to many ONTs. No powered electronics in the field. Upstream is shared in time slots, so the planning issues are split ratio, optical budget and upstream contention. A 1:32 versus 1:64 split trades capital efficiency against per-subscriber margin and reach.</div>
+    <div class="box wild"><b>Greenfield vs old neighbourhood</b>New housing: run full fiber from the start. Older area: fiber to a cabinet and keep legacy copper or coax for now. Both are access decisions. The first uses optics as the whole medium, the second uses them as a staged upgrade anchor.</div>
+
+    <h4>Connectors are a service issue</h4>
+    <p><b>Short form:</b> connector type, polish and cleanliness change insertion loss and reflection, so they change whether a subscriber has service.</p>
+    <div class="tscroll"><table>
+      <tr><th>Item</th><th>What to remember</th></tr>
+      <tr><td class="mono ok">SC</td><td>Square push-pull; common in access equipment, easy to handle</td></tr>
+      <tr><td class="mono ok">LC</td><td>Small form factor; dense panels and high-port-count gear</td></tr>
+      <tr><td class="mono ok">ST / FC</td><td>Round bayonet / threaded; older installs, special environments, test</td></tr>
+      <tr><td class="mono ok">APC</td><td>Angled end-face, low back-reflection; widely used in PON</td></tr>
+      <tr><td class="mono ok">UPC</td><td>General purpose finish; not interchangeable with APC in design intent</td></tr>
+    </table></div>
+    <div class="box trap"><b>Typical field fault</b>The feeder and OLT are fine. A dirty connector at the wall outlet or ONT patch lead is what knocks the customer out. Inspect, clean, label, use standard termination.</div>
+
+    <h4>Aggregation vs core</h4>
+    <ul class="pts">
+      <li><b>Aggregation:</b> consolidates traffic from many access segments and <b>enforces subscriber policy</b>. Uses Ethernet over fiber, wavelength services or packet-optical transport to connect access nodes, broadband network gateways and regional service edges.</li>
+      <li><b>Core:</b> large-scale transport, interconnection and reachability across regions or nations.</li>
+      <li><b>DWDM:</b> several wavelengths on one fiber pair multiply capacity without new cable, e.g. adding mobile backhaul or data-center interconnect later.</li>
+      <li><b>Resilience:</b> ring, mesh and dual-homed topologies over fiber let traffic reroute after a cut, if restoration was designed in.</li>
+    </ul>
+    <details><summary>▸ chapter 7 exercise 1 (aggregation vs core)</summary><div class="dbody">
+      <p><b>1</b> Purpose and scale → aggregation gathers many access segments and applies subscriber policy at metro scale. Core carries the combined traffic at very high capacity and provides interconnection and reachability over long distances. Aggregation is about collecting and controlling; core is about moving a lot, far.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t71"> mark done</label><button class="btn" data-drill="7">drill ch7 cards →</button></div>
+  </article>
+
+  <!-- ===== 7.2 ===== -->
+  <article class="item c7" id="t72">
+    <div class="ph"><span class="badge pk">7.2</span><h3>Capacity, oversubscription and the subscriber edge</h3><span class="tag">CH7 · Broadband</span></div>
+    <p class="tldr">Fiber does not remove sharing. It moves the bottleneck and changes its timescale.</p>
+
+    <h4>Oversubscription: Eq 7.1</h4>
+    <p><b>Short form:</b> <b>O = (N × R<sub>access</sub>) / R<sub>uplink</sub></b>. N subscribers each sold R<sub>access</sub>, sharing an uplink of R<sub>uplink</sub>. O = 1 means the uplink could carry everyone at full rate. O &gt; 1 relies on statistical multiplexing, because not everyone is busy at once.</p>
+    <div class="box anl"><b>Worked example</b>400 subscribers × 100 Mb/s = 40 Gb/s of sold capacity on a 10 Gb/s uplink → O = <b>4:1</b>. Add 400 more subscribers and change nothing else: O = <b>8:1</b>. The busy-hour share per user is now half of what it was.</div>
+    <ul class="pts">
+      <li>It happens at several places: PON upstream slots, aggregation rings toward the metro core, uplink wavelengths.</li>
+      <li>Plan by asking <b>where contention will occur</b>, how bursty traffic is across tiers, and how much headroom to keep for growth and protection.</li>
+    </ul>
+    <div class="box dgr"><b>Exercise 2 answer shape</b>More N with the same R<sub>uplink</sub> raises O proportionally. Busy-hour congestion, loss and latency appear first, worst for the heavy tiers. Fix: upgrade uplink, split nodes, shape by tier, or cap sales per node.</div>
+
+    <h4>Subscriber edge</h4>
+    <p><b>Short form:</b> the gateway or ONT/ONU does framing, traffic classification, address translation and <b>service demarcation</b>. On fiber it converts light to Ethernet or voice, takes part in provisioning, and exposes <b>optical power, loss margin and registration state</b> as diagnostics.</p>
+    <p>"Internet keeps dropping" could be indoor Wi-Fi congestion, a failing residential gateway, a dirty connector, bend loss in the drop cable, or a splitter path upstream. The edge is both a network boundary and an optical maintenance boundary, so staff need both skill sets.</p>
+
+    <h4>Layers working together</h4>
+    <p><b>Short form:</b> Ethernet, MPLS, IP and optical transport are integrated, and coordination between them decides fault tolerance, scalability and operational difficulty. A fiber cut shows up first as an optical alarm, then an Ethernet link failure, then a routing convergence event. Being able to connect those quickly is operational maturity.</p>
+    <ul class="pts">
+      <li>The optical layer can give wavelengths or protected circuits to separate services (residential Internet, business Ethernet, mobile backhaul, video) over one regional fiber plant.</li>
+      <li>Route length, regeneration and protection topology influence latency, synchronisation and upgrade timing for sensitive services such as mobile transport.</li>
+    </ul>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t72"> mark done</label><button class="btn" data-drill="7">drill ch7 cards →</button></div>
+  </article>
+
+  <!-- ===== 7.3 ===== -->
+  <article class="item c7" id="t73">
+    <div class="ph"><span class="badge pk">7.3</span><h3>BGP: policy-controlled reachability (§7.2.2.1)</h3><span class="tag">CH7 · Broadband</span></div>
+    <p class="tldr">BGP is a policy system that happens to carry routes. The preferred path is the one your policy likes, not necessarily the shortest.</p>
+
+    <h4>Basics</h4>
+    <p><b>Short form:</b> an <b>autonomous system (AS)</b> is a network under one routing policy, with an AS number. Inside an AS, an IGP (OSPF, IS-IS) computes routes. <b>BGP</b> tells other ASes which prefixes you can reach. BGP speakers peer over <b>TCP</b>.</p>
+    <div class="tscroll"><table>
+      <tr><th>Message</th><th>Job</th></tr>
+      <tr><td class="mono ok">OPEN</td><td>Establish the session and its parameters</td></tr>
+      <tr><td class="mono ok">KEEPALIVE</td><td>Confirm the session is still alive</td></tr>
+      <tr><td class="mono ok">UPDATE</td><td>Advertise (NLRI + attributes) or withdraw prefixes</td></tr>
+      <tr><td class="mono ok">NOTIFICATION</td><td>Report an error and close the session</td></tr>
+    </table></div>
+    <p>A long-lived session carries only incremental changes, which is what makes large-scale exchange practical. A session reset means a lot of relearning.</p>
+
+    <h4>eBGP vs iBGP</h4>
+    <div class="tscroll"><table>
+      <tr><th></th><th>eBGP</th><th>iBGP</th></tr>
+      <tr><td><b>Between</b></td><td>Different ASes</td><td>Routers in the same AS</td></tr>
+      <tr><td><b>Purpose</b></td><td>Advertise customer, peer, provider and service prefixes per policy</td><td>Spread externally learned routes to the routers that need them</td></tr>
+      <tr><td><b>Rule</b></td><td>Adds own AS number to AS_PATH when advertising out</td><td>Does <b>not</b> re-advertise a route learned from one iBGP peer to another iBGP peer</td></tr>
+    </table></div>
+    <div class="box wild"><b>Route reflectors</b>Because of the iBGP rule, plain iBGP needs a <b>full mesh</b>, which grows roughly as n(n−1)/2 sessions. A route reflector is allowed to reflect routes to its clients, so the session count drops sharply. Cost: where you place reflectors and how you set policy changes which paths the clients see and pick. 20 routers: 190 sessions in a full mesh versus about 20 with one reflector (client sessions, ignoring redundancy).</div>
+
+    <h4>Path-vector and attributes</h4>
+    <p><b>Short form:</b> a route carries the <b>AS_PATH</b> (list of ASes it passed). A router that sees its own AS in the path rejects it, which gives interdomain <b>loop prevention</b>. The receiver applies <b>import policy</b>, selects a best path, then applies <b>export policy</b> before telling anyone else. BGP spreads selected outcomes, not every path it knows.</p>
+    <div class="tscroll"><table>
+      <tr><th>Attribute</th><th>Carries</th><th>Policy role</th></tr>
+      <tr><td class="mono ok">AS_PATH</td><td>ASes traversed</td><td>Loop detection; often influences preference</td></tr>
+      <tr><td class="mono ok">NEXT_HOP</td><td>Next router toward the prefix</td><td>Ties BGP choice to forwarding topology</td></tr>
+      <tr><td class="mono ok">LOCAL_PREF</td><td>Preference set and shared inside an AS</td><td>Which exit or upstream the AS prefers</td></tr>
+      <tr><td class="mono ok">MED</td><td>Suggested entry point into a neighbouring AS</td><td>Helps a neighbour choose among multiple links</td></tr>
+      <tr><td class="mono ok">ORIGIN</td><td>How the route entered BGP</td><td>Extra selection and diagnostic signal</td></tr>
+      <tr><td class="mono ok">Community</td><td>Policy tag</td><td>Group routes for filtering, preference, propagation</td></tr>
+    </table></div>
+    <div class="box anl"><b>Order of thinking for exercise 4</b>Strong local policy first (<b>higher LOCAL_PREF</b> wins inside the AS), then shorter <b>AS_PATH</b>, then MED when comparing paths from the same neighbouring AS, then IGP cost to <b>NEXT_HOP</b> (closest exit). Exact sequence is implementation- and policy-dependent.</div>
+    <ul class="pts">
+      <li>Typical provider policy: prefer customer routes over peer or transit routes, stop one customer becoming transit for another, steer outbound traffic to a preferred upstream.</li>
+      <li><b>Withdrawal and convergence:</b> a withdrawn prefix makes each peer redo selection and policy, possibly passing through several intermediate paths before things settle. Bad churn is flapping.</li>
+      <li><b>Safeguards:</b> prefix and AS-path filters, max-prefix limits, protected sessions, careful community handling, monitoring origin changes, route-origin validation. Without them: route leaks and prefix hijacks.</li>
+      <li><b>BGP and MPLS split the work:</b> BGP decides which routes and service info get distributed (including VPN routes between PE routers). MPLS carries the packets over labeled paths.</li>
+    </ul>
+    <details><summary>▸ chapter 7 exercises 3, 4, 5 (eBGP/iBGP, selection, withdrawal)</summary><div class="dbody">
+      <p><b>3</b> eBGP vs iBGP and route reflectors → eBGP between ASes, iBGP inside one AS to carry external routes to the routers that need them. iBGP does not pass a route from one iBGP peer to another, so a full mesh is needed, which scales badly. Route reflectors reduce sessions; trade-off is placement and policy affecting path choice.</p>
+      <p><b>4</b> Two advertisements for one prefix → compare with the order above, and say that policy can override "shortest". Give a mini example: path A has LOCAL_PREF 200 but a longer AS_PATH, path B is shorter with LOCAL_PREF 100 → A wins.</p>
+      <p><b>5</b> Withdrawal → UPDATE removes the prefix, receivers delete it, rerun selection, advertise a replacement if one exists, and their neighbours repeat. Convergence takes time because the changes ripple across many ASes with policy processing at each step (and flaps can prolong it).</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t73"> mark done</label><button class="btn" data-drill="7">drill ch7 cards →</button></div>
+  </article>
+
+  <!-- ===== 7.4 ===== -->
+  <article class="item c7" id="t74">
+    <div class="ph"><span class="badge pk">7.4</span><h3>MPLS: labels, VPNs and traffic engineering (§7.2.2.2)</h3><span class="tag">CH7 · Broadband</span></div>
+    <p class="tldr">MPLS forwards on a short label chosen at the edge instead of looking up the destination IP at every hop.</p>
+
+    <h4>Push, swap, pop</h4>
+    <svg class="topo" viewBox="-10 0 740 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MPLS push swap pop along a label switched path">
+      <g font-family="ui-monospace,monospace" font-size="12" font-weight="700" text-anchor="middle">
+        <rect x="10" y="38" width="110" height="48" rx="9" fill="none" stroke="#94a3b8" stroke-width="2"/><text x="65" y="60" fill="#94a3b8">IP packet</text><text x="65" y="76" fill="#94a3b8" font-weight="600">to D</text>
+        <rect x="170" y="38" width="110" height="48" rx="9" fill="none" stroke="#f472b6" stroke-width="2"/><text x="225" y="58" fill="#f472b6">Ingress LER</text><text x="225" y="76" fill="#f472b6" font-weight="600">push 100</text>
+        <rect x="330" y="38" width="110" height="48" rx="9" fill="none" stroke="#fbbf24" stroke-width="2"/><text x="385" y="58" fill="#fbbf24">Transit LSR</text><text x="385" y="76" fill="#fbbf24" font-weight="600">swap 100→240</text>
+        <rect x="490" y="38" width="110" height="48" rx="9" fill="none" stroke="#fbbf24" stroke-width="2"/><text x="545" y="58" fill="#fbbf24">Transit LSR</text><text x="545" y="76" fill="#fbbf24" font-weight="600">swap 240→77</text>
+        <rect x="640" y="38" width="72" height="48" rx="9" fill="none" stroke="#34d399" stroke-width="2"/><text x="676" y="58" fill="#34d399">Egress</text><text x="676" y="76" fill="#34d399" font-weight="600">pop</text>
+        <g stroke="#94a3b8" stroke-width="2"><line x1="120" y1="62" x2="168" y2="62"/><line x1="280" y1="62" x2="328" y2="62"/><line x1="440" y1="62" x2="488" y2="62"/><line x1="600" y1="62" x2="638" y2="62"/></g>
+        <text x="360" y="112" fill="#94a3b8" font-weight="600">Labels have local significance. 100, 240 and 77 mean something only on their own link.</text>
+      </g>
+    </svg>
+    <ul class="pts">
+      <li><b>FEC:</b> a class of packets that get the same forwarding treatment. The ingress LER decides it, using destination prefix, interface, VPN, QoS class or TE policy.</li>
+      <li><b>LER</b> (edge) pushes and pops. <b>LSR</b> (inside) reads the top label and swaps it. The label indexes a table, so no longest-prefix lookup in transit. A label is not an address and does not replace IP routing.</li>
+      <li><b>LSP</b> is the directional labeled path. Return traffic can take a different one.</li>
+      <li>Tables: FEC-to-NHLFE (entering packets), incoming label map (labeled packets), NHLFE (outgoing interface, next hop, operation).</li>
+      <li><b>Penultimate-hop popping:</b> the router before the egress removes the outer label, saving the egress a lookup.</li>
+    </ul>
+
+    <h4>Label stack and BGP/MPLS VPN</h4>
+    <p><b>Short form:</b> <b>outer label</b> gets the packet across the core to the right egress PE. <b>Inner label</b> picks the VPN (VRF) or customer attachment there. Core P routers only read the outer label, so they <b>do not hold customer routes</b>. CE routers exchange routes with PE routers, each PE keeps one VRF per VPN, and BGP distributes the VPN routes between PEs.</p>
+    <div class="box trap"><b>Separation is not encryption</b>An MPLS VPN keeps customers apart in routing and forwarding. It does not hide the payload from the provider. Confidentiality needs something extra like IPsec.</div>
+
+    <h4>Traffic engineering</h4>
+    <p><b>Short form:</b> shortest-path routing may pile everything on the cheapest path while another path sits idle. A <b>TE LSP</b> is explicitly routed with constraints (bandwidth, policy, latency, links to include or avoid). <b>RSVP-TE</b> signals such tunnels and reserves resources.</p>
+    <ul class="pts">
+      <li>Better utilisation and service support, but it creates state that must be monitored, protected and recomputed after failures.</li>
+      <li>It is a network-wide planning tool, not a guarantee that each packet gets better QoS.</li>
+      <li>MPLS depends on healthy IP routing, label distribution and operations. An optical failure underneath can break many LSPs at once, so watch adjacencies, bindings, LSP state, loss, latency and transport alarms together.</li>
+    </ul>
+    <details><summary>▸ chapter 7 exercises 6, 7, 8 (push/swap/pop, labels, TE)</summary><div class="dbody">
+      <p><b>6</b> Push at the ingress LER after classifying into a FEC; swap at each transit LSR, replacing the incoming label with a locally significant outgoing one; pop at the egress (or one hop earlier with PHP) so the IP packet leaves unlabeled. Use Fig 7.4 numbers: 100 → 240 → 77.</p>
+      <p><b>7</b> The outer transport label moves the packet to the correct egress PE; the inner VPN label picks the VRF there. P routers only look at the outer label, so no customer routes are stored in the core. That is how the provider adds services without every core router knowing every customer.</p>
+      <p><b>8</b> Shortest-path forwarding follows the lowest-cost route regardless of load. A TE LSP is chosen by constraints and can use a path with spare capacity. It costs extra signalling and state and needs re-planning on failures.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t74"> mark done</label><button class="btn" data-drill="7">drill ch7 cards →</button></div>
+  </article>
+
+  <!-- ===== 7.5 ===== -->
+  <article class="item c7" id="t75">
+    <div class="ph"><span class="badge pk">7.5</span><h3>FTTH/PON, fiber-centric and hybrid access</h3><span class="tag">CH7 · Broadband</span></div>
+    <p class="tldr">Pick the access technology by medium, strength and challenge. FTTH/PON is the high-capacity, high-civil-cost end. Hybrids reach fiber step by step.</p>
+
+    <div class="tscroll"><table>
+      <tr><th>Technology</th><th>Medium</th><th>Strength</th><th>Common challenge</th></tr>
+      <tr><td class="mono ok">FTTH/PON</td><td>Fiber</td><td>Very high capacity</td><td>Civil works cost</td></tr>
+      <tr><td class="mono ok">DOCSIS cable</td><td>Coax</td><td>Reuses installed plant</td><td>Shared-medium contention</td></tr>
+      <tr><td class="mono ok">DSL</td><td>Twisted pair</td><td>Broad legacy availability</td><td>Distance sensitivity</td></tr>
+      <tr><td class="mono ok">Fixed wireless</td><td>Radio</td><td>Fast deployment</td><td>Spectrum and propagation limits</td></tr>
+    </table></div>
+
+    <h4>FTTH/PON topology</h4>
+    <svg class="topo" viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PON: OLT, feeder, passive splitter, distribution fibers to ONTs">
+      <g font-family="ui-monospace,monospace" font-size="12" font-weight="700" text-anchor="middle">
+        <rect x="10" y="62" width="110" height="50" rx="9" fill="none" stroke="#f472b6" stroke-width="2"/><text x="65" y="84" fill="#f472b6">OLT</text><text x="65" y="101" fill="#f472b6" font-weight="600">central office</text>
+        <circle cx="330" cy="87" r="26" fill="none" stroke="#fbbf24" stroke-width="2"/><text x="330" y="91" fill="#fbbf24">1:N</text>
+        <text x="330" y="132" fill="#fbbf24" font-weight="600">passive splitter</text>
+        <g stroke="#94a3b8" stroke-width="2"><line x1="120" y1="87" x2="304" y2="87"/><line x1="356" y1="87" x2="520" y2="30"/><line x1="356" y1="87" x2="520" y2="87"/><line x1="356" y1="87" x2="520" y2="144"/></g>
+        <text x="212" y="78" fill="#94a3b8" font-weight="600">feeder fiber</text>
+        <rect x="520" y="10" width="110" height="40" rx="8" fill="none" stroke="#34d399" stroke-width="2"/><text x="575" y="35" fill="#34d399">ONT 1 · Home A</text>
+        <rect x="520" y="67" width="110" height="40" rx="8" fill="none" stroke="#34d399" stroke-width="2"/><text x="575" y="92" fill="#34d399">ONT 2 · Home B</text>
+        <rect x="520" y="124" width="110" height="40" rx="8" fill="none" stroke="#34d399" stroke-width="2"/><text x="575" y="149" fill="#34d399">ONT 3 · Home C</text>
+        <text x="670" y="92" fill="#94a3b8" font-weight="600">drops</text>
+      </g>
+    </svg>
+    <p><b>Short form:</b> the OLT launches light downstream; the splitter divides it with no field power; each ONT converts to Ethernet/voice/video. Upstream is coordinated in time so subscribers do not overlap. <b>Responsibility split (ex 10):</b> feeder = shared provider section back to the OLT, splitter = passive branch point and where split ratio and loss are decided, ONT/drop = subscriber demarcation and local service handoff.</p>
+
+    <h4>Optical budget</h4>
+    <p><b>Short form:</b> every passive element eats power. Total path loss has to stay comfortably inside what the transceiver pair supports. Margin = (Tx power − Rx sensitivity) − total loss.</p>
+    <div class="tscroll"><table>
+      <tr><th>Component</th><th>Typical loss</th><th>Note</th></tr>
+      <tr><td class="mono ok">Fiber</td><td>2–6 dB</td><td>Route length, fiber type, wavelength</td></tr>
+      <tr><td class="mono ok">Splices</td><td>0.2–1 dB total</td><td>Adds up over all splice points</td></tr>
+      <tr><td class="mono ok">Connectors</td><td>0.5–1.5 dB total</td><td>Cleanliness, polish, mating</td></tr>
+      <tr><td class="mono ok">Splitter</td><td>7–20 dB</td><td>Depends on 1:8 / 1:16 / 1:32 / 1:64</td></tr>
+      <tr><td class="mono ok">Reserve margin</td><td>2–4 dB</td><td>Aging, repairs, temperature, measurement error</td></tr>
+      <tr><td class="mono ok">Total</td><td>12–32 dB</td><td>Must fit the PON system's budget</td></tr>
+    </table></div>
+    <div class="box anl"><b>Rule of thumb</b>An ideal 1:N splitter loses about 10·log₁₀(N) dB, and real ones a bit more. Each doubling of the split costs about 3 dB, which is why 1:64 eats reach compared with 1:32. Use the optical-budget calculator in the RF Lab.</div>
+    <ul class="pts">
+      <li><b>Operations:</b> few powered field parts means fewer failures, but faults at connectors, bends, splitter paths and registration need optical diagnostic skill (power readings, event traces, OLT telemetry). Document splitter locations and port assignments carefully.</li>
+      <li><b>Adoption matters:</b> 32 homes with 6 active behave differently from 32 homes all on multi-gigabit tiers at evening peak.</li>
+      <li><b>Upgrades:</b> move to a faster PON generation by changing OLT/ONT and optics, but the passive plant, splitters and wavelength plan must stay compatible during migration.</li>
+    </ul>
+
+    <h4>Fiber-centric and hybrid</h4>
+    <ul class="pts">
+      <li><b>Fiber-centric:</b> high capacity, low attenuation, long upgrade horizon. The cable can stay in the ground while you improve modulation, wavelengths or PON standard. Justified when long-term demand pays for the high upfront cost (open-access municipal network, new suburb that later also does business and small-cell backhaul). Optical budget and construction quality still decide whether gigabit marketing is real.</li>
+      <li><b>Hybrid (HFC, fiber-to-the-cabinet):</b> fiber deep into the network, existing coax or copper for the last segment. Cheaper and faster, a good transition, but users feel the <b>weakest segment</b> and pressure to push fiber closer keeps growing. In HFC, shrink the homes per node over time.</li>
+    </ul>
+    <details><summary>▸ chapter 7 exercises 9, 10, 11 (fiber vs fixed wireless, PON roles, connector and budget)</summary><div class="dbody">
+      <p><b>9</b> Suburban rollout: fiber = highest capacity and longest life, expensive civil works, slower to build. Fixed wireless = fast and cheap to deploy, limited by spectrum, line of sight and propagation, shared capacity per sector (and it still needs fiber backhaul). Staged option: fixed wireless first, fiber where demand justifies it.</p>
+      <p><b>10</b> Feeder: OLT to splitter, shared by all subscribers on the branch. Splitter: passive branching, set split ratio and a big part of the loss budget. ONT: end of the drop, demarcation and customer-facing service. A registration failure could sit in any of the three, so diagnosis follows the same split.</p>
+      <p><b>11</b> A correct fiber route still fails if connectors are dirty or the wrong polish, since they set insertion loss and reflection, and the total loss budget must stay under the transceiver's limit. Small physical mistakes at an interface cause large service effects, and degrade margin as parts age.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t75"> mark done</label><button class="btn" data-drill="7">drill ch7 cards →</button></div>
+  </article>
+
+  <!-- ===== 8.1 ===== -->
+  <article class="item c8" id="t81">
+    <div class="ph"><span class="badge or">8.1</span><h3>Demand forecasting and service tiers</h3><span class="tag">CH8 · Design</span></div>
+    <p class="tldr">Everything downstream rests on the forecast. Bad demand assumptions are expensive to undo once fiber is in the ground.</p>
+
+    <h4>The design flow</h4>
+    <div class="pipe" style="grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr">
+      <div class="pnode"><b>Demand forecast</b></div><div class="parrow">▶</div>
+      <div class="pnode"><b>Topology</b></div><div class="parrow">▶</div>
+      <div class="pnode"><b>Capacity</b></div><div class="parrow">▶</div>
+      <div class="pnode"><b>Resilience</b></div><div class="parrow">▶</div>
+      <div class="pnode"><b>Implementation</b></div>
+    </div>
+
+    <h4>Forecasting</h4>
+    <p><b>Short form:</b> combine demographics, adoption, historical demand and competition. Segment first, because apartments, low-density suburbs, industrial parks, student housing and rural towns behave differently. A new network replacing poor service adopts fast; an overbuild in a market with several fast operators grows slowly unless price or service differs.</p>
+    <ul class="pts">
+      <li>Plan for <b>busy-hour</b> traffic, not the daily average. The busy hour drives uplink sizing, aggregation and oversubscription risk.</li>
+      <li>Turn customer counts into <b>time-varying traffic models</b> rather than one aggregate bit rate.</li>
+      <li>Over-forecast strands capital in unused feeder and oversized equipment. Under-forecast leaves bottlenecks. Look for the defensible middle supported by data.</li>
+    </ul>
+    <div class="box dgr"><b>Examples of forecast errors</b>Remote work and video calls were missed → upstream demand stresses aggregation even though the downstream headline speed looked fine. Business take-up was overestimated in an industrial corridor → premium infrastructure sits idle.</div>
+
+    <h4>Service tiers and SLAs</h4>
+    <p><b>Short form:</b> a tier defines nominal throughput, latency target, support commitments and extras. An <b>SLA</b> adds contractual restoration targets, maintenance windows and escalation. Tiers are <b>engineering commitments</b>, not sales labels.</p>
+    <ul class="pts">
+      <li>Best-effort residential can lean on statistical sharing. Premium low-latency business circuits cannot.</li>
+      <li>Promising symmetric multi-gigabit affects access technology, aggregation headroom, optical budget and CPE.</li>
+      <li>Three tiers on one plant (entry, premium residential, business with uptime and response guarantees) still differ in design: the business tier may need reserved capacity, stronger monitoring and faster repair.</li>
+      <li>Marketing that outruns the engineering model leads to unhappy customers, regulatory trouble or overload.</li>
+    </ul>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t81"> mark done</label><button class="btn" data-drill="8">drill ch8 cards →</button></div>
+  </article>
+
+  <!-- ===== 8.2 ===== -->
+  <article class="item c8" id="t82">
+    <div class="ph"><span class="badge or">8.2</span><h3>Topology, availability and resilience</h3><span class="tag">CH8 · Design</span></div>
+    <p class="tldr">You can raise availability by failing less often or by repairing faster. A good design uses both.</p>
+
+    <h4>Availability: Eq 8.1</h4>
+    <p><b>Short form:</b> <b>A = MTBF / (MTBF + MTTR)</b>. Higher MTBF and lower MTTR both raise A.</p>
+    <ul class="pts">
+      <li><b>Raise MTBF:</b> fiber route diversity, quality construction, environmental hardening, equipment redundancy.</li>
+      <li><b>Lower MTTR:</b> spares strategy, clear documentation, quick alarm correlation, disciplined repair workflow.</li>
+      <li>Moderate redundancy plus strong operations is usually cheaper than pure duplication.</li>
+    </ul>
+    <div class="box anl"><b>Worked example (exercise 1)</b>MTBF 2000 h, MTTR 8 h → A = 2000/2008 = <b>99.60%</b> (about 35 h of downtime per year). Cut MTTR to 2 h with spares and better documentation → A = 2000/2002 = <b>99.90%</b> (about 8.8 h per year). Same hardware, four times less downtime, so repair-process investment can be justified by the equation. Downtime/year ≈ (1 − A) × 8760 h.</div>
+    <div class="box wild"><b>Combining parts</b>In <b>series</b> (all must work) availabilities multiply, so the chain is weaker than its weakest link. In <b>parallel</b> (any one is enough) the unavailabilities multiply: A = 1 − (1 − A₁)(1 − A₂). Two 99% links in parallel give 99.99%; in series 98.01%. The RF Lab has this too.</div>
+    <div class="box trap"><b>Not every segment needs the same protection</b>A rural spur is engineered differently from a metro aggregation path that carries hospitals, enterprise customers and mobile backhaul. Ask which failures are most likely, which are most costly, and where redundancy gives the most benefit per unit cost.</div>
+
+    <h4>Physical topology</h4>
+    <p><b>Short form:</b> star, ring, tree and mesh affect cost, expansion and survivability. A tree is cheap but a feeder cut has a large failure domain. Rings and dual-homing cost more but cut outage time and affected customers. Geography decides what is buildable: roads, poles, rivers, rail, ducts, permits.</p>
+    <ul class="pts">
+      <li><b>Node placement</b> (cabinets, splitters, aggregation points, COs) sets reach, optical loss, repair access and expansion room. Too few nodes: long runs and hard repairs. Too many: site cost, power and complexity.</li>
+      <li>In fiber designs route length, splice count, connector count and split strategy all consume optical margin.</li>
+      <li>A suburban ring survives a cut but needs more trenching than a tree. Long rural feeders reduce site count but may leave no margin for later split expansion.</li>
+    </ul>
+
+    <h4>Logical topology</h4>
+    <p><b>Short form:</b> the service view on top: which traffic shares a forwarding domain, how subscribers are authenticated and isolated, how business is separated from residential, how rerouting works. It can differ a lot from the physical shape because of tunnels, virtual circuits and overlays.</p>
+    <ul class="pts">
+      <li>Two customers on the same fiber can be in totally different services with different addressing, QoS and policy.</li>
+      <li>VLANs, MPLS constructs, tunnels and policy routing allow this, but add complexity. It must still be understandable during an outage.</li>
+      <li>Example: physical metro ring, logical star flows into centralised subscriber gateways. Or an open-access network with shared passive fiber and separate wholesale environments per retailer.</li>
+    </ul>
+    <details><summary>▸ chapter 8 exercises 1, 3, 4</summary><div class="dbody">
+      <p><b>1</b> Faster repair → MTTR is in the denominator, so shrinking it raises A. Give the 8 h vs 2 h numbers and compare with the cost of doubling hardware. Say that both levers matter, but repair improvements apply to every failure type.</p>
+      <p><b>3</b> Logical vs physical → physical is cables, ducts, nodes. Logical is VLANs, MPLS tunnels, VRFs, policy. Same fiber can carry residential, business VPN, wholesale and mobile transport as separate services.</p>
+      <p><b>4</b> An efficient physical topology can still give poor service if the logical design is weak → bad isolation, a single centralised gateway as bottleneck or failure point, no QoS separation, or a design too complex to troubleshoot. The customer experiences the logical design.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t82"> mark done</label><button class="btn" data-drill="8">drill ch8 cards →</button></div>
+  </article>
+
+  <!-- ===== 8.3 ===== -->
+  <article class="item c8" id="t83">
+    <div class="ph"><span class="badge or">8.3</span><h3>Cost, phased rollout and operational readiness</h3><span class="tag">CH8 · Design</span></div>
+    <p class="tldr">The technically best design is not always the one you can finance, build and keep running.</p>
+
+    <h4>CAPEX, OPEX and upgrade path</h4>
+    <p><b>Short form:</b> CAPEX is civil works, fiber, active gear, sites, power and CPE. OPEX is crews, leased facilities, energy, software, spares and support. Saving in one often inflates the other, so make the trade-off explicit early. Outside plant is expensive to rebuild while electronics are cheap to upgrade, which is why fiber-heavy can win despite the sticker price. A staged hybrid can still be right if it gets revenue flowing to fund deeper upgrades.</p>
+    <div class="tscroll"><table>
+      <tr><th>Design choice</th><th>Main benefit</th><th>Main cost</th></tr>
+      <tr><td><b>Full fiber rollout</b></td><td>Highest long-term capacity</td><td>Highest initial capital expense</td></tr>
+      <tr><td><b>Incremental hybrid upgrade</b></td><td>Faster deployment</td><td>Greater architectural complexity</td></tr>
+      <tr><td><b>Redundant aggregation links</b></td><td>Higher availability</td><td>More equipment and leasing cost</td></tr>
+      <tr><td><b>Centralised policy control</b></td><td>Easier operations</td><td>Potential scaling bottleneck</td></tr>
+    </table></div>
+
+    <h4>Phased rollout</h4>
+    <p><b>Short form:</b> build the high-demand zones or strategic corridors first (dense neighbourhoods, business districts, anchor institutions, routes with existing duct). Lower initial cost and early revenue, but later areas may feel treated unfairly, and quick temporary decisions in phase one can become <b>technical debt</b>.</p>
+    <ul class="pts">
+      <li>Plan transitions: don't put early neighbourhoods on a convenient temporary aggregation design that hurts later.</li>
+      <li>Pair it with clear communication, scalable backbone planning and a dated roadmap for underserved districts.</li>
+      <li><b>Phased vs full immediate (ex 2):</b> phased = cash and crews spread out, learning between phases, uneven coverage. Full = uniform service and no interim compromises, but huge capital, permit and resource demand, and more exposure to forecast error.</li>
+    </ul>
+
+    <h4>Operational readiness</h4>
+    <p><b>Short form:</b> design ends when the network can be run confidently in normal and abnormal conditions, not at commissioning. Without it MTTR grows regardless of how elegant the design is.</p>
+    <ul class="pts">
+      <li><b>Inventory:</b> fiber paths, splitters, ports, ONTs, routers, power.</li>
+      <li><b>Monitoring:</b> correlate optical alarms, transport faults and customer impact.</li>
+      <li><b>Field procedures:</b> installation, connector cleaning, labelling, testing, escalation, repair.</li>
+      <li><b>Spares:</b> line cards, OLT port modules, power supplies, ONT models on hand.</li>
+      <li><b>Documentation:</b> so a technician can identify the right splitter path or cabinet patching.</li>
+    </ul>
+    <div class="box wild"><b>Two providers, same architecture</b>One has accurate records, tested escalation, prepositioned spares and clear standards. The other relies on tribal knowledge. Customers see the first as the higher-quality network. Operational discipline turns comparable infrastructure into more reliable service.</div>
+    <details><summary>▸ chapter 8 exercises 2 and 5</summary><div class="dbody">
+      <p><b>2</b> Phased vs full → see the bullet above; end with when each fits (limited capital or uncertain demand → phased; strong funding and uniform-service mandate → full).</p>
+      <p><b>5</b> Readiness checklist before activation → verified optical power and loss at each ONT location; inventory and port/splitter records complete; monitoring and alarms live with correlation; connector inspection and cleaning done and labelled; test results recorded; spares stocked; escalation and repair procedures tested; support staff trained in both optical and IP; provisioning and ONT registration tested end to end; pilot subscribers verified.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t83"> mark done</label><button class="btn" data-drill="8">drill ch8 cards →</button></div>
+  </article>
 </div></section>
 
 <!-- ============ RF LAB ============ -->
 <section class="tab" id="lab"><div class="wrap">
-  <h1><span class="pre">// RF LAB</span>The six equations, live</h1>
+  <h1><span class="pre">// RF LAB</span>The equations, live</h1>
   <p class="lede">Move the sliders until the numbers stop being surprising. Every tool shows its working the way you would write it on an exam paper.</p>
 
   <div class="panel pa">
@@ -1344,6 +1842,53 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <p id="paMsg" style="margin-top:11px;font-family:var(--mono);font-size:13.5px;font-weight:650"></p>
     <div class="row"><button class="btn" id="paNew">new attack</button><span class="badge cy" id="paScore">0 / 0</span></div>
   </div>
+  <div class="panel p6">
+    <div class="ph"><h2>LPWAN battery life</h2><span class="badge sk right">EQ 6.1</span></div>
+    <p class="sub2">L = Ebattery / Pavg, with Pavg as the duty-cycle-weighted mix of active and sleep current. Defaults give the 6-year example from the notes.</p>
+    <div class="sl"><label>Battery</label><input type="range" id="l6B" min="500" max="19000" step="100" value="2400"><span class="v" id="vL6B"></span></div>
+    <div class="sl"><label>Active current</label><input type="range" id="l6A" min="5" max="150" step="1" value="40"><span class="v" id="vL6A"></span></div>
+    <div class="sl"><label>Sleep current</label><input type="range" id="l6S" min="1" max="100" step="1" value="5"><span class="v" id="vL6S"></span></div>
+    <div class="sl"><label>Duty cycle (active)</label><input type="range" id="l6D" min="0.01" max="5" step="0.01" value="0.1"><span class="v" id="vL6D"></span></div>
+    <div class="work" id="l6Work"></div>
+    <div class="res" id="l6Res"></div>
+    <div class="box wild"><b>The exam point</b>Duty cycling works by shrinking Pavg. But once the duty cycle is not tiny, active time dominates and every extra retry costs battery. The sleep current sets a floor on how far you can go.</div>
+  </div>
+
+  <div class="panel p7">
+    <div class="ph"><h2>Oversubscription</h2><span class="badge pk right">EQ 7.1</span></div>
+    <p class="sub2">O = (N × Raccess) / Ruplink. See what happens when subscribers grow and the uplink does not.</p>
+    <div class="sl"><label>N subscribers</label><input type="range" id="o7N" min="10" max="2000" step="10" value="400"><span class="v" id="vO7N"></span></div>
+    <div class="sl"><label>Raccess</label><input type="range" id="o7R" min="10" max="2000" step="10" value="100"><span class="v" id="vO7R"></span></div>
+    <div class="sl"><label>Ruplink</label><input type="range" id="o7U" min="1" max="100" step="1" value="10"><span class="v" id="vO7U"></span></div>
+    <div class="work" id="o7Work"></div>
+    <div class="res" id="o7Res"></div>
+    <div class="box dgr"><b>Why it matters</b>O does not say the network is bad. It says how much you are betting on users not being busy together. Busy-hour behaviour, not the average, decides if the bet pays off.</div>
+  </div>
+
+  <div class="panel p7">
+    <div class="ph"><h2>PON optical budget</h2><span class="badge pk right">§7.3.1</span></div>
+    <p class="sub2">Margin = (Tx power − Rx sensitivity) − total loss. Splitter loss is approximated as 10·log₁₀(N) + 0.5 dB excess. Default values are illustrative, not from a specific standard.</p>
+    <div class="sl"><label>Tx power</label><input type="range" id="p7T" min="0" max="8" step="0.5" value="3"><span class="v" id="vP7T"></span></div>
+    <div class="sl"><label>Rx sensitivity</label><input type="range" id="p7X" min="-34" max="-20" step="1" value="-28"><span class="v" id="vP7X"></span></div>
+    <div class="sl"><label>Fiber length</label><input type="range" id="p7L" min="1" max="30" step="1" value="10"><span class="v" id="vP7L"></span></div>
+    <div class="sl"><label>Split 1:N</label><input type="range" id="p7N" min="0" max="3" step="1" value="2"><span class="v" id="vP7N"></span></div>
+    <div class="sl"><label>Connectors</label><input type="range" id="p7C" min="2" max="10" step="1" value="4"><span class="v" id="vP7C"></span></div>
+    <div class="sl"><label>Splices</label><input type="range" id="p7P" min="0" max="12" step="1" value="4"><span class="v" id="vP7P"></span></div>
+    <div class="work" id="p7Work"></div>
+    <div class="res" id="p7Res"></div>
+    <div class="box wild"><b>Rules used here</b>0.35 dB/km fiber, 0.3 dB per connector, 0.1 dB per splice, and a 3 dB reserve for aging and repairs. Try 1:64 at 20 km and watch the margin vanish.</div>
+  </div>
+
+  <div class="panel p8">
+    <div class="ph"><h2>Availability</h2><span class="badge or right">EQ 8.1</span></div>
+    <p class="sub2">A = MTBF / (MTBF + MTTR). Then see what series and parallel combinations do.</p>
+    <div class="sl"><label>MTBF</label><input type="range" id="a8B" min="100" max="20000" step="100" value="2000"><span class="v" id="vA8B"></span></div>
+    <div class="sl"><label>MTTR</label><input type="range" id="a8R" min="1" max="72" step="1" value="8"><span class="v" id="vA8R"></span></div>
+    <div class="work" id="a8Work"></div>
+    <div class="res" id="a8Res"></div>
+    <div class="row"><button class="btn" id="a8Fast">halve the MTTR</button><button class="btn no2" id="a8Reset">reset</button></div>
+    <div class="box wild"><b>The exam point</b>Faster repair raises availability for every kind of failure, and it is usually cheaper than duplicating hardware. Redundancy (parallel) multiplies the unavailabilities, a chain (series) multiplies the availabilities.</div>
+  </div>
 </div></section>
 <!-- ============ DRILLS ============ -->
 <section class="tab" id="drills"><div class="wrap">
@@ -1390,6 +1935,10 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono ok">3.1</td><td class="mono">Tsetup = Tscan+Tauth+Tassoc+Tip</td><td>Time-to-service</td><td class="mono">60+40+20+30 = 150 ms</td></tr>
       <tr><td class="mono ok">4.1</td><td class="mono">Pr = Pt+Gt+Gr−Lp−Lm</td><td>Link budget</td><td class="mono">17+3+0−76−6 = −62 dBm</td></tr>
       <tr><td class="mono ok">5.1</td><td class="mono">Risk = Threat × Vulnerability × Impact</td><td>Control prioritisation</td><td class="mono">hardening cuts V · segmentation cuts I</td></tr>
+      <tr><td class="mono ok">6.1</td><td class="mono">L = Ebattery / Pavg</td><td>LPWAN device lifetime</td><td class="mono">2400 mAh, 0.045 mA avg ≈ 6 yr · at 1% duty ≈ 0.7 yr</td></tr>
+      <tr><td class="mono ok">7.1</td><td class="mono">O = N·Raccess / Ruplink</td><td>Oversubscription</td><td class="mono">400·100 Mb/s / 10 Gb/s = 4:1</td></tr>
+      <tr><td class="mono ok">7.2</td><td class="mono">Margin = (Ptx − Prx,min) − Σloss</td><td>PON optical budget</td><td class="mono">splitter ≈ 10·log₁₀N · +3 dB per doubling</td></tr>
+      <tr><td class="mono ok">8.1</td><td class="mono">A = MTBF / (MTBF + MTTR)</td><td>Availability</td><td class="mono">2000/2008 = 99.60% · MTTR 2 h → 99.90%</td></tr>
     </table></div>
   </div>
 
@@ -1468,6 +2017,47 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </table></div>
   </div>
 
+  <div class="panel p6">
+    <div class="ph"><h2>Chapters 6–8 tables</h2><span class="badge sk right">CH6 · CH7 · CH8</span></div>
+    <div class="tscroll"><table>
+      <tr><th>LPWAN</th><th>Spectrum</th><th>Strength</th><th>Limitation</th></tr>
+      <tr><td class="mono ok">LoRaWAN</td><td>Unlicensed</td><td>Flexible private deployment</td><td>Duty-cycle constraints</td></tr>
+      <tr><td class="mono ok">Sigfox</td><td>Unlicensed</td><td>Very low energy messaging</td><td>Limited payload flexibility</td></tr>
+      <tr><td class="mono ok">NB-IoT</td><td>Licensed</td><td>Strong operator coverage, stationary</td><td>Operator dependency</td></tr>
+      <tr><td class="mono ok">LTE-M</td><td>Licensed</td><td>Mobility, higher rate</td><td>Higher complexity</td></tr>
+    </table></div>
+    <div class="tscroll"><table>
+      <tr><th>Access tech</th><th>Medium</th><th>Strength</th><th>Challenge</th></tr>
+      <tr><td class="mono ok">FTTH/PON</td><td>Fiber</td><td>Very high capacity</td><td>Civil works cost</td></tr>
+      <tr><td class="mono ok">DOCSIS</td><td>Coax</td><td>Reuses plant</td><td>Shared contention</td></tr>
+      <tr><td class="mono ok">DSL</td><td>Twisted pair</td><td>Legacy availability</td><td>Distance sensitivity</td></tr>
+      <tr><td class="mono ok">Fixed wireless</td><td>Radio</td><td>Fast deployment</td><td>Spectrum, propagation</td></tr>
+    </table></div>
+    <div class="tscroll"><table>
+      <tr><th>BGP attribute</th><th>Remember</th></tr>
+      <tr><td class="mono ok">LOCAL_PREF</td><td>Higher wins inside the AS; strongest everyday policy lever</td></tr>
+      <tr><td class="mono ok">AS_PATH</td><td>Loop prevention; shorter often preferred</td></tr>
+      <tr><td class="mono ok">MED</td><td>Hint to a neighbour about which entry link to use</td></tr>
+      <tr><td class="mono ok">NEXT_HOP</td><td>Ties choice to forwarding; IGP cost picks closest exit</td></tr>
+      <tr><td class="mono ok">Community</td><td>Policy tag for filtering and handling</td></tr>
+    </table></div>
+    <div class="tscroll"><table>
+      <tr><th>MPLS term</th><th>Remember</th></tr>
+      <tr><td class="mono ok">FEC</td><td>Packets given equal treatment, chosen at ingress</td></tr>
+      <tr><td class="mono ok">LER / LSR</td><td>Edge pushes and pops / transit swaps</td></tr>
+      <tr><td class="mono ok">LSP</td><td>Directional labeled path</td></tr>
+      <tr><td class="mono ok">Label stack</td><td>Outer = transport, inner = VPN/service</td></tr>
+      <tr><td class="mono ok">PHP</td><td>Penultimate hop pops the outer label</td></tr>
+    </table></div>
+    <div class="tscroll"><table>
+      <tr><th>Design choice</th><th>Main benefit</th><th>Main cost</th></tr>
+      <tr><td>Full fiber rollout</td><td>Highest long-term capacity</td><td>Highest initial capital</td></tr>
+      <tr><td>Incremental hybrid</td><td>Faster deployment</td><td>More architectural complexity</td></tr>
+      <tr><td>Redundant aggregation links</td><td>Higher availability</td><td>Equipment and leasing cost</td></tr>
+      <tr><td>Centralised policy control</td><td>Easier operations</td><td>Possible scaling bottleneck</td></tr>
+    </table></div>
+  </div>
+
   <div class="panel pr">
     <div class="ph"><h2>Security tables</h2><span class="badge rd right">CH5</span></div>
     <h4>WEP vs WPA2 — why it changed</h4>
@@ -1524,6 +2114,12 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <li><b>A checksum is not integrity</b> — CRC-32 catches accidents; a MIC catches attackers.</li>
       <li><b>Authenticated is not authorised</b> — segmentation decides what a valid user may actually reach.</li>
       <li><b>Encryption is not validation</b> — WPA2 protects the radio hop but never checks ARP mappings or the MQTT broker.</li>
+      <li><b>LPWAN is not "slow broadband".</b> It trades throughput for coverage, battery life and cost per device.</li>
+      <li><b>A preamble is not waste.</b> It lets a duty-cycled receiver catch the packet.</li>
+      <li><b>Fiber is not "no sharing".</b> Oversubscription moves to PON slots and uplinks.</li>
+      <li><b>BGP is not shortest path.</b> It is a policy system.</li>
+      <li><b>An MPLS label is not an address,</b> and an MPLS VPN is not encryption.</li>
+      <li><b>High availability is not only redundancy.</b> MTTR matters as much as MTBF.</li>
     </ul>
   </div>
 </div></section>
@@ -1531,7 +2127,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 <!-- ============ TERMS ============ -->
 <section class="tab" id="terms"><div class="wrap">
   <h1><span class="pre">// GLOSSARY</span>Short form → long form → meaning</h1>
-  <p class="lede">Every acronym in the five chapters. Type to filter.</p>
+  <p class="lede">Every acronym in the eight chapters. Type to filter.</p>
   <input class="fld" id="acroF" placeholder="search… e.g. CAPWAP, PANA, OFDMA, margin" style="margin-top:14px">
   <div class="panel"><div class="tscroll"><table id="acroT">
     <tr><th style="width:104px">Short</th><th style="width:270px">Long</th><th>What it actually means</th></tr>
@@ -1630,7 +2226,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 <!-- ============ ASSIGNMENTS ============ -->
 <section class="tab" id="asg"><div class="wrap">
   <h1><span class="pre">// SUBMISSIONS</span>Assignments</h1>
-  <p class="lede">A1 is submitted. A2 is still open — the comparison below is there to help you choose fast.</p>
+  <p class="lede">A1 is submitted. A6, A7 and A8 outlines are at the bottom. A2 is still open — the comparison below is there to help you choose fast.</p>
 
   <div class="panel pg">
     <div class="ph"><span class="badge gr">A1</span><h2>Chapter 1 · Problem 1</h2><span class="badge gr right">SUBMITTED</span></div>
@@ -1682,9 +2278,18 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <p><b>6 · PAA and EP on separate devices.</b> Authenticate and integrity/replay-protect their exchange of identity, authorization state, filters and keys; add least-privilege filtering, session expiry, monitoring, and a PaC–EP security association if the data plane needs protection.</p>
     </div></details>
   </div>
+
+  <div class="panel p6">
+    <div class="ph"><span class="badge sk">A6 / A7 / A8</span><h2>Chapters 6, 7, 8 · one problem each</h2></div>
+    <p class="sub2">Same rule as A1: answer only one problem from the end of each chapter. Nothing here is marked submitted. The three below are the ones picked first; all others have hints in the chapter sections.</p>
+    <details><summary>▸ Ch 6 · problem 1 · duty cycling and sensor lifetime</summary><div class="dbody"><p>State Eq 6.1 (L = E/Pavg) and say what each term means → duty cycling keeps the radio asleep most of the time so Pavg drops and L rises → give a numeric case (0.1% active gives about 6 years, 1% gives about 0.7 years with the same battery) → limits: sleep current is a floor, retries and long listening windows raise Pavg again, so coverage margin and few ACKs protect the lifetime.</p></div></details>
+    <details><summary>▸ Ch 7 · problem 3 · eBGP vs iBGP and route reflectors</summary><div class="dbody"><p>eBGP runs between different ASes and applies business policy; iBGP runs inside one AS to carry external routes to routers that need them → iBGP does not pass a route from one iBGP peer to another, so it needs a full mesh of about n(n−1)/2 sessions → route reflectors reflect routes to clients, so far fewer sessions in a large AS → cost: reflector placement and policy influence which paths clients see.</p></div></details>
+    <details><summary>▸ Ch 8 · problem 1 · Eq 8.1 and faster repair</summary><div class="dbody"><p>A = MTBF/(MTBF+MTTR) → MTTR is in the denominator, so shorter repair raises A → example: MTBF 2000 h, MTTR 8 h gives 99.60%, MTTR 2 h gives 99.90%, about four times less downtime → ways to cut MTTR (spares, documentation, alarm correlation, repair workflow) → compare with buying redundancy and conclude both help but repair investment works on every fault type.</p></div></details>
+    <div class="box rl"><b>Other quick candidates</b>Ch 6 → problem 3 (why uplink is favoured). Ch 7 → problem 2 (Eq 7.1, uplink not upgraded) or 6 (push, swap, pop). Ch 8 → problem 5 (readiness checklist). Each is one clear paragraph plus a small numeric or diagram example.</div>
+  </div>
 </div></section>
 
-<div class="footer">// built from CH1 · CH2 · CH3 · CH4 · CH5 handouts — wireless &amp; broadband computer networks · term 1/2569</div>
+<div class="footer">// built from CH1 · CH2 · CH3 · CH4 · CH5 · CH6 · CH7 · CH8 handouts — wireless &amp; broadband computer networks · term 1/2569</div>
 <script>
 var store={get:function(k,d){try{var v=localStorage.getItem("wn_"+k);return v?JSON.parse(v):d}catch(e){return d}},
            set:function(k,v){try{localStorage.setItem("wn_"+k,JSON.stringify(v))}catch(e){}}};
@@ -1705,8 +2310,20 @@ var TOPICS={
  "51":["Threat landscape","passive vs active, rogue AP, ARP spoofing","5"],
  "52":["WPS · WEP · WPA2 · WPA3","IV reuse, AES-CCMP, 4-way handshake","5"],
  "53":["EAP · EDHOC · PANA","method choice, IoT keys, segmentation","5"],
- "54":["Monitoring &amp; response","WIDS/WIPS, SPAN, the evil-twin case","5"]};
-var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security"};
+ "54":["Monitoring &amp; response","WIDS/WIPS, SPAN, the evil-twin case","5"],
+ "61":["LPWAN goals &amp; energy","duty cycling, preamble/CAD, L = E/Pavg","6"],
+ "62":["LPWAN technologies","LoRaWAN, Sigfox, NB-IoT, LTE-M","6"],
+ "63":["Architecture &amp; scalability","gateway→server→app, MQTT, uplink bias","6"],
+ "71":["Access · aggregation · core","hierarchy, fiber backbone, connectors","7"],
+ "72":["Capacity &amp; the edge","O = N·R/Ruplink, ONT, layer coordination","7"],
+ "73":["BGP","eBGP/iBGP, route reflectors, attributes, policy","7"],
+ "74":["MPLS","push/swap/pop, label stack, VPN, TE","7"],
+ "75":["FTTH/PON &amp; hybrids","optical budget, fiber-centric, HFC","7"],
+ "81":["Demand &amp; service tiers","forecasting, busy hour, SLAs","8"],
+ "82":["Topology &amp; availability","A = MTBF/(MTBF+MTTR), physical vs logical","8"],
+ "83":["Cost, rollout &amp; operations","CAPEX/OPEX, phased rollout, readiness","8"]};
+var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security","6":"LPWAN","7":"Broadband","8":"Broadband Design"};
+var NSEC=Object.keys(TOPICS).length;
 
 /* ================= CARDS ================= */
 var CARDS=[];function C(t,q,a){CARDS.push({t:t,q:q,a:a})}
@@ -1881,6 +2498,80 @@ C("5","How was the evil twin in the worked example identified?","By correlating 
 C("5","Why did the evil-twin incident stay contained?","Guest and laboratory systems were segmented from the staff network, so the likely blast radius remained limited even if some users associated.");
 
 /* ================= QUIZ BANK ================= */
+C("6","What do LPWANs optimise for, and what do they give up?","Coverage, battery life and low cost per device. They give up peak throughput and low latency. Judged by fleet efficiency, not user experience.");
+C("6","State Eq 6.1 and what it implies.","L = Ebattery / Pavg. For a fixed battery, lifetime rises only when average power falls, so you attack how often and how long the expensive states (transmit, receive, retries) happen.");
+C("6","Why can a tenfold duty-cycle increase cut battery life by about nine times?","Pavg is dominated by active time once duty cycle is non-trivial. Example: 2400 mAh, 5 µA sleep, 40 mA active. 0.1% duty → 0.045 mA → ~6 years. 1% duty → 0.405 mA → ~0.7 years.");
+C("6","Typical LPWAN traffic profile?","Small payloads, infrequent, mostly uplink. Wake, measure, send, sleep. Timing can be periodic, event-driven or hybrid.");
+C("6","Why does protocol overhead matter more in LPWAN?","With only a few payload bytes, headers, joins, ACKs and retransmissions can take a large share of airtime and energy. Ask how much useful information per unit of battery and airtime.");
+C("6","How does alarm-driven traffic differ from periodic metering?","Periodic: predictable, schedulable, easy to stagger. Alarm: long silence then urgent bursts, so reliability, latency and collisions matter. Keep routine telemetry and critical exceptions distinct.");
+C("6","What is the preamble for?","A known pattern at the start of a frame that lets a sleeping receiver detect an arriving packet, align timing and prepare for the payload. It is what makes intermittent reception workable, not wasted overhead.");
+C("6","What is CAD?","Channel activity detection: a very short wake-up to test for a preamble-like signal. Nothing found → back to sleep. Something found → stay awake and receive.");
+C("6","CAD every 2 s with 20 ms awake vs every 1 s. Cost?","20/2000 = 1% vs 20/1000 = 2% of time. Checking twice as often doubles receiver listening cost but allows a shorter preamble (e.g. 1.2 s → 0.6 s), which saves transmitter airtime.");
+C("6","Preamble length vs CAD interval trade-off?","Longer preamble: better detection, more transmitter airtime. More frequent CAD: faster response, more receiver energy. Less frequent CAD: saves power but needs longer preamble or risks misses. Tune them together.");
+C("6","Unlicensed LPWAN: strengths and risks?","Low barrier, you place gateways and keep control (campus, factory, farm). Risks: shared-spectrum interference and regulatory duty-cycle limits on how often you transmit and acknowledge.");
+C("6","Cellular LPWAN: strengths and costs?","Licensed spectrum, operator-managed wide-area coverage, built-in subscriber identity, mobility. Costs: dependence on operator coverage and tariffs, module certification and SIM provisioning.");
+C("6","NB-IoT vs LTE-M?","NB-IoT: low-rate, stationary, delay-tolerant, deep coverage and tight energy (basement gas meter). LTE-M: higher rate, lower latency, mobility (asset tracker).");
+C("6","One-word strength/limit for LoRaWAN, Sigfox, NB-IoT, LTE-M?","LoRaWAN: flexible private deployment / duty-cycle limits. Sigfox: very low energy messaging / limited payload flexibility. NB-IoT: operator coverage / operator dependency. LTE-M: mobility / higher complexity.");
+C("6","LPWAN architecture path?","Sensors → gateway or base station → network server → applications. Server handles identity, deduplication, security policy, queuing. Performance is end to end, not just the radio link.");
+C("6","How does MQTT work?","Devices publish messages to named topics on a broker. Applications subscribe. Decouples sensors from consumers. Over Wi-Fi it rides 802.11 → IP → TCP → MQTT.");
+C("6","MQTT local broker vs cloud broker?","Local: low latency, works through Internet outages. Cloud: easy wide-area integration and central management. Hybrid: edge broker bridging selected topics to the cloud.");
+C("6","What is ECHONET Lite?","Application protocol for home automation and energy. Devices are objects with properties a controller can read, write or be notified about. Wi-Fi only provides the IP path.");
+C("6","Main security point for ECHONET Lite on Wi-Fi?","Wi-Fi encryption keeps outsiders off the link but does not limit which authenticated client can control an appliance. Use an IoT segment, restrict controllers, disable unneeded remote access, update firmware, monitor.");
+C("6","Why do LPWANs favour uplink over downlink?","Devices are reporters. Downlink needs the receiver awake (energy), uses scarce airtime and is limited by sleep schedules. Chatty ACK/command workflows do not scale.");
+C("6","What determines LPWAN scalability?","Gateway density, channel occupancy, acknowledgment policy and uplink/downlink asymmetry. Not coverage radius alone.");
+C("6","Why can a 300-device pilot fail at 30,000?","Collisions, retries (which raise Pavg and cut battery life), gateway and backend load, synchronised reporting bursts, and ACK/downlink habits that were harmless at small scale.");
+C("6","Fixes for LPWAN scaling problems?","Stagger transmissions, place gateways well, minimise ACKs and chatty control, reserve downlink for high-value functions, plan from the mature-deployment traffic model.");
+C("7","Roles of access, aggregation and core?","Access connects users to the provider edge. Aggregation consolidates access segments and enforces subscriber policy. Core provides large-scale transport, interconnection and reachability.");
+C("7","Why is fiber the structural backbone even for copper/coax/radio access?","Only optical links economically carry aggregated traffic over metro and regional distances: huge bandwidth, low attenuation, EMI immunity, long reach. Upstream design converges onto fiber.");
+C("7","Why is fiber a good long-term asset?","Cable plant outlives the electronics. Capacity grows by changing optics, wavelengths, split strategy or PON generation without replacing buried cable.");
+C("7","What does DWDM give a provider?","Several wavelengths on one fiber pair, multiplying capacity without new cable. Lets services like mobile backhaul or data-center interconnect be added later.");
+C("7","State Eq 7.1.","O = (N × Raccess) / Ruplink. O = 1 means the uplink can carry everyone at full rate. O > 1 relies on statistical multiplexing.");
+C("7","400 users × 100 Mb/s on a 10 Gb/s uplink. O? Then 800 users?","40 Gb/s / 10 Gb/s = 4:1. With 800 users, 8:1. Doubling N with the same uplink doubles O and halves the busy-hour share.");
+C("7","Does fiber remove oversubscription?","No. It moves the bottleneck and changes its timescale: PON upstream slots, aggregation rings, uplink wavelengths still share capacity.");
+C("7","What does the ONT/ONU do?","Converts optical to Ethernet/voice, marks the provider/customer demarcation, takes part in provisioning, and exposes optical power, loss margin and registration state for diagnosis.");
+C("7","What is a PON?","Passive optical network: an OLT shares a feeder fiber through passive splitters to many ONTs with no powered field electronics. Upstream is time-shared.");
+C("7","Splitter ratio trade-off (1:32 vs 1:64)?","Higher split lowers per-subscriber outside-plant cost but adds optical loss (~3 dB per doubling) and reduces per-subscriber capacity and reach margin.");
+C("7","Why APC vs UPC matters in PON?","APC has an angled end-face that reduces back reflection, widely used in PON. UPC is general purpose. They are not interchangeable in design intent.");
+C("7","SC, LC, ST, FC in one line each?","SC square push-pull, common in access. LC small, dense panels. ST round bayonet, older installs. FC threaded, secure fit, older/test.");
+C("7","Optical budget margin formula?","Margin = (Tx power − Rx sensitivity) − total path loss. Path loss = fiber + splices + connectors + splitter + reserve margin.");
+C("7","Typical PON loss components?","Fiber 2–6 dB, splices 0.2–1, connectors 0.5–1.5, splitter 7–20, reserve 2–4. Total 12–32 dB must fit the system budget.");
+C("7","What is an autonomous system and who routes inside it?","A network under one routing policy with an AS number. An IGP (OSPF or IS-IS) routes inside. BGP exchanges reachability between ASes.");
+C("7","Four BGP message types?","OPEN (set up), KEEPALIVE (liveness), UPDATE (advertise or withdraw NLRI with attributes), NOTIFICATION (error and close). Sessions run over TCP.");
+C("7","eBGP vs iBGP?","eBGP between speakers in different ASes, applies business policy. iBGP between speakers in the same AS, distributes external routes. iBGP does not re-advertise one iBGP peer's route to another iBGP peer.");
+C("7","Why route reflectors?","iBGP's no-readvertise rule forces a full mesh, about n(n−1)/2 sessions. Reflectors reflect routes to clients so far fewer sessions. Cost: placement and policy affect which paths clients see.");
+C("7","Why is BGP called path-vector?","Routes carry the AS_PATH. Each AS adds its own number when advertising out. A router rejecting a path with its own AS gets loop prevention, and operators get policy information.");
+C("7","LOCAL_PREF, AS_PATH, MED, NEXT_HOP roles?","LOCAL_PREF: preference inside an AS (higher wins, strong policy). AS_PATH: loops and shorter-path preference. MED: suggests entry point to a neighbour. NEXT_HOP: ties to forwarding; IGP cost to it picks closest exit.");
+C("7","BGP import vs export policy?","Import filters decide which routes are accepted and how attributes change. Export filters decide which selected routes are announced to each neighbour. BGP propagates selected outcomes, not all paths.");
+C("7","What happens when a prefix is withdrawn?","UPDATE withdraws it, peers rerun selection and policy, advertise replacements if any, and neighbours repeat. Convergence takes time because changes ripple and intermediate paths appear. Flapping makes it worse.");
+C("7","BGP safeguards?","Prefix and AS-path filters, max-prefix limits, protected sessions, community care, monitoring origin changes, route-origin validation. Protects against leaks and hijacks.");
+C("7","Division of labour: BGP vs MPLS?","BGP distributes reachability and policy (including VPN routes between PEs). MPLS carries packets along labeled paths across the core.");
+C("7","MPLS push, swap, pop?","Push: ingress LER classifies into a FEC and adds a label. Swap: transit LSR replaces the top label with a local outgoing one. Pop: egress LER (or the hop before with PHP) removes the label.");
+C("7","Is an MPLS label an address?","No. It is a short, locally significant identifier used as an index into a forwarding table. It does not replace IP routing.");
+C("7","FEC, LER, LSR, LSP?","FEC: packets given equal treatment. LER: edge router that pushes/pops. LSR: transit router that swaps. LSP: directional labeled path.");
+C("7","Outer vs inner label in a BGP/MPLS VPN?","Outer: transport label to the correct egress PE. Inner: selects the VRF or customer attachment there. P routers read only the outer label, so they hold no customer routes.");
+C("7","Does MPLS VPN encrypt traffic?","No. It separates routing and forwarding between customers. Confidentiality against the provider needs something like IPsec.");
+C("7","MPLS traffic engineering vs shortest path?","Shortest path follows lowest cost even if loaded. A TE LSP is explicitly routed under constraints (bandwidth, policy, latency, include/avoid links), signalled e.g. with RSVP-TE. Better utilisation but extra state to monitor and recompute.");
+C("7","Compare FTTH/PON, DOCSIS, DSL, fixed wireless.","FTTH/PON: fiber, very high capacity, civil cost. DOCSIS: coax, reuses plant, shared contention. DSL: twisted pair, legacy reach, distance sensitive. Fixed wireless: radio, fast to deploy, spectrum and propagation limits.");
+C("7","Hybrid access weakness?","Users feel the weakest segment. A fiber feeder can be abundant while the coax or copper last segment stays shared or distance-limited, so pressure to extend fiber persists.");
+C("7","Why can a subscriber outage be a connector problem?","Dirty or mismatched connectors raise insertion loss. The feeder and OLT may be fine while a contaminated connector at the wall outlet or ONT patch lead breaks service.");
+C("8","What starts broadband design?","Demand and service planning: subscriber counts, traffic growth, service tiers, geographic reach. Flow: forecast → topology → capacity → resilience → implementation.");
+C("8","Average vs busy-hour traffic?","Busy hour drives uplink sizing, aggregation planning and oversubscription risk. Forecast time-varying models, not a single aggregate bit rate.");
+C("8","Costs of forecast errors?","Over-forecast: stranded capital in unused feeder and oversized gear. Under-forecast: bottlenecks and expensive expansion. Example: missed remote-work upstream demand.");
+C("8","Why are service tiers engineering commitments?","They set throughput, latency, support and sometimes SLA terms that drive capacity, reserved resources, monitoring and repair speed. Marketing beyond the engineering model causes overload or complaints.");
+C("8","State Eq 8.1.","A = MTBF / (MTBF + MTTR). Raise MTBF or lower MTTR to raise availability.");
+C("8","MTBF 2000 h, MTTR 8 h vs 2 h?","8 h: 2000/2008 = 99.60% (~35 h/yr down). 2 h: 2000/2002 = 99.90% (~8.8 h/yr). A repair-process improvement can justify its cost.");
+C("8","Ways to raise MTBF vs lower MTTR?","MTBF: route diversity, quality construction, hardening, redundancy. MTTR: spares, documentation, alarm correlation, disciplined repair workflow.");
+C("8","Series vs parallel availability?","Series: multiply availabilities (weaker than the weakest). Parallel: A = 1 − (1−A1)(1−A2). Two 99% in parallel → 99.99%; in series → 98.01%.");
+C("8","Tree vs ring vs mesh?","Tree: cheap, big failure domain on a feeder cut. Ring: reroutes around a cut, more trenching. Mesh: most paths, highest cost. Dual-homing reduces single-point failure at extra cost.");
+C("8","Physical vs logical topology?","Physical: cables, ducts, nodes shaped by geography. Logical: VLANs, MPLS, tunnels, VRFs, policy that define services. Same fiber can carry many logical services.");
+C("8","Why can a good physical topology still give poor service?","Weak logical design: poor isolation, a central gateway bottleneck or single point of failure, missing QoS separation, or complexity that cannot be troubleshot.");
+C("8","Why is protection not uniform?","A rural spur and a metro path with hospitals and mobile backhaul have different outage costs. Put redundancy where it gives most benefit per unit cost.");
+C("8","CAPEX vs OPEX in broadband?","CAPEX: civil works, fiber, active gear, sites, power, CPE. OPEX: crews, leases, energy, software, spares, support. Minimising one can raise the other.");
+C("8","Why can fiber-heavy win despite high cost?","Outside plant is expensive to rebuild while electronics are cheap to upgrade, so fiber preserves future options. A staged hybrid can still be correct if early revenue funds later upgrades.");
+C("8","Phased rollout pros and cons?","Pros: lower initial cost, early revenue, learning. Cons: coverage inequity, temporary designs that become technical debt. Needs a transition plan and public roadmap.");
+C("8","Operational readiness checklist?","Inventory, monitoring and correlation, field procedures (install, clean, label, test, escalate), spares, documentation, trained staff, tested provisioning. Design ends when the network can be run confidently.");
+C("8","Why can operations beat equipment?","Two similar networks differ in quality because accurate records, tested escalation and prepositioned spares cut MTTR. Discipline converts infrastructure into reliability.");
+
 var QB=[];function Q(t,q,o,a,w){QB.push({t:t,q:q,o:o,a:a,w:w})}
 Q("1","In infrastructure mode, devices communicate…",["Directly, peer to peer","Through a central access point","Only over cables","With no coordination at all"],1,"The AP is the central coordinator. Direct peer-to-peer with no boss is ad hoc mode.");
 Q("1","Which part of a frame catches transmission damage?",["The header","The payload","The FCS in the trailer","The SSID"],2,"The FCS is a CRC-based checksum. If it fails, the receiver drops the frame.");
@@ -1987,12 +2678,12 @@ function refreshReady(){
   var nt=doneSet.length;
   var kn=0;CARDS.forEach(function(c){if(knownSet.indexOf(cardId(c))>-1)kn++});
   var best=store.get("quizBest",-1);
-  var t=nt/16,c=kn/CARDS.length,q=best<0?0:best/15;
+  var t=nt/NSEC,c=kn/CARDS.length,q=best<0?0:best/15;
   var pct=Math.round((t+c+q)/3*100);
   el.textContent=pct+"%";
   document.getElementById("ringFg").style.strokeDashoffset=314*(1-pct/100);
   document.getElementById("bTop").style.width=(t*100)+"%";
-  document.getElementById("vTop").textContent=nt+"/16";
+  document.getElementById("vTop").textContent=nt+"/"+NSEC;
   document.getElementById("bCard").style.width=(c*100)+"%";
   document.getElementById("vCard").textContent=kn+"/"+CARDS.length;
   document.getElementById("bQuiz").style.width=(q*100)+"%";
@@ -2008,7 +2699,7 @@ document.querySelectorAll(".dn").forEach(function(c){
     if(c.checked&&i<0)doneSet.push(c.dataset.k);
     if(!c.checked&&i>-1)doneSet.splice(i,1);
     store.set("done",doneSet);refreshReady();syncMarks();
-    if(c.checked&&doneSet.length===16)boom();
+    if(c.checked&&doneSet.length===NSEC)boom();
   });
 });
 document.getElementById("sCards").textContent=CARDS.length;
@@ -2133,7 +2824,7 @@ function chip(v,l){
   chipRow.appendChild(b);
 }
 chip("all","ALL");chip("weak","WEAK");
-["1","2","3","4","5"].forEach(function(k){chip(k,"CH"+k)});
+["1","2","3","4","5","6","7","8"].forEach(function(k){chip(k,"CH"+k)});
 build();
 document.querySelectorAll("[data-drill]").forEach(function(b){
   b.addEventListener("click",function(){
@@ -2497,6 +3188,9 @@ refreshReady();
 <script src="./chapter-upgrade.js?v=20260821a"></script>
 <script src="./chapter-layout.js?v=20260821-strongsplit"></script>
 <script src="./question-study.js?v=20260822-exact"></script>
+<script src="./chapter678-questions.js?v=20261005"></script>
+<script src="./chapter678-lab.js?v=20261005"></script>
+<script src="./terms-ch678.js?v=20261005"></script>
 <script src="./course-switcher-hackathon.js?v=20260825"></script>
 <script src="./wifi-logo.js?v=20260817"></script>
 

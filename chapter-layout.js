@@ -13,6 +13,9 @@ css.textContent='\
 #notes article.item.c3>.ph{border-left-color:var(--gr)}\
 #notes article.item.c4>.ph{border-left-color:var(--am)}\
 #notes article.item.c5>.ph{border-left-color:var(--rd)}\
+#notes article.item.c6>.ph{border-left-color:var(--sk)}\
+#notes article.item.c7>.ph{border-left-color:var(--pk)}\
+#notes article.item.c8>.ph{border-left-color:var(--or)}\
 #notes article.item>.ph h3{font-size:21px!important;line-height:1.3!important;margin:0!important;padding:0!important;color:var(--ink)}\
 #notes article.item>.ph .tag{margin-left:auto;color:var(--faint)}\
 #notes .topic-stack{display:grid!important;gap:18px!important;margin:0!important}\

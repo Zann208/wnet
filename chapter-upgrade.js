@@ -40,13 +40,16 @@ css.textContent='\
 @media(max-width:760px){#notes .panel{padding:19px 17px;margin-top:18px}#chapterIndex{margin:14px 0 18px;padding:8px}.chiTitle{display:none}.chiRows{gap:3px}.chiRow{gap:4px}.chiChapter{flex-basis:38px}.chiBtn{padding:5px 7px}#backToGuide{right:10px;bottom:76px}}';
 document.head.appendChild(css);
 
-var chapterNames={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security"};
+var chapterNames={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security","6":"LPWAN","7":"Broadband","8":"Broadband Design"};
 var sectionNames={
  "1.1":"Layers, frames & modes","1.2":"APs, controllers & roaming","1.3":"Coverage & margin",
  "2.1":"Standards bodies","2.2":"Wi-Fi standards & frames","2.3":"Cellular & IoT",
  "3.1":"Connection lifecycle","3.2":"Authentication & access","3.3":"Mobility & continuity",
  "4.1":"Requirements","4.2":"Link budget & capacity","4.3":"Channels & validation",
- "5.1":"Threat landscape","5.2":"WEP / WPA2 / WPA3","5.3":"EAP / EDHOC / PANA","5.4":"Monitoring & response"
+ "5.1":"Threat landscape","5.2":"WEP / WPA2 / WPA3","5.3":"EAP / EDHOC / PANA","5.4":"Monitoring & response",
+ "6.1":"LPWAN goals & energy","6.2":"LPWAN technologies","6.3":"Architecture & scalability",
+ "7.1":"Access, aggregation, core","7.2":"Capacity & the edge","7.3":"BGP","7.4":"MPLS","7.5":"FTTH/PON & hybrids",
+ "8.1":"Demand & service tiers","8.2":"Topology & availability","8.3":"Cost, rollout & operations"
 };
 
 function norm(s){return String(s||"").toLowerCase().replace(/[^a-z0-9.]+/g," ").replace(/\s+/g," ").trim()}
@@ -66,7 +69,7 @@ var targets={};Object.keys(sectionNames).forEach(function(sec){var el=findSectio
 
 var idx=document.createElement("div");idx.id="chapterIndex";idx.innerHTML='<div class="chiTitle">Chapter quick navigation</div><div class="chiRows"></div>';
 var rows=idx.querySelector(".chiRows");
-["1","2","3","4","5"].forEach(function(ch){
+["1","2","3","4","5","6","7","8"].forEach(function(ch){
  var row=document.createElement("div");row.className="chiRow";
  var lab=document.createElement("button");lab.className="chiChapter";lab.textContent="CH"+ch;lab.title=chapterNames[ch];row.appendChild(lab);
  Object.keys(sectionNames).filter(function(k){return k.charAt(0)===ch}).forEach(function(sec){
