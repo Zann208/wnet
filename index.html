@@ -188,6 +188,7 @@ tbody tr:hover{background:var(--panel2)}
 #notes article.item.c7>.ph{border-left-color:var(--pk)}
 #notes article.item.c8>.ph{border-left-color:var(--or)}
 .p6 h2.sec .num{color:var(--sk)}.p7 h2.sec .num{color:var(--pk)}.p8 h2.sec .num{color:var(--or)}
+.tab>.wrap>.lede{display:none}
 .panel.p6::before{background:var(--sk)}.panel.p7::before{background:var(--pk)}.panel.p8::before{background:var(--or)}
 .tag{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto;white-space:nowrap}
 .tldr{margin-top:12px;background:var(--panel2);border-left:2px solid var(--cy);border-radius:0 8px 8px 0;padding:10px 14px;font-size:15.5px;font-weight:600}
@@ -1750,7 +1751,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
   <div class="panel pa">
     <div class="ph"><h2>Link budget + coverage margin</h2><span class="badge am right">EQ 4.1 · 1.2</span></div>
-    <p class="sub2">Pr = Pt + Gt + Gr − Lp − Lm, then M = Pr − Pmin. Defaults = the worked classroom example.</p>
+    <p class="sub2">Pr = Pt + Gt + Gr − Lp − Lm, then M = Pr − Pmin.</p>
     <div class="sl"><label>Pt transmit</label><input type="range" id="lbPt" min="0" max="30" step="1" value="17"><span class="v" id="vPt">17 dBm</span></div>
     <div class="sl"><label>Gt AP antenna</label><input type="range" id="lbGt" min="0" max="18" step="1" value="3"><span class="v" id="vGt">3 dBi</span></div>
     <div class="sl"><label>Gr client antenna</label><input type="range" id="lbGr" min="-3" max="9" step="1" value="0"><span class="v" id="vGr">0 dBi</span></div>
@@ -1851,7 +1852,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
   <div class="panel p6">
     <div class="ph"><h2>LPWAN battery life</h2><span class="badge sk right">EQ 6.1</span></div>
-    <p class="sub2">L = Ebattery / Pavg, with Pavg as the duty-cycle-weighted mix of active and sleep current. Defaults give the 6-year example from the notes.</p>
+    <p class="sub2">L = Ebattery / Pavg, with Pavg as the duty-cycle-weighted mix of active and sleep current.</p>
     <div class="sl"><label>Battery</label><input type="range" id="l6B" min="500" max="19000" step="100" value="2400"><span class="v" id="vL6B"></span></div>
     <div class="sl"><label>Active current</label><input type="range" id="l6A" min="5" max="150" step="1" value="40"><span class="v" id="vL6A"></span></div>
     <div class="sl"><label>Sleep current</label><input type="range" id="l6S" min="1" max="100" step="1" value="5"><span class="v" id="vL6S"></span></div>
@@ -1874,7 +1875,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
   <div class="panel p7">
     <div class="ph"><h2>PON optical budget</h2><span class="badge pk right">§7.3.1</span></div>
-    <p class="sub2">Margin = (Tx power − Rx sensitivity) − total loss. Splitter loss is approximated as 10·log₁₀(N) + 0.5 dB excess. Default values are illustrative, not from a specific standard.</p>
+    <p class="sub2">Margin = (Tx power − Rx sensitivity) − total loss. Splitter loss is approximated as 10·log₁₀(N) + 0.5 dB excess.</p>
     <div class="sl"><label>Tx power</label><input type="range" id="p7T" min="0" max="8" step="0.5" value="3"><span class="v" id="vP7T"></span></div>
     <div class="sl"><label>Rx sensitivity</label><input type="range" id="p7X" min="-34" max="-20" step="1" value="-28"><span class="v" id="vP7X"></span></div>
     <div class="sl"><label>Fiber length</label><input type="range" id="p7L" min="1" max="30" step="1" value="10"><span class="v" id="vP7L"></span></div>
@@ -2233,7 +2234,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 <!-- ============ ASSIGNMENTS ============ -->
 <section class="tab" id="asg"><div class="wrap">
   <h1><span class="pre">// SUBMISSIONS</span>Assignments</h1>
-  <p class="lede">A1 is submitted. A6, A7 and A8 outlines are at the bottom. A2 is still open — the comparison below is there to help you choose fast.</p>
+  
 
   <div class="panel pg">
     <div class="ph"><span class="badge gr">A1</span><h2>Chapter 1 · Problem 1</h2><span class="badge gr right">SUBMITTED</span></div>
@@ -2288,7 +2289,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
   <div class="panel p6">
     <div class="ph"><span class="badge sk">A6 / A7 / A8</span><h2>Chapters 6, 7, 8 · one problem each</h2></div>
-    <p class="sub2">Same rule as A1: answer only one problem from the end of each chapter. Nothing here is marked submitted. The three below are the ones picked first; all others have hints in the chapter sections.</p>
+    <p class="sub2">One problem per chapter.</p>
     <details><summary>▸ Ch 6 · problem 1 · duty cycling and sensor lifetime</summary><div class="dbody"><p>State Eq 6.1 (L = E/Pavg) and say what each term means → duty cycling keeps the radio asleep most of the time so Pavg drops and L rises → give a numeric case (0.1% active gives about 6 years, 1% gives about 0.7 years with the same battery) → limits: sleep current is a floor, retries and long listening windows raise Pavg again, so coverage margin and few ACKs protect the lifetime.</p></div></details>
     <details><summary>▸ Ch 7 · problem 3 · eBGP vs iBGP and route reflectors</summary><div class="dbody"><p>eBGP runs between different ASes and applies business policy; iBGP runs inside one AS to carry external routes to routers that need them → iBGP does not pass a route from one iBGP peer to another, so it needs a full mesh of about n(n−1)/2 sessions → route reflectors reflect routes to clients, so far fewer sessions in a large AS → cost: reflector placement and policy influence which paths clients see.</p></div></details>
     <details><summary>▸ Ch 8 · problem 1 · Eq 8.1 and faster repair</summary><div class="dbody"><p>A = MTBF/(MTBF+MTTR) → MTTR is in the denominator, so shorter repair raises A → example: MTBF 2000 h, MTTR 8 h gives 99.60%, MTTR 2 h gives 99.90%, about four times less downtime → ways to cut MTTR (spares, documentation, alarm correlation, repair workflow) → compare with buying redundancy and conclude both help but repair investment works on every fault type.</p></div></details>
@@ -2296,7 +2297,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
 </div></section>
 
-<div class="footer">// built from CH1 · CH2 · CH3 · CH4 · CH5 · CH6 · CH7 · CH8 handouts — wireless &amp; broadband computer networks · term 1/2569</div>
+<div class="footer">// wireless &amp; broadband computer networks · term 1/2569</div>
 <script>
 var store={get:function(k,d){try{var v=localStorage.getItem("wn_"+k);return v?JSON.parse(v):d}catch(e){return d}},
            set:function(k,v){try{localStorage.setItem("wn_"+k,JSON.stringify(v))}catch(e){}}};

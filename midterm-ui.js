@@ -41,13 +41,12 @@ var css=document.createElement("style");css.textContent='\
 
 var p=document.createElement("div");p.className="panel mt";p.id="midtermPrep";
 p.innerHTML='<div class="ph"><span class="badge gr">MIDTERM</span><h2>Professor-Style MCQ Prep</h2><span class="badge gr right">'+QB.length+' POTENTIAL QUESTIONS</span></div>'+ 
-'<p class="sub2"><b>Chapter study = flashcard-style deck.</b> Open CH1 once, then move through CH1-Q01 → CH1-Q30 with Previous / Next. Your position is remembered. The 3 mocks remain fixed 50-question exam sets.</p>'+ 
 '<div class="mtk"><div><b>30 × 5</b><span>chapter questions</span></div><div><b>150</b><span>full bank</span></div><div><b>3 × 50</b><span>fixed mocks</span></div><div><b id="mtBest">—</b><span>best mock score</span></div></div>'+ 
 '<div class="mtmap"><div><b>CH1-Q01 → Q30</b>Architecture</div><div><b>CH2-Q01 → Q30</b>Standards</div><div><b>CH3-Q01 → Q30</b>Connection</div><div><b>CH4-Q01 → Q30</b>Design</div><div><b>CH5-Q01 → Q30</b>Security</div></div>'+ 
 '<h4>Chapter decks — Previous / Next</h4><div class="mtrow" id="mtChips"></div>'+ 
 '<div class="mtrow"><button class="btn on" id="mtAll">ALL 150 — DECK</button><button class="btn no2" id="mtMissed">RETRY MISSED <span id="mtMissN">0</span></button></div>'+ 
 '<h4>Three full midterm mocks — fixed sets</h4><div class="mtmocks" id="mtMocks"></div>'+ 
-'<div id="mtBody"><div class="box wild"><b>How to use it</b>Study each chapter as a numbered deck. Your answer and current question are remembered. Then take Mock 1, 2, and 3. Every mock question still shows its source ID such as <span class="mono">CH3-Q17</span>.</div></div>';
+'<div id="mtBody"></div>';
 var first=wrap.querySelector(".panel");if(first)wrap.insertBefore(p,first);else wrap.appendChild(p);
 
 var bankOK=QB.length===150&&TS.every(function(t){return counts[t]===30});

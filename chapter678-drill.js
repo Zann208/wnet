@@ -26,7 +26,6 @@ document.head.appendChild(css);
 
 var p=document.createElement("div");p.className="panel";p.id="ch678Prep";
 p.innerHTML='<div class="ph"><span class="badge sk">CH6–8</span><h2>Chapters 6–8 practice</h2><span class="badge sk right">'+ALL.length+' QUESTIONS</span></div>'+
-'<p class="sub2">Numbered decks like the midterm panel: pick a chapter, answer, read the explanation, move with Previous / Next. Your position and misses are remembered.</p>'+
 '<div class="row" id="c678Chips"></div>'+
 '<div id="c678Body"></div>'+
 '<details style="margin-top:12px"><summary>▸ answer guide for chapters 6–8</summary><div class="gl" id="c678Guide"></div></details>';
