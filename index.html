@@ -428,7 +428,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
 
   <div class="panel pa">
-    <div class="ph"><h2>The 6 equations</h2><span class="badge am right">memorize</span></div>
+    <div class="ph"><h2>The 10 equations</h2><span class="badge am right">memorize</span></div>
     <div class="tscroll"><table>
       <tr><th>Eq</th><th>Formula</th><th>Plain meaning</th><th>Worked number</th></tr>
       <tr><td class="mono ok">1.1</td><td class="mono">C = B·log₂(1+SNR)</td><td>Cell capacity = bandwidth × signal quality</td><td class="mono">20 MHz @20 dB ≈ 133 Mb/s</td></tr>
@@ -437,12 +437,16 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono ok">3.1</td><td class="mono">Tsetup = Tscan+Tauth+Tassoc+Tip</td><td>Connection wait = sum of stages</td><td class="mono">60+40+20+30 = 150 ms</td></tr>
       <tr><td class="mono ok">4.1</td><td class="mono">Pr = Pt+Gt+Gr−Lp−Lm</td><td>Link budget: what actually arrives</td><td class="mono">17+3+0−76−6 = −62 dBm</td></tr>
       <tr><td class="mono ok">5.1</td><td class="mono">Risk = Threat × Vulnerability × Impact</td><td>Which control to prioritise</td><td class="mono">segmentation cuts Impact only</td></tr>
+      <tr><td class="mono ok">6.1</td><td class="mono">L = Ebattery / Pavg</td><td>LPWAN lifetime: lower average power, longer life</td><td class="mono">0.1% duty ≈ 6 yr · 1% ≈ 0.7 yr</td></tr>
+      <tr><td class="mono ok">7.1</td><td class="mono">O = N·Raccess / Ruplink</td><td>Oversubscription of a shared uplink</td><td class="mono">400·100 Mb/s / 10 Gb/s = 4:1</td></tr>
+      <tr><td class="mono ok">7.2</td><td class="mono">Margin = (Ptx − Prx,min) − Σloss</td><td>PON optical budget</td><td class="mono">+3 dB per doubling of split</td></tr>
+      <tr><td class="mono ok">8.1</td><td class="mono">A = MTBF / (MTBF + MTTR)</td><td>Availability: fail less or repair faster</td><td class="mono">2000/2008 = 99.60%</td></tr>
     </table></div>
-    <p class="sub2" style="margin-top:9px">All six are live in the <b>RF LAB</b> tab — move the sliders and watch the verdict change.</p>
+    <p class="sub2" style="margin-top:9px">All ten are live in the <b>RF LAB</b> tab — move the sliders and watch the verdict change.</p>
   </div>
 
   <div class="panel">
-    <div class="ph"><h2>7-day plan</h2></div>
+    <div class="ph"><h2>10-day plan</h2></div>
     <div class="tscroll"><table>
       <tr><th>Day</th><th>Study</th><th>Target</th></tr>
       <tr><td class="mono">D1</td><td>1.1 · 1.2</td><td>Layers + frames cold. Infra vs ad hoc in 3 aspects.</td></tr>
@@ -452,6 +456,9 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono">D5</td><td>3.2 · 3.3</td><td>PANA roles. ARP by heart. 150 ms breakdown.</td></tr>
       <tr><td class="mono">D6</td><td>4.1–4.3 · 5.1</td><td>Link budget by hand. Why coverage ≠ capacity. Passive vs active threats.</td></tr>
       <tr><td class="mono">D7</td><td>5.2–5.4 · cheatsheet + drills</td><td>WEP's four flaws. The 4-way handshake in order. Mock exam ×2.</td></tr>
+      <tr><td class="mono">D8</td><td>6.1 · 6.2 · 6.3</td><td>L = E/Pavg with numbers. Preamble vs CAD trade-off. NB-IoT vs LTE-M. Why uplink is favoured.</td></tr>
+      <tr><td class="mono">D9</td><td>7.1–7.5</td><td>O = N·R/Ruplink. eBGP vs iBGP and route reflectors. Push/swap/pop. Splitter loss.</td></tr>
+      <tr><td class="mono">D10</td><td>8.1–8.3 · CH6–8 drills</td><td>A = MTBF/(MTBF+MTTR) with MTTR 8 h vs 2 h. Phased rollout. Readiness checklist.</td></tr>
     </table></div>
     <p class="sub2" style="margin-top:10px">Daily: 20 min notes → 15 min cards → 10 min RF LAB sliders until the numbers feel obvious.</p>
   </div>
@@ -3190,6 +3197,7 @@ refreshReady();
 <script src="./question-study.js?v=20260822-exact"></script>
 <script src="./chapter678-questions.js?v=20261005"></script>
 <script src="./chapter678-lab.js?v=20261005"></script>
+<script src="./chapter678-drill.js?v=20261005"></script>
 <script src="./terms-ch678.js?v=20261005"></script>
 <script src="./course-switcher-hackathon.js?v=20260825"></script>
 <script src="./wifi-logo.js?v=20260817"></script>
