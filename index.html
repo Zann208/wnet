@@ -177,19 +177,22 @@ tbody tr:hover{background:var(--panel2)}
 .box.dgr{background:color-mix(in srgb,var(--rd) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--rd) 28%,transparent)}
 .box.dgr b:first-child{color:var(--rd)}
 .panel.pr::before{background:var(--rd)}
-.badge.sk{color:var(--sk);border-color:var(--sk)}.badge.pk{color:var(--pk);border-color:var(--pk)}.badge.or{color:var(--or);border-color:var(--or)}
+.badge.vi{color:var(--vi);border-color:var(--vi)}.badge.sk{color:var(--sk);border-color:var(--sk)}.badge.pk{color:var(--pk);border-color:var(--pk)}.badge.or{color:var(--or);border-color:var(--or)}
 .gcard.c6 .id{color:var(--sk);border-color:color-mix(in srgb,var(--sk) 45%,transparent)}
 .gcard.c7 .id{color:var(--pk);border-color:color-mix(in srgb,var(--pk) 45%,transparent)}
 .gcard.c8 .id{color:var(--or);border-color:color-mix(in srgb,var(--or) 45%,transparent)}
+.gcard.c9 .id{color:var(--vi);border-color:color-mix(in srgb,var(--vi) 45%,transparent)}
 .item.c6{border-left:2px solid color-mix(in srgb,var(--sk) 55%,transparent)}
 .item.c7{border-left:2px solid color-mix(in srgb,var(--pk) 55%,transparent)}
 .item.c8{border-left:2px solid color-mix(in srgb,var(--or) 55%,transparent)}
+.item.c9{border-left:2px solid color-mix(in srgb,var(--vi) 55%,transparent)}
 #notes article.item.c6>.ph{border-left-color:var(--sk)}
 #notes article.item.c7>.ph{border-left-color:var(--pk)}
 #notes article.item.c8>.ph{border-left-color:var(--or)}
-.p6 h2.sec .num{color:var(--sk)}.p7 h2.sec .num{color:var(--pk)}.p8 h2.sec .num{color:var(--or)}
+#notes article.item.c9>.ph{border-left-color:var(--vi)}
+.p6 h2.sec .num{color:var(--sk)}.p7 h2.sec .num{color:var(--pk)}.p8 h2.sec .num{color:var(--or)}.p9 h2.sec .num{color:var(--vi)}
 .tab>.wrap>.lede{display:none}
-.panel.p6::before{background:var(--sk)}.panel.p7::before{background:var(--pk)}.panel.p8::before{background:var(--or)}
+.panel.p6::before{background:var(--sk)}.panel.p7::before{background:var(--pk)}.panel.p8::before{background:var(--or)}.panel.p9::before{background:var(--vi)}
 .tag{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto;white-space:nowrap}
 .tldr{margin-top:12px;background:var(--panel2);border-left:2px solid var(--cy);border-radius:0 8px 8px 0;padding:10px 14px;font-size:15.5px;font-weight:600}
 .box{border-radius:8px;padding:11px 14px;margin-top:11px;font-size:14.5px;line-height:1.6}
@@ -375,6 +378,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   <button class="tabbtn" data-tab="cheat">CHEATSHEET</button>
   <button class="tabbtn" data-tab="terms">TERMS</button>
   <button class="tabbtn" data-tab="asg">ASSIGNMENTS</button>
+  <button class="tabbtn" data-tab="final">FINAL</button>
   <button class="iconbtn" id="themeBtn" title="Toggle light / dark">◐</button>
 </div>
 <div id="rail"><div class="railin">
@@ -394,13 +398,13 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
-  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Eight chapters. One console.</h1>
-  <p class="lede">Built from your own CH1–CH8 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Term 1/2569.</p>
+  <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Nine chapters. One console.</h1>
+  <p class="lede">Built from your own CH1–CH9 handouts. Plain words, short form + long form, live calculators, cards and a mock exam. Term 1/2569.</p>
 
   <div class="stats">
-    <div class="stat"><b>8</b><span>Chapters</span></div>
-    <div class="stat g"><b>27</b><span>Sections</span></div>
-    <div class="stat a"><b>10</b><span>Equations</span></div>
+    <div class="stat"><b>9</b><span>Chapters</span></div>
+    <div class="stat g"><b>30</b><span>Sections</span></div>
+    <div class="stat a"><b>11</b><span>Equations</span></div>
     <div class="stat v"><b id="sCards">—</b><span>Cards</span></div>
     <div class="stat"><b id="sQs">—</b><span>Quiz Qs</span></div>
   </div>
@@ -410,7 +414,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     <div class="row" style="align-items:flex-start;gap:24px">
       <div class="ringwrap"><svg class="ring" viewBox="0 0 110 110"><circle class="rbg" cx="55" cy="55" r="50"/><circle class="rfg" id="ringFg" cx="55" cy="55" r="50"/></svg><div class="rtx" id="readyPct">0%</div></div>
       <div class="bars">
-        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/27</span></div>
+        <div class="bar"><span class="bl">SECTIONS</span><span class="bt"><i id="bTop"></i></span><span class="bv" id="vTop">0/30</span></div>
         <div class="bar"><span class="bl">CARDS</span><span class="bt"><i id="bCard"></i></span><span class="bv" id="vCard">0</span></div>
         <div class="bar"><span class="bl">BEST QUIZ</span><span class="bt"><i id="bQuiz"></i></span><span class="bv" id="vQuiz">—</span></div>
       </div>
@@ -429,7 +433,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
   </div>
 
   <div class="panel pa">
-    <div class="ph"><h2>The 10 equations</h2><span class="badge am right">memorize</span></div>
+    <div class="ph"><h2>The 11 equations</h2><span class="badge am right">memorize</span></div>
     <div class="tscroll"><table>
       <tr><th>Eq</th><th>Formula</th><th>Plain meaning</th><th>Worked number</th></tr>
       <tr><td class="mono ok">1.1</td><td class="mono">C = B·log₂(1+SNR)</td><td>Cell capacity = bandwidth × signal quality</td><td class="mono">20 MHz @20 dB ≈ 133 Mb/s</td></tr>
@@ -442,8 +446,9 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono ok">7.1</td><td class="mono">O = N·Raccess / Ruplink</td><td>Oversubscription of a shared uplink</td><td class="mono">400·100 Mb/s / 10 Gb/s = 4:1</td></tr>
       <tr><td class="mono ok">7.2</td><td class="mono">Margin = (Ptx − Prx,min) − Σloss</td><td>PON optical budget</td><td class="mono">+3 dB per doubling of split</td></tr>
       <tr><td class="mono ok">8.1</td><td class="mono">A = MTBF / (MTBF + MTTR)</td><td>Availability: fail less or repair faster</td><td class="mono">2000/2008 = 99.60%</td></tr>
+      <tr><td class="mono ok">9.1</td><td class="mono">De2e = Dproc + Dqueue + Dtrans + Dprop</td><td>End-to-end delay by source; queuing is the variable, controllable part</td><td class="mono">0.5 + 12 + 1.2 + 5 = 18.7 ms</td></tr>
     </table></div>
-    <p class="sub2" style="margin-top:9px">All ten are live in the <b>RF LAB</b> tab — move the sliders and watch the verdict change.</p>
+    <p class="sub2" style="margin-top:9px">Ten of the eleven are live in the <b>RF LAB</b> tab (9.1 is in the <b>FINAL</b> tab calculators) — move the sliders and watch the verdict change.</p>
   </div>
 
   <div class="panel">
@@ -460,6 +465,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
       <tr><td class="mono">D8</td><td>6.1 · 6.2 · 6.3</td><td>L = E/Pavg with numbers. Preamble vs CAD trade-off. NB-IoT vs LTE-M. Why uplink is favoured.</td></tr>
       <tr><td class="mono">D9</td><td>7.1–7.5</td><td>O = N·R/Ruplink. eBGP vs iBGP and route reflectors. Push/swap/pop. Splitter loss.</td></tr>
       <tr><td class="mono">D10</td><td>8.1–8.3 · CH6–8 drills</td><td>A = MTBF/(MTBF+MTTR) with MTTR 8 h vs 2 h. Phased rollout. Readiness checklist.</td></tr>
+      <tr><td class="mono">D11</td><td>9.1–9.3 · <b>FINAL</b> tab</td><td>De2e by component. Strict priority vs WFQ. Why verification matters. Then Mock 1, Mock 2, Mock 3 for the final on Thu 22 Oct.</td></tr>
     </table></div>
     <p class="sub2" style="margin-top:10px">Daily: 20 min notes → 15 min cards → 10 min RF LAB sliders until the numbers feel obvious.</p>
   </div>
@@ -467,7 +473,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 
 <!-- ============ MAP ============ -->
 <section class="tab" id="map"><div class="wrap">
-  <h1><span class="pre">// COURSE PIPELINE</span>How the eight chapters fit together</h1>
+  <h1><span class="pre">// COURSE PIPELINE</span>How the nine chapters fit together</h1>
   <p class="lede">Each chapter answers one question about the same network. Read them as one story, not five topics.</p>
 
   <div class="panel">
@@ -552,7 +558,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 </div></section>
 <!-- ============ CHAPTERS ============ -->
 <section class="tab" id="notes"><div class="wrap">
-  <h1><span class="pre">// CHAPTER NOTES</span>27 sections, in plain words</h1>
+  <h1><span class="pre">// CHAPTER NOTES</span>30 sections, in plain words</h1>
   <p class="lede">Each section: a one-line summary, <b>short form</b> for revision, examples, and a <b>long form</b> you open only when you want depth. Use <b>‹ ›</b> in the bar above or <b>J / K</b> to move.</p>
 
   <!-- ===== 1.1 ===== -->
@@ -1742,6 +1748,130 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </div></details>
     <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t83"> mark done</label><button class="btn" data-drill="8">drill ch8 cards →</button></div>
   </article>
+
+  <!-- ===== 9.1 ===== -->
+  <article class="item c9" id="t91">
+    <div class="ph"><span class="badge vi">9.1</span><h3>QoS metrics: delay, jitter, loss and throughput</h3><span class="tag">CH9 · QoS</span></div>
+    <p class="tldr">Quality of service means predictable performance for each kind of application. You measure it with delay, jitter, loss, availability and throughput, and you read them together, never one at a time.</p>
+
+    <h4>Why metrics at all</h4>
+    <p><b>Short form:</b> metrics turn "the network feels bad" into targets an operator can measure. A service can show high average throughput and still feel poor if delay swings or loss forces retransmission. Everything is <b>relative to the application class</b>: a cloud backup tolerates delay and jitter, a voice call does not, streamed video tolerates some loss if it can buffer, and a real-time control system tolerates almost none.</p>
+
+    <h4>Delay and jitter</h4>
+    <p><b>Short form:</b> <b>delay</b> is the time for a packet to cross the network. <b>Jitter</b> is how much that delay varies. Voice and interactive video are sensitive to both.</p>
+    <ul class="pts">
+      <li><b>Where delay comes from:</b> propagation over the medium, serialization onto links, forwarding decisions in devices, and waiting in queues.</li>
+      <li><b>Queuing is the swingy part:</b> it depends on how many packets compete for one output at that moment. The same network feels fine at noon and laggy at the evening peak with the same distances and routes.</li>
+      <li><b>Why jitter hurts:</b> a receiver can absorb a modest fixed delay, but irregular arrival forces a bigger buffer or causes glitches, freezes and distortion. Two paths with the same average delay can feel very different.</li>
+      <li><b>Examples:</b> a video call with plenty of downstream speed still has awkward overlap if upstream queuing creates delay spikes. An online game uses little bandwidth yet is very sensitive to latency variation.</li>
+    </ul>
+
+    <h4>Loss and throughput</h4>
+    <p><b>Short form:</b> loss hurts the application directly, and it also lowers throughput indirectly because TCP shrinks its window and retransmits. So the two must be judged together.</p>
+    <ul class="pts">
+      <li><b>Causes of loss:</b> physical errors, buffer overflow, policing actions, path instability. On shared access and aggregation links, congestion-driven loss matters most.</li>
+      <li><b>Peak is not sustained:</b> a speed test on an idle line is not the rate you get at busy hour. Effective throughput depends on protocol overhead, contention, queue occupancy, retransmissions and how well the transport recovers.</li>
+      <li><b>Moderate speed with low loss and stable latency</b> can beat a faster line with unstable queues.</li>
+    </ul>
+    <div class="tscroll"><table>
+      <tr><th>Metric</th><th>Plain meaning</th><th>Who suffers first</th></tr>
+      <tr><td><b>Delay</b></td><td>time to cross the network</td><td>voice, interactive video, games</td></tr>
+      <tr><td><b>Jitter</b></td><td>variation in that delay</td><td>real-time media, buffers, conversation flow</td></tr>
+      <tr><td><b>Loss</b></td><td>packets that never arrive</td><td>calls, control traffic, and TCP rate via retransmission</td></tr>
+      <tr><td><b>Throughput</b></td><td>effective rate during use</td><td>backups, downloads, video quality</td></tr>
+      <tr><td><b>Availability</b></td><td>fraction of time the service works</td><td>everyone, see Eq 8.1</td></tr>
+    </table></div>
+    <div class="box wild"><b>Evening household</b>Video, cloud sync and remote work share the upstream path. Upstream congestion makes file transfers slow (TCP backs off) and makes calls choppy (late or missing packets). Loss changed the achievable throughput, and the throughput demand caused the loss. They are one problem.</div>
+    <details><summary>▸ chapter 9 exercise 4</summary><div class="dbody">
+      <p><b>4</b> High speed-test throughput but poor real-time experience → the test measures peak rate on an uncongested line. Real-time apps care about delay, jitter and loss during busy periods. Queue build-up from bulk upload, bufferbloat or misclassified traffic can give delay spikes and loss that a speed test never shows.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t91"> mark done</label><button class="btn" data-drill="9">drill ch9 cards →</button></div>
+  </article>
+
+  <!-- ===== 9.2 ===== -->
+  <article class="item c9" id="t92">
+    <div class="ph"><span class="badge vi">9.2</span><h3>QoS models and mechanisms</h3><span class="tag">CH9 · QoS</span></div>
+    <p class="tldr">QoS exists because broadband is shared. Classify traffic, mark it, schedule it and manage queues, with a small number of classes you can actually verify.</p>
+
+    <h4>Why differentiate at all</h4>
+    <p><b>Short form:</b> best effort is simple and fair, but mixed traffic has very different sensitivity to delay and loss, so some controlled prioritization becomes necessary. The skill is to help critical traffic without starving the rest, and without building a scheme nobody can troubleshoot: <b>few meaningful classes, mapped consistently, tied to measurable objectives</b>.</p>
+
+    <h4>Equation 9.1: where the delay comes from</h4>
+    <div class="eq"><span class="eqn">EQ 9.1</span>D<sub>e2e</sub> = D<sub>proc</sub> + D<sub>queue</sub> + D<sub>trans</sub> + D<sub>prop</sub><small>Processing + queuing + transmission + propagation. The split tells you which remedy to reach for.</small></div>
+    <ul class="pts">
+      <li><b>Propagation dominates</b> → the problem is distance or route length.</li>
+      <li><b>Transmission dominates</b> → link rate is the limit.</li>
+      <li><b>Processing dominates</b> → device architecture or feature load.</li>
+      <li><b>Queuing dominates</b> → the most controllable term at broadband bottlenecks, which is why QoS centres on classification, scheduling, shaping and queue management.</li>
+    </ul>
+    <details><summary>▸ chapter 9 exercise 1</summary><div class="dbody">
+      <p><b>1</b> During congestion the term that grows is <b>D<sub>queue</sub></b>, because more packets wait for the same output. D<sub>proc</sub> can creep up if a device is overloaded. D<sub>prop</sub> and D<sub>trans</sub> do not change with load (distance and link rate stay fixed).</p>
+    </div></details>
+
+    <h4>Classification and marking</h4>
+    <p><b>Short form:</b> <b>classification</b> decides what a packet belongs to (application, subscriber policy, contract). <b>Marking</b> writes the intended treatment into a field so downstream devices can apply it consistently.</p>
+    <ul class="pts">
+      <li>Classify by port numbers, deep packet inspection, subscriber identity, virtual interface, access line, or markings from trusted devices.</li>
+      <li><b>Trust boundary:</b> if you accept every marking blindly, subscribers mark everything high priority. Providers rewrite, validate or constrain markings at the service edge, trusting managed business equipment and reclassifying unmanaged residential traffic.</li>
+      <li><b>Example:</b> managed residential voice is classified at the gateway and marked for a low-latency queue while web and streaming stay in less urgent classes.</li>
+    </ul>
+
+    <h4>Scheduling and queue management</h4>
+    <p><b>Short form:</b> a scheduler picks which queued packet goes next when several classes wait for the same output. Queue management decides how full the queues are allowed to get before that.</p>
+    <div class="tscroll"><table>
+      <tr><th>Mechanism</th><th>What it does</th><th>Main risk or cost</th></tr>
+      <tr><td><b>Strict priority</b></td><td>Always serves the highest class first. Protects small volumes of delay-sensitive traffic.</td><td>Starves lower classes if overused.</td></tr>
+      <tr><td><b>Weighted fair queuing</b></td><td>Reserves relative service shares while still favouring important traffic.</td><td>More configuration; shares must reflect real needs.</td></tr>
+      <tr><td><b>Deficit round robin</b></td><td>Cycles through queues giving each a byte allowance, so shares stay fair across packet sizes.</td><td>Not strictly low-latency by itself.</td></tr>
+      <tr><td><b>Active queue management</b></td><td>Signals congestion or drops early so buffer occupancy, and therefore latency, stays stable.</td><td>Needs tuning; the benefit is delay, not peak throughput.</td></tr>
+    </table></div>
+    <ul class="pts">
+      <li><b>Bufferbloat:</b> huge unmanaged buffers absorb bursts but add excessive delay under sustained load. AQM can greatly improve interactive performance even if peak throughput barely changes.</li>
+      <li><b>Evening scenario:</b> a video stream, a cloud backup and a voice call share the upstream. Unmanaged, the backup fills buffers and voice waits too long. With a modest low-latency treatment for voice and controlled queue occupancy for bulk data, the same line works without stopping the backup.</li>
+    </ul>
+    <details><summary>▸ chapter 9 exercise 2</summary><div class="dbody">
+      <p><b>2</b> Strict priority vs WFQ for mixed residential traffic → strict priority is simple and great for a small voice class but a heavy high-priority flow can starve web and backup. WFQ gives each class a guaranteed relative share, so voice still does well and bulk keeps moving, at the price of more tuning. Common answer: a small strict-priority (or low-latency) queue for voice, WFQ for the rest.</p>
+    </div></details>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t92"> mark done</label><button class="btn" data-drill="9">drill ch9 cards →</button></div>
+  </article>
+
+  <!-- ===== 9.3 ===== -->
+  <article class="item c9" id="t93">
+    <div class="ph"><span class="badge vi">9.3</span><h3>QoS engineering in practice</h3><span class="tag">CH9 · QoS</span></div>
+    <p class="tldr">QoS works only when policy, measurement and operations stay aligned. Pick a few classes, prove they work under load, and keep tuning.</p>
+
+    <h4>Traffic classes</h4>
+    <p><b>Short form:</b> Table 9.1 is a starting framework, not a template. Providers merge or split classes to suit their mix (a carrier with mobile backhaul and enterprise VPNs may define stricter real-time and assured classes than a small residential ISP). Each class should mean one distinct operational intention.</p>
+    <div class="tscroll"><table>
+      <tr><th>Class</th><th>Example traffic</th><th>Primary goal</th><th>Typical treatment</th></tr>
+      <tr><td><b>Real-time</b></td><td>Voice, interactive video</td><td>Low delay and jitter</td><td>Priority scheduling</td></tr>
+      <tr><td><b>Transactional</b></td><td>Web and control traffic</td><td>Fast responsiveness</td><td>Assured bandwidth</td></tr>
+      <tr><td><b>Bulk data</b></td><td>Backups, file transfers</td><td>High throughput efficiency</td><td>Best effort or weighted sharing</td></tr>
+      <tr><td><b>Background</b></td><td>Software updates</td><td>Low operational impact</td><td>Rate-limited service</td></tr>
+    </table></div>
+
+    <h4>Measurement and verification</h4>
+    <p><b>Short form:</b> a policy that looks sensible in a config file is not proven. Measure with synthetic tests, flow telemetry, queue statistics and user-experience indicators, and watch class-specific drops, queue occupancy, latency variation and representative applications, not just interface utilisation.</p>
+    <ul class="pts">
+      <li>Verify the priority queue carries the <b>intended</b> traffic and that lower classes stay usable.</li>
+      <li>Synthetic traffic shows whether the treatment appears during congestion. Passive telemetry shows whether real traffic behaves the same over time.</li>
+      <li><b>Example:</b> total loss is low, yet video meetings are bad at busy hours. Queue telemetry shows delay-sensitive traffic misclassified into the same congested class as bulk uploads.</li>
+    </ul>
+    <details><summary>▸ chapter 9 exercise 5</summary><div class="dbody">
+      <p><b>5</b> Verify a low-latency class → run synthetic voice-like probes through congestion and check delay, jitter and loss; read per-class queue occupancy and drops; sample the flows in the class (ports, DSCP or marking, subscriber) to confirm they are voice, not misclassified bulk or video; check lower classes still get their share; compare with call-quality scores from users.</p>
+    </div></details>
+
+    <h4>Policy trade-offs</h4>
+    <p><b>Short form:</b> too much traffic in the high class makes "priority" meaningless and hurts the others. Too little differentiation leaves real-time traffic exposed to bulk congestion. The aim is to <b>distribute impairment according to service value</b>, tuned from live data.</p>
+    <ul class="pts">
+      <li>On consumer broadband many traffic types share one line under end-user control, and finite capacity means ideal performance for every app cannot be guaranteed.</li>
+      <li><b>Example:</b> a real-time class first protects voice, then grows to include lots of interactive video and starves ordinary traffic. The fix is rarely to drop priority altogether: refine classification, add class limits or improve queue management.</li>
+      <li>Revisit policy with operational data, complaint patterns, new application mixes and changing service tiers. QoS is an ongoing process, not a one-time configuration.</li>
+    </ul>
+    <div class="box wild"><b>Exercise 3: a simple policy</b>Voice → real-time class, small priority queue, rate-limited so it cannot starve others. Web and control → transactional, assured share. Backups → bulk, weighted share or best effort. Update downloads → background, rate-limited. Mark at the trusted edge, rewrite untrusted markings, apply AQM on the upstream, then verify with per-class counters.</div>
+    <div class="foot"><label class="chk"><input type="checkbox" class="dn" data-k="t93"> mark done</label><button class="btn" data-drill="9">drill ch9 cards →</button></div>
+  </article>
+
 </div></section>
 
 <!-- ============ RF LAB ============ -->
@@ -2066,6 +2196,18 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
     </table></div>
   </div>
 
+  <div class="panel p9">
+    <div class="ph"><h2>Chapter 9 table</h2><span class="badge vi right">CH9 · QoS</span></div>
+    <div class="tscroll"><table>
+      <tr><th>Class</th><th>Example traffic</th><th>Primary goal</th><th>Typical treatment</th></tr>
+      <tr><td class="mono ok">Real-time</td><td>Voice, interactive video</td><td>Low delay and jitter</td><td>Priority scheduling</td></tr>
+      <tr><td class="mono ok">Transactional</td><td>Web and control traffic</td><td>Fast responsiveness</td><td>Assured bandwidth</td></tr>
+      <tr><td class="mono ok">Bulk data</td><td>Backups, file transfers</td><td>High throughput efficiency</td><td>Best effort or weighted sharing</td></tr>
+      <tr><td class="mono ok">Background</td><td>Software updates</td><td>Low operational impact</td><td>Rate-limited service</td></tr>
+    </table></div>
+  </div>
+
+
   <div class="panel pr">
     <div class="ph"><h2>Security tables</h2><span class="badge rd right">CH5</span></div>
     <h4>WEP vs WPA2 — why it changed</h4>
@@ -2298,6 +2440,9 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 </div></section>
 
 <div class="footer">// wireless &amp; broadband computer networks · term 1/2569</div>
+<!-- ============ FINAL EXAM ============ -->
+<section class="tab" id="final"><div class="wrap"></div></section>
+
 <script>
 var store={get:function(k,d){try{var v=localStorage.getItem("wn_"+k);return v?JSON.parse(v):d}catch(e){return d}},
            set:function(k,v){try{localStorage.setItem("wn_"+k,JSON.stringify(v))}catch(e){}}};
@@ -2329,8 +2474,11 @@ var TOPICS={
  "75":["FTTH/PON &amp; hybrids","optical budget, fiber-centric, HFC","7"],
  "81":["Demand &amp; service tiers","forecasting, busy hour, SLAs","8"],
  "82":["Topology &amp; availability","A = MTBF/(MTBF+MTTR), physical vs logical","8"],
- "83":["Cost, rollout &amp; operations","CAPEX/OPEX, phased rollout, readiness","8"]};
-var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security","6":"LPWAN","7":"Broadband","8":"Broadband Design"};
+ "83":["Cost, rollout &amp; operations","CAPEX/OPEX, phased rollout, readiness","8"],
+ "91":["QoS metrics","delay, jitter, loss, throughput, interaction","9"],
+ "92":["QoS models &amp; mechanisms","Eq 9.1, classify, mark, schedule, AQM","9"],
+ "93":["QoS in practice","traffic classes, verification, policy trade-offs","9"]};
+var CHNAME={"1":"Architecture","2":"Standards","3":"Connection","4":"Design","5":"Security","6":"LPWAN","7":"Broadband","8":"Broadband Design","9":"QoS"};
 var NSEC=Object.keys(TOPICS).length;
 
 /* ================= CARDS ================= */
@@ -2579,6 +2727,22 @@ C("8","Why can fiber-heavy win despite high cost?","Outside plant is expensive t
 C("8","Phased rollout pros and cons?","Pros: lower initial cost, early revenue, learning. Cons: coverage inequity, temporary designs that become technical debt. Needs a transition plan and public roadmap.");
 C("8","Operational readiness checklist?","Inventory, monitoring and correlation, field procedures (install, clean, label, test, escalate), spares, documentation, trained staff, tested provisioning. Design ends when the network can be run confidently.");
 C("8","Why can operations beat equipment?","Two similar networks differ in quality because accurate records, tested escalation and prepositioned spares cut MTTR. Discipline converts infrastructure into reliability.");
+C("9","What is QoS for?","Predictable performance for applications with different sensitivity to delay, jitter, loss and throughput. Judged per application class, not as one abstract speed.");
+C("9","Delay vs jitter?","Delay is the time to cross the network. Jitter is the variation in that delay. Same average delay can feel very different if jitter differs.");
+C("9","The four sources of delay?","Propagation (medium), transmission/serialization (link rate), processing (forwarding in devices), queuing (waiting during congestion). Queuing varies most.");
+C("9","Eq 9.1?","De2e = Dproc + Dqueue + Dtrans + Dprop. Points to the remedy: distance, link rate, device load, or queue management.");
+C("9","Which delay term grows during congestion?","Dqueue. Propagation and link rate stay the same. Queuing is also the most controllable term, so QoS centres on it.");
+C("9","How does loss reduce throughput?","TCP and other upper layers shrink their window and retransmit after loss. Loss and throughput interact and must be assessed together.");
+C("9","Why can a speed test mislead?","It shows peak rate on an uncongested line. Sustained rate depends on overhead, contention, queue occupancy, retransmissions and loss recovery.");
+C("9","Classification vs marking?","Classification identifies traffic (app, subscriber policy, contract). Marking encodes the treatment so downstream devices enforce it consistently.");
+C("9","Why a trust boundary?","If markings are accepted blindly, subscribers mark everything high priority. Providers rewrite or validate markings at the service edge.");
+C("9","Strict priority vs WFQ?","Strict priority protects small real-time volumes but can starve lower classes. WFQ reserves relative shares for a balanced compromise. DRR is another share-based scheduler.");
+C("9","Bufferbloat and the fix?","Big unmanaged buffers absorb bursts but add large delay under sustained load. Active queue management signals congestion or drops early to keep latency stable.");
+C("9","The four example traffic classes (Table 9.1)?","Real-time: voice, interactive video, priority scheduling. Transactional: web and control, assured bandwidth. Bulk: backups, best effort or weighted. Background: updates, rate-limited.");
+C("9","Why verify QoS policy?","A config that looks right is unproven under load. Measure per-class drops, queue occupancy, latency variation and user experience, and confirm the priority queue carries the intended traffic.");
+C("9","Low total loss but bad video meetings. Likely cause?","Delay-sensitive traffic misclassified or sharing a congested class with bulk uploads. Queue telemetry shows it, link-level loss does not.");
+C("9","Main policy trade-off?","Too much high-priority traffic starves other classes and dilutes priority. Too little differentiation leaves real-time traffic exposed. Tune iteratively from live data.");
+C("9","How many classes should a design use?","A small number of meaningful classes mapped consistently, each with a distinct operational intention. Elaborate schemes are hard to validate and troubleshoot.");
 
 var QB=[];function Q(t,q,o,a,w){QB.push({t:t,q:q,o:o,a:a,w:w})}
 Q("1","In infrastructure mode, devices communicate…",["Directly, peer to peer","Through a central access point","Only over cables","With no coordination at all"],1,"The AP is the central coordinator. Direct peer-to-peer with no boss is ad hoc mode.");
@@ -2832,7 +2996,7 @@ function chip(v,l){
   chipRow.appendChild(b);
 }
 chip("all","ALL");chip("weak","WEAK");
-["1","2","3","4","5","6","7","8"].forEach(function(k){chip(k,"CH"+k)});
+["1","2","3","4","5","6","7","8","9"].forEach(function(k){chip(k,"CH"+k)});
 build();
 document.querySelectorAll("[data-drill]").forEach(function(b){
   b.addEventListener("click",function(){
@@ -3197,9 +3361,11 @@ refreshReady();
 <script src="./chapter-layout.js?v=20260821-strongsplit"></script>
 <script src="./question-study.js?v=20260822-exact"></script>
 <script src="./chapter678-questions.js?v=20261005"></script>
+<script src="./final-bank.js?v=20261020"></script>
 <script src="./chapter678-lab.js?v=20261005"></script>
-<script src="./chapter678-drill.js?v=20261005"></script>
-<script src="./terms-ch678.js?v=20261005"></script>
+<script src="./chapter678-drill.js?v=20261020"></script>
+<script src="./terms-ch678.js?v=20261020"></script>
+<script src="./final-exam.js?v=20261020"></script>
 <script src="./course-switcher-hackathon.js?v=20260825"></script>
 <script src="./wifi-logo.js?v=20260817"></script>
 

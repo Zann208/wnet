@@ -1,11 +1,11 @@
 "use strict";
-/* Chapters 6-8 practice decks + answer guide for the Drills tab.
+/* Chapters 6-9 practice decks + answer guide for the Drills tab.
    The midterm panel stays CH1-5 (that is what the midterm covers). */
 (function(){
 if(window.__wnCh678DrillLoaded)return;window.__wnCh678DrillLoaded=true;
 if(!window.QB||typeof store==="undefined")return;
 var wrap=document.querySelector("#drills .wrap");if(!wrap)return;
-var TS=["6","7","8"],BANK={};
+var TS=["6","7","8","9"],BANK={};
 TS.forEach(function(t){
   BANK[t]=QB.filter(function(q){return q.t===t});
   BANK[t].forEach(function(q,i){q.__c678="CH"+t+"-Q"+String(i+1).padStart(2,"0")});
@@ -25,10 +25,10 @@ var css=document.createElement("style");css.textContent='\
 document.head.appendChild(css);
 
 var p=document.createElement("div");p.className="panel";p.id="ch678Prep";
-p.innerHTML='<div class="ph"><span class="badge sk">CH6–8</span><h2>Chapters 6–8 practice</h2><span class="badge sk right">'+ALL.length+' QUESTIONS</span></div>'+
+p.innerHTML='<div class="ph"><span class="badge sk">CH6–9</span><h2>Chapters 6–9 practice</h2><span class="badge sk right">'+ALL.length+' QUESTIONS</span></div>'+
 '<div class="row" id="c678Chips"></div>'+
 '<div id="c678Body"></div>'+
-'<details style="margin-top:12px"><summary>▸ answer guide for chapters 6–8</summary><div class="gl" id="c678Guide"></div></details>';
+'<details style="margin-top:12px"><summary>▸ answer guide for chapters 6–9</summary><div class="gl" id="c678Guide"></div></details>';
 var mt=document.getElementById("midtermPrep"),anchor=mt?mt.nextSibling:wrap.querySelector(".panel");
 wrap.insertBefore(p,anchor);
 

@@ -1,5 +1,5 @@
 "use strict";
-/* Glossary rows for Chapters 6-8 (same pattern as terms-extra.js). */
+/* Glossary rows for Chapters 6-9 (same pattern as terms-extra.js). */
 (function(){
 if(window.__wnTermsCh678Loaded)return;window.__wnTermsCh678Loaded=true;
 var table=document.getElementById("acroT");if(!table)return;
@@ -49,7 +49,18 @@ var rows=[
  ["MTBF","Mean Time Between Failures","Average operating time between failures. Higher is better for availability."],
  ["MTTR","Mean Time To Repair","Average time to restore service after a failure. Lower is better for availability."],
  ["Availability","Availability","A = MTBF / (MTBF + MTTR). Series elements multiply; parallel elements multiply unavailabilities."],
- ["CAPEX / OPEX","Capital / Operational expenditure","CAPEX is build cost (civil works, fiber, gear). OPEX is running cost (crews, leases, energy, support)."]
+ ["CAPEX / OPEX","Capital / Operational expenditure","CAPEX is build cost (civil works, fiber, gear). OPEX is running cost (crews, leases, energy, support)."],
+ ["QoS","Quality of Service","Delivering predictable performance to applications with different sensitivity to delay, jitter, loss and throughput."],
+ ["Jitter","Delay variation","Variation in packet delay. Real-time voice and video need it small and stable."],
+ ["Queuing delay","Dqueue","Time a packet waits in a queue during congestion. The most variable and most controllable term in Eq 9.1."],
+ ["Classification","Traffic classification","Identifying packets by application, subscriber policy or service contract so they receive a treatment class."],
+ ["Marking","Traffic marking","Encoding the intended treatment in a packet field so downstream devices can enforce it consistently."],
+ ["Trust boundary","QoS trust boundary","Point where markings are accepted, validated or rewritten, so subscribers cannot simply mark all traffic high priority."],
+ ["Strict priority","Strict priority scheduling","Always serves the highest class first. Protects small real-time volumes but can starve lower classes."],
+ ["WFQ","Weighted Fair Queuing","Scheduler that reserves relative service shares for each class while still favouring important traffic."],
+ ["DRR","Deficit Round Robin","Share-based scheduler that cycles through queues with a byte allowance so shares stay fair across packet sizes."],
+ ["AQM","Active Queue Management","Signals congestion or drops packets early to keep buffer occupancy, and therefore latency, under control."],
+ ["Bufferbloat","Bufferbloat","Large unmanaged buffers that absorb bursts but add excessive delay under sustained load."]
 ];
 function existingKeys(){var m={};Array.from(table.querySelectorAll("tr")).slice(1).forEach(function(r){var c=r.querySelector("td");if(c)m[c.textContent.trim().toLowerCase()]=1;});return m;}
 var have=existingKeys();
