@@ -78,7 +78,121 @@ var CH=[
  ]}
 ];
 
+/* Decoder: [term, stands for, what it plainly means] */
+var DEC={
+"6":[
+["LPWAN","Low-Power Wide-Area Network","A network for tiny battery devices (meters, soil sensors, trackers) that must reach kilometres and last years. \"Low power\" = battery life, \"wide area\" = long range."],
+["IoT","Internet of Things","Everyday devices with a sensor and a radio that report data over a network."],
+["Uplink / downlink","Device to network / network to device","Uplink is the sensor reporting. Downlink is a command or acknowledgment coming back. LPWANs favour uplink."],
+["Duty cycle","Fraction of time the radio is active","0.1% duty cycle = radio on for 1 ms in every second. Lower duty cycle, longer battery. Regulators may also cap it."],
+["Pavg","Average power","The long-run power draw mixing sleep and active time. Battery life L = E / Pavg."],
+["mAh","Milliamp-hours","Battery capacity. Divide by current in mA to get hours."],
+["Payload","The useful data in a packet","The few bytes of actual reading, as opposed to headers and overhead."],
+["Airtime","Time a transmission occupies the channel","Long transmissions use more energy and block others, so LPWANs keep messages short."],
+["Preamble","Opening pattern of a frame","A known signal at the start of a packet so a sleeping receiver can notice it and align timing."],
+["CAD","Channel Activity Detection","A very short wake-up where the receiver checks whether a packet is starting, then sleeps again if not."],
+["Licensed / unlicensed spectrum","Paid-for operator frequencies / free shared frequencies","Licensed (cellular): little interference, operator control. Unlicensed (LoRaWAN, Sigfox): free to use but shared, so interference and duty-cycle rules."],
+["LoRaWAN","Long Range Wide Area Network","Unlicensed LPWAN where you can install your own gateways. Limit: duty-cycle rules and interference."],
+["Sigfox","Company and network name","Unlicensed LPWAN with very low energy messaging and small, fixed payloads."],
+["NB-IoT","Narrowband Internet of Things","Cellular LPWAN for low-rate, fixed, delay-tolerant devices with deep coverage (a gas meter in a basement)."],
+["LTE-M","LTE for Machines","Cellular LPWAN with higher rate, lower latency and mobility (a tracker on a moving vehicle)."],
+["Gateway / base station","Radio attachment point","Receives weak transmissions from many devices and relays them upstream."],
+["Network server","Core platform of the LPWAN","Handles device identity, removes duplicate messages, applies security and forwards to applications."],
+["MQTT","Message Queuing Telemetry Transport","Lightweight publish/subscribe messaging. Devices publish to named topics, applications subscribe."],
+["Broker","MQTT message hub","The server that receives published messages and forwards them to subscribers."],
+["ECHONET Lite","Home-energy and appliance protocol","Treats appliances as objects with properties you can read, write or be notified about."]
+],
+"7":[
+["Access network","Last-mile connection","Connects customers to the provider edge: fiber, cable, DSL, fixed wireless, PON."],
+["Aggregation network","Metro layer","Combines traffic from many access segments and applies subscriber policy."],
+["Core network","Backbone","Large-scale transport and interconnection across regions or countries."],
+["Oversubscription","Selling more than the uplink can carry at once","O = N x Raccess / Ruplink. Works because users are rarely all busy together."],
+["FTTH","Fiber To The Home","Fiber all the way to the customer's premises."],
+["PON","Passive Optical Network","Fiber access where unpowered splitters share one feeder fiber among many homes."],
+["OLT","Optical Line Terminal","Provider-side PON equipment in the central office."],
+["ONT / ONU","Optical Network Terminal / Unit","The box in the customer's home that turns light into Ethernet or voice. Marks where the provider's service ends."],
+["Splitter / split ratio","Passive optical divider; 1:N","1:32 shares one fiber among 32 homes. Every doubling costs about 3 dB of signal."],
+["Optical budget","Allowed total signal loss","Transmitter power minus receiver sensitivity. Total losses (fiber, splices, connectors, splitter, reserve) must stay below it."],
+["dB","Decibel","A ratio unit for power. Losses add up in dB, so budgets are simple addition."],
+["DWDM","Dense Wavelength Division Multiplexing","Many colours of light on one fiber, multiplying capacity without new cable."],
+["HFC","Hybrid Fiber-Coax","Fiber deep into the network, coaxial cable for the last stretch to homes."],
+["DOCSIS","Data Over Cable Service Interface Specification","The standard for broadband over coaxial cable. The medium is shared among homes on a node."],
+["DSL","Digital Subscriber Line","Broadband over old copper phone lines. Speed drops with distance."],
+["APC / UPC","Angled / Ultra Physical Contact","Connector polish types. APC's angled face reflects less light and is common in PON."],
+["SC / LC / ST / FC","Connector body styles","SC push-pull, LC small and dense, ST and FC older or specialised."],
+["BGP","Border Gateway Protocol","The routing protocol between networks. It carries reachability and policy, not just shortest paths."],
+["AS","Autonomous System","One organization's network under a single routing policy, identified by an AS number."],
+["eBGP / iBGP","External / Internal BGP","eBGP between different ASes. iBGP inside one AS."],
+["Route reflector","iBGP helper","Passes routes to its clients so you do not need a session between every pair of routers."],
+["AS_PATH","List of ASes crossed","Used to stop loops and often to compare paths."],
+["LOCAL_PREF","Local preference","A number set inside your AS. Higher is preferred, and it outranks a shorter AS_PATH."],
+["MED","Multi-Exit Discriminator","A hint to a neighbour about which entry point into your AS to use."],
+["NEXT_HOP","Next router toward the prefix","Ties a BGP route to a reachable forwarding path."],
+["Community","Policy tag on a route","Marks routes so they can be filtered or treated in groups."],
+["NLRI / prefix","Network Layer Reachability Information","The address ranges a BGP UPDATE advertises or withdraws."],
+["IGP (OSPF, IS-IS)","Interior Gateway Protocol","Routing inside one AS. BGP handles between ASes."],
+["MPLS","Multiprotocol Label Switching","Forwarding by short labels instead of looking up the full IP address at every router."],
+["Label","Short forwarding tag","Local identifier swapped at each hop. Not an address."],
+["FEC","Forwarding Equivalence Class","A group of packets that get the same MPLS treatment."],
+["LER / LSR","Label Edge Router / Label Switching Router","LER pushes and pops labels at the edge. LSR swaps inside."],
+["LSP","Label-Switched Path","The one-way route labeled packets follow."],
+["PHP","Penultimate Hop Popping","The router before the last one removes the outer label to save the egress work."],
+["VPN / VRF","Virtual Private Network / Virtual Routing and Forwarding","Separate customer networks over shared infrastructure. A VRF is one customer's routing table on a PE."],
+["PE / CE / P","Provider Edge / Customer Edge / Provider router","CE is the customer router, PE the provider edge it connects to, P the core routers in between."],
+["RSVP-TE","Resource Reservation Protocol - Traffic Engineering","Builds explicitly routed MPLS tunnels with reserved resources."],
+["Traffic engineering","Steering traffic onto chosen paths","Uses spare capacity instead of piling everything on the shortest path."]
+],
+"8":[
+["Demand forecast","Estimate of subscribers and traffic","The first design step. Must model the busy hour, not the daily average."],
+["Busy hour","Peak-traffic period","The time many users act at once. It sizes uplinks and sets oversubscription risk."],
+["Service tier","Package level","Residential, premium or business, each with different capacity, latency and support promises."],
+["SLA","Service-Level Agreement","A contract promising restoration times, maintenance windows and escalation."],
+["MTBF","Mean Time Between Failures","Average working time between breakdowns. Higher is better."],
+["MTTR","Mean Time To Repair","Average time to restore service. Lower is better."],
+["Availability","Fraction of time the service works","A = MTBF / (MTBF + MTTR). 99.9% is about 8.8 hours of downtime a year."],
+["Tree / star / ring / mesh","Topology shapes","Tree: cheap, big failure domain. Ring and dual-homed: cost more but survive a cut. Mesh: most paths."],
+["Failure domain","Everything hurt by one fault","A cut feeder in a tree takes down all its branches."],
+["Dual-homing","Connected to two upstream points","If one link or node fails, traffic uses the other."],
+["Physical / logical topology","Cables and ducts / services and policy","One fiber can carry several logical services (VLANs, tunnels, VRFs)."],
+["VLAN","Virtual LAN","A logical separation of traffic on shared switches."],
+["CAPEX / OPEX","Capital / Operational expenditure","CAPEX is the build (civil works, fiber, gear). OPEX is running it (crews, leases, energy, support)."],
+["Phased rollout","Build in stages","Dense or strategic areas first, for lower initial cost and early revenue."],
+["Technical debt","Cost of quick temporary choices","An interim design that makes later upgrades harder."],
+["Stranded capital","Money in unused assets","What over-forecasting leaves you with."],
+["CPE","Customer-Premises Equipment","The gateway, ONT or router at the customer's home or office."],
+["Operational readiness","Able to run it day to day","Inventory, monitoring, field procedures, spares and documentation."]
+],
+"9":[
+["QoS","Quality of Service","Making a shared network give each type of application the performance it needs."],
+["Delay (latency)","Time to cross the network","Matters most for voice, video and games."],
+["Jitter","Variation in delay","Packets arriving at uneven intervals. Causes glitches in calls even when average delay is fine."],
+["Packet loss","Packets that never arrive","Causes retransmission, and TCP slows down after loss."],
+["Throughput","Data actually delivered per second","Effective rate under real conditions, not the advertised peak."],
+["Dproc","Processing delay","Time a device spends deciding where to forward a packet."],
+["Dqueue","Queuing delay","Time spent waiting behind other packets. Grows during congestion and is the most controllable term."],
+["Dtrans","Transmission (serialization) delay","Time to push the packet onto the link. Depends on link rate."],
+["Dprop","Propagation delay","Time for the signal to travel the distance. Fixed by route length."],
+["Best effort","No special treatment","All traffic treated alike, first come first served."],
+["Classification","Identifying what a packet is","By application, subscriber policy or contract, so it gets the right treatment."],
+["Marking","Tagging the treatment","Writing the intended handling into a packet field for downstream devices to enforce."],
+["Trust boundary","Where markings are accepted or rewritten","Stops subscribers from marking everything high priority."],
+["Scheduling","Choosing which queued packet goes next","Done when several classes wait for the same output link."],
+["Strict priority","Highest class always first","Great for small voice volumes, but can starve lower classes."],
+["WFQ","Weighted Fair Queuing","Each class gets a guaranteed share of the link."],
+["DRR","Deficit Round Robin","Cycles through queues with a byte allowance so sharing stays fair across packet sizes."],
+["AQM","Active Queue Management","Signals congestion or drops packets early so queues stay short and latency stable."],
+["Bufferbloat","Oversized buffers adding delay","Big unmanaged buffers absorb bursts but make everything wait."],
+["Shaping / policing","Smoothing / limiting traffic rate","Shaping delays excess traffic. Policing drops or remarks it."],
+["Synthetic test / telemetry","Probe traffic / collected statistics","Used to verify a policy works under load: per-class drops, queue occupancy, latency variation."]
+]
+};
+
 var css=document.createElement("style");css.textContent='\
+#finRead .dec{margin-top:12px;border:1px solid var(--line2);border-radius:9px;background:var(--panel);overflow:hidden}\
+#finRead .dec>summary{cursor:pointer;padding:10px 13px;font:700 11px var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--gr)}\
+#finRead .dec table{margin:0}#finRead .dec td:first-child{white-space:nowrap;font:700 12.5px var(--mono);color:var(--cy)}\
+#finRead .dec td:nth-child(2){color:var(--dim);font-size:13px}\
+#finRead .decf{width:100%;margin-top:10px}\
 #finRead details.rc{border:1px solid var(--line);border-radius:10px;background:var(--panel2);margin-top:10px}\
 #finRead details.rc>summary{cursor:pointer;list-style:none;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:700}\
 #finRead details.rc>summary::-webkit-details-marker{display:none}\
@@ -99,11 +213,16 @@ document.head.appendChild(css);
 
 function readSet(){return store.get("finalRead",[])}
 var h='<div class="ph"><span class="badge vi">READ</span><h2>Final prep reading</h2><span class="badge vi right" id="finReadN"></span></div>'+
-'<p class="sub2">Each chapter below gives the one big idea, then every key concept in three parts: <b>What it means</b> in plain words, <b>Why it matters</b>, and the <b>Exam trap</b>. Worked numbers show every step. Tick a chapter when you have read it.</p>';
+'<p class="sub2">Each chapter below gives the one big idea, then every key concept in three parts: <b>What it means</b> in plain words, <b>Why it matters</b>, and the <b>Exam trap</b>. Worked numbers show every step. Tick a chapter when you have read it. Every chapter starts with a <b>decoder</b> that spells out each acronym and term.</p>'+
+'<input class="fld decf" id="finDecF" placeholder="Look up any term or acronym (LPWAN, CAD, MED, jitter...)">';
 CH.forEach(function(c,ci){
   h+='<details class="rc"'+(ci===0?' open':'')+' data-ch="'+c.t+'"><summary><span class="badge '+c.color+'">CH'+c.t+'</span>'+c.name+
      '<label class="rdone" onclick="event.stopPropagation()"><input type="checkbox" data-rd="'+c.t+'"> read</label></summary><div class="rcb">'+
-     '<div class="rone">'+c.one+'</div>';
+     '<div class="rone">'+c.one+'</div>'+
+     '<details class="dec" open><summary>Decoder: what the words actually mean ('+DEC[c.t].length+' terms)</summary><div class="tscroll"><table>'+
+     '<tr><th>Term</th><th>Stands for</th><th>In plain words</th></tr>'+
+     DEC[c.t].map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'}).join("")+
+     '</table></div></details>';
   c.items.forEach(function(it){
     h+='<div class="ri"><h5>'+it[0]+'</h5><p><span class="lb w">What it means</span>'+it[1]+'</p>'+
        (it[2]?'<p><span class="lb">Why it matters</span>'+it[2]+'</p>':'')+
@@ -125,6 +244,19 @@ h+='<h4>Last 24 hours: suggested plan</h4><div class="tscroll"><table class="pla
 var p=document.createElement("div");p.className="panel pv";p.id="finRead";p.innerHTML=h;
 anchor.parentNode.insertBefore(p,anchor);
 
+document.getElementById("finDecF").addEventListener("input",function(e){
+  var q=e.target.value.trim().toLowerCase();
+  p.querySelectorAll("details.rc").forEach(function(rc){
+    var hits=0;
+    rc.querySelectorAll(".dec tr").forEach(function(tr,i){
+      if(i===0)return;
+      var show=!q||tr.textContent.toLowerCase().indexOf(q)>-1;
+      tr.style.display=show?"":"none";if(show)hits++;
+    });
+    if(q){rc.open=hits>0;rc.style.display=hits>0?"":"none";var d=rc.querySelector(".dec");if(d)d.open=true}
+    else rc.style.display="";
+  });
+});
 function sync(){
   var s=readSet();
   p.querySelectorAll("[data-rd]").forEach(function(c){c.checked=s.indexOf(c.dataset.rd)>-1});
