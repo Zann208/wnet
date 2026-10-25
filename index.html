@@ -3,23 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://zann208.github.io/study/shared/v2/theme-init.js"></script>
+<script src="https://zann208.github.io/study/shared/v3/boot.js?v=20261025-1" data-console="wnet" data-v2="index.v2.html"></script>
 <title>WNET // RF Console</title>
 <style>
-:root{
-  --bg:#060a12; --bg2:#0a0f1c; --panel:#0d1524; --panel2:#111b2e;
-  --ink:#e6edf7; --dim:#8fa3c0; --faint:#5d708e;
-  --cy:#22d3ee; --gr:#34d399; --am:#fbbf24; --rd:#f87171; --vi:#a78bfa; --sk:#38bdf8; --pk:#f472b6; --or:#fb923c;
-  --line:#1e2b44; --line2:#2b3d5c;
-  --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-body.light{
-  --bg:#eef2f8; --bg2:#e6ecf5; --panel:#ffffff; --panel2:#f4f7fc;
-  --ink:#0f1b2d; --dim:#4f6180; --faint:#7c8ca6;
-  --cy:#0891b2; --gr:#059669; --am:#b45309; --rd:#dc2626; --vi:#7c3aed; --sk:#0369a1; --pk:#be185d; --or:#c2410c;
-  --line:#d3dceb; --line2:#bcc9de;
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -33,72 +19,6 @@ a{color:var(--cy);text-decoration:none}
 a:hover{text-decoration:underline}
 code{font-family:var(--mono);font-size:.88em;background:var(--panel2);color:var(--cy);padding:1px 6px;border-radius:4px;border:1px solid var(--line)}
 
-/* ---- TOP BAR ---- */
-nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navin{max-width:1440px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;align-items:center;overflow:visible;flex-wrap:nowrap}
-.navin>.iconbtn{margin-left:auto}
-.navin>.tabbtn{flex:0 0 auto}
-
-.logo{display:flex;align-items:center;gap:9px;border:1px solid transparent;background:none;cursor:pointer;
-  padding:4px 8px 4px 5px;border-radius:9px;transition:.13s;font-family:inherit;color:inherit}
-.logo:hover{border-color:var(--line2);background:var(--panel)}
-.logo:hover .bcaret{color:var(--cy)}
-.logo::after{content:none}
-.bmark{width:28px;height:28px;border-radius:8px;border:1px solid var(--line2);background:var(--panel2);
-  display:flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--dim)}
-.btext{line-height:1.2;text-align:left}
-.btext b{display:block;font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:-.2px;color:var(--ink)}
-.btext b i{font-style:normal;color:var(--faint);font-weight:600}
-.btext span{display:block;font-family:var(--mono);font-size:8px;letter-spacing:1.6px;color:var(--faint);text-transform:uppercase;margin-top:1px}
-.btext span em{font-style:normal;color:var(--cy);animation:neon 2.2s ease-in-out infinite}
-@keyframes neon{0%,68%,100%{text-shadow:none;opacity:.75}76%{text-shadow:0 0 4px var(--cy),0 0 11px var(--cy);opacity:1}84%{opacity:.9}}
-@media (prefers-reduced-motion: reduce){.btext span em{animation:none;opacity:1}}
-.bcaret{font-family:var(--mono);font-size:9px;color:var(--faint);transition:.13s}
-@media(max-width:700px){.btext{display:none}}
-
-/* COURSE SWITCHER */
-#csWrap{position:relative;flex:0 0 auto}
-
-#csPop{position:absolute;top:calc(100% + 10px);left:0;z-index:200;width:min(92vw,340px);background:var(--panel);
-  border:1px solid var(--line2);border-radius:14px;padding:9px;z-index:95;display:none;
-  box-shadow:0 24px 60px rgba(0,0,0,.55)}
-#csPop.on{display:block}
-.cshd{font-family:var(--mono);font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--faint);
-  padding:6px 10px 8px;display:flex;justify-content:space-between;align-items:center}
-.cshd b{color:var(--gr)}
-.csi{display:flex;align-items:center;gap:11px;width:100%;text-align:left;border:1px solid transparent;background:none;
-  border-radius:10px;padding:10px 11px;cursor:pointer;font-family:inherit;color:var(--ink);transition:.14s;text-decoration:none}
-.csi:hover{background:var(--panel2);border-color:var(--line2);text-decoration:none}
-.csi.cur{background:var(--panel2);border-color:color-mix(in srgb,var(--cy) 45%,transparent)}
-.csmk{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;
-  font-family:var(--mono);font-weight:800;font-size:11px;border:1px solid}
-
-.csmk.c4{color:#a78bfa;border-color:#a78bfa}.csmk.c5{color:#34d399;border-color:#34d399}.csmk.c0{background:color-mix(in srgb,var(--gr) 14%,transparent);border-color:var(--gr);color:var(--gr)}
-.csi.hub{border-bottom:1px solid var(--line);border-radius:10px 10px 0 0;margin-bottom:4px;padding-bottom:12px}
-.csmk.c1{background:color-mix(in srgb,#22d3ee 14%,transparent);border-color:#22d3ee;color:#22d3ee}
-.csmk.c2{background:color-mix(in srgb,#a78bfa 14%,transparent);border-color:#a78bfa;color:#a78bfa}
-.csmk.c3{background:color-mix(in srgb,#fbbf24 14%,transparent);border-color:#fbbf24;color:#fbbf24}
-.cstx{flex:1;min-width:0}
-.cstx b{display:block;font-size:14px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cstx span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:2px}
-.csnow{font-family:var(--mono);font-size:8.5px;letter-spacing:1px;color:var(--cy);border:1px solid var(--cy);
-  border-radius:4px;padding:2px 5px;flex:0 0 auto}
-.cssoon{font-family:var(--mono);font-size:8.5px;letter-spacing:1px;color:var(--faint);border:1px solid var(--line2);
-  border-radius:4px;padding:2px 5px;flex:0 0 auto}
-.csft{border-top:1px solid var(--line);margin-top:7px;padding:9px 11px 4px;display:flex;justify-content:space-between;
-  font-family:var(--mono);font-size:10px;color:var(--faint)}
-.csft a{color:var(--faint);text-decoration:none}
-.csft a:hover{color:var(--cy)}
-
-.navin::-webkit-scrollbar{display:none}
-.logo{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--cy);white-space:nowrap;margin-right:10px;letter-spacing:.5px}
-.logo b{color:var(--gr)}
-.tabbtn{border:1px solid transparent;background:transparent;color:var(--dim);font-family:var(--mono);font-weight:600;font-size:12.5px;padding:7px 12px;border-radius:6px;cursor:pointer;white-space:nowrap;letter-spacing:.4px;transition:.15s}
-.tabbtn:hover{color:var(--cy);border-color:var(--line2);background:var(--panel)}
-.tabbtn.on{color:var(--bg);background:var(--cy);border-color:var(--cy);font-weight:700}
-body.light .tabbtn.on{color:#fff}
-.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--dim);font-size:14px;padding:6px 11px;border-radius:6px;cursor:pointer;font-family:var(--mono);margin-left:auto}
-.iconbtn:hover{color:var(--cy);border-color:var(--cy)}
 
 /* ---- SECTIONS ---- */
 section.tab{display:none;padding:30px 0 90px}
@@ -296,38 +216,7 @@ body.light .chip.on{color:#fff}
 .bar .bt i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--gr));transition:.6s}
 .bar .bv{flex:0 0 62px;text-align:right;color:var(--dim)}
 
-/* ---- SIDEBAR ---- */
-#sbT{position:fixed;left:15px;bottom:16px;z-index:80;border:1px solid var(--cy);background:var(--panel);color:var(--cy);font-family:var(--mono);font-weight:700;border-radius:8px;padding:11px 17px;font-size:12.5px;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.5)}
-#sbB{position:fixed;inset:0;background:rgba(3,7,14,.62);z-index:85;display:none}
-#sbB.on{display:block}
-#sb{position:fixed;top:0;left:0;bottom:0;width:min(84vw,290px);background:var(--panel);border-right:1px solid var(--line2);z-index:90;transform:translateX(-105%);transition:transform .24s;display:flex;flex-direction:column;padding:14px 0 10px}
-#sb.on{transform:none;box-shadow:0 0 50px rgba(0,0,0,.6)}
-.sbh{display:flex;align-items:center;justify-content:space-between;padding:0 10px 8px 16px}
-.sbh span{font-family:var(--mono);font-size:11px;letter-spacing:1.4px;color:var(--gr)}
-#sbX{border:0;background:none;color:var(--faint);font-size:14px;cursor:pointer;padding:4px 9px;font-family:var(--mono)}
-#sbX:hover{color:var(--rd)}
-#sbL{overflow-y:auto;flex:1}
-.sbg{font-family:var(--mono);font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:var(--faint);padding:13px 16px 4px}
-.sbi{display:flex;gap:9px;align-items:center;width:100%;text-align:left;border:0;background:none;font-family:var(--sans);font-size:13.5px;color:var(--ink);padding:7px 14px 7px 16px;cursor:pointer}
-.sbi:hover{background:var(--panel2);color:var(--cy)}
-.sbi .n{flex:0 0 auto;font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--cy);background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:3px 5px;min-width:30px;text-align:center}
-.sbi .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sbi.done::after{content:"OK";margin-left:auto;font-family:var(--mono);font-size:9.5px;color:var(--gr)}
-#sbF{margin:2px 14px 8px 16px;width:calc(100% - 30px)}
 
-/* ---- RAIL ---- */
-#rail{display:none;border-top:1px solid var(--line);background:var(--panel)}
-body.hasrail #rail{display:block}
-.railin{max-width:960px;margin:0 auto;padding:7px 16px;display:flex;gap:8px;align-items:center}
-.rbtn{border:1px solid var(--line2);background:var(--panel2);color:var(--dim);font-family:var(--mono);font-size:14px;font-weight:700;padding:5px 11px;border-radius:6px;cursor:pointer;line-height:1.2}
-.rbtn:hover:not(:disabled){color:var(--cy);border-color:var(--cy)}
-.rbtn:disabled{opacity:.3;cursor:default}
-#railSel{flex:1;min-width:0;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-radius:6px;cursor:pointer}
-#railSel:focus{outline:1px solid var(--cy)}
-#railTop{border:1px solid var(--line2);background:var(--panel2);color:var(--gr);font-family:var(--mono);font-size:11px;font-weight:700;padding:6px 10px;border-radius:6px;cursor:pointer;white-space:nowrap}
-#railTop:hover{border-color:var(--gr)}
-body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
-@media(max-width:560px){#railTop{display:none}.railin{padding:6px 12px}}
 
 /* ---- SVG ---- */
 .topo{width:100%;height:auto;margin-top:12px;background:var(--panel2);border:1px solid var(--line);border-radius:10px}
@@ -335,67 +224,14 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
 .footer{text-align:center;color:var(--faint);font-family:var(--mono);font-size:11px;padding:26px 0 46px;letter-spacing:.5px}
 @media(max-width:600px){.panel,.item{padding:16px}.tag{display:none}.sl{grid-template-columns:98px 1fr 62px}}
-@media print{nav,#sbT,#sb,#sbB,.btn,.chk,.row{display:none!important}section.tab{display:block!important}body{background:#fff;color:#000}}
+@media print{.btn,.chk,.row{display:none!important}section.tab{display:block!important}body{background:#fff;color:#000}}
 </style>
-<link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/study-system.css?v=20260911-width1">
-<link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/legacy-console.css">
-<link rel="stylesheet" href="./study-console-adapter.css">
-<link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/reading.css?v=20260910-layout2">
 </head>
 <body data-study-console="wnet" data-console-id="wnet" data-console-name="Wireless Network Engineering">
 
-<nav><div class="navin">
-  <div id="csWrap"><button class="logo" id="logoBtn" title="Switch course" aria-haspopup="true" aria-expanded="false"><span class="bmark"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true">
-      <path d="M3.2 9.4a6.6 6.6 0 0 1 9.6 0" fill="none" stroke="#a78bfa" stroke-width="1.35" stroke-linecap="round" opacity=".55"/>
-      <path d="M5.1 11.3a3.9 3.9 0 0 1 5.8 0" fill="none" stroke="#a78bfa" stroke-width="1.35" stroke-linecap="round" opacity=".85"/>
-      <circle cx="8" cy="13.2" r="1.7" fill="#22d3ee"/></svg></span><span class="btext"><b>WNET<i>://STUDY</i></b><span>study console</span></span><span class="bcaret">▾</span></button>
-  <div id="csPop" role="menu">
-    <div class="cshd"><span>Semester consoles</span><span>5</span></div>
-      <a class="csi hub" href="https://zann208.github.io/study/" role="menuitem">
-        <span class="csmk c0">ALL</span>
-        <span class="cstx"><b>All courses</b><span>semester overview</span></span>
-        <span class="cssoon">HOME ↗</span></a>
-    <a class="csi" href="https://zann208.github.io/netdes/" role="menuitem">
-      <span class="csmk c1">NET</span>
-      <span class="cstx"><b>Network Design</b><span>Switching &amp; routing</span></span>
-      <span class="cssoon">OPEN ↗</span></a>
-    <a class="csi cur" href="#" id="csSelf" role="menuitem">
-      <span class="csmk c2">WLN</span>
-      <span class="cstx"><b>Wireless Networks</b><span>Wireless engineering</span></span>
-      <span class="csnow">HERE</span></a>
-    <a class="csi" href="https://zann208.github.io/algo/" role="menuitem">
-      <span class="csmk c3">ALG</span>
-      <span class="cstx"><b>Algorithms for iSNE</b><span>Algorithms &amp; data structures</span></span>
-      <span class="cssoon">OPEN ↗</span></a>
-    <a class="csi" href="https://zann208.github.io/privacy/" role="menuitem"><span class="csmk c4">PRV</span><span class="cstx"><b>Privacy Technologies</b><span>Privacy &amp; security</span></span><span class="cssoon">OPEN &#8599;</span></a><a class="csi" href="https://zann208.github.io/os/" role="menuitem"><span class="csmk c5">OS</span><span class="cstx"><b>Operating Systems</b><span>Systems &amp; scheduling</span></span><span class="cssoon">OPEN &#8599;</span></a><div class="csft"><span>SEM 1 · 2026</span><a href="https://zann208.github.io" target="_blank" rel="noopener">portfolio ↗</a></div>
-  </div>
-  </div>
-  <button class="tabbtn on" data-tab="home">HOME</button>
-  <button class="tabbtn" data-tab="map">MAP</button>
-  <button class="tabbtn" data-tab="notes">CHAPTERS</button>
-  <button class="tabbtn" data-tab="lab">RF LAB</button>
-  <button class="tabbtn" data-tab="drills">DRILLS</button>
-  <button class="tabbtn" data-tab="cheat">CHEATSHEET</button>
-  <button class="tabbtn" data-tab="terms">TERMS</button>
-  <button class="tabbtn" data-tab="asg">ASSIGNMENTS</button>
-  <button class="tabbtn" data-tab="final">FINAL</button>
-  <button class="iconbtn" id="themeBtn" title="Toggle light / dark">◐</button>
-</div>
-<div id="rail"><div class="railin">
-  <button class="rbtn" id="railPrev" title="previous">‹</button>
-  <select id="railSel"></select>
-  <button class="rbtn" id="railNext" title="next">›</button>
-  <button id="railTop">↑ TOP</button>
-</div></div></nav>
 
-<div id="sbB"></div>
-<aside id="sb">
-  <div class="sbh"><span>// NAVIGATE</span><button id="sbX">✕</button></div>
-  <input id="sbF" class="fld" placeholder="filter…">
-  <div id="sbL"></div>
-</aside>
-<button id="sbT">☰ INDEX</button>
 
+<main id="main">
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
   <h1><span class="pre">// WIRELESS &amp; BROADBAND COMPUTER NETWORKS</span>Nine chapters. One console.</h1>
@@ -2442,6 +2278,7 @@ body.hasrail .item,body.hasrail .panel{scroll-margin-top:112px}
 <div class="footer">// wireless &amp; broadband computer networks · term 1/2569</div>
 <!-- ============ FINAL EXAM ============ -->
 <section class="tab" id="final"><div class="wrap"></div></section>
+</main>
 
 <script>
 var store={get:function(k,d){try{var v=localStorage.getItem("wn_"+k);return v?JSON.parse(v):d}catch(e){return d}},
@@ -2820,8 +2657,6 @@ function showTab(id,toTop){
   tabs.forEach(function(b){b.classList.toggle("on",b.dataset.tab===id)});
   var rail=(id==="notes");
   document.body.classList.toggle("hasrail",rail);
-  document.getElementById("sbT").style.display=rail?"":"none";
-  if(!rail)closeSb();
   if(rail)buildRail();
   restoring=true;
   window.scrollTo({top:toTop?0:(scrollMem[id]||0)});
@@ -2835,12 +2670,6 @@ function jump(id,tab){
   setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth"})},70);
 }
 
-/* ================= THEME ================= */
-document.getElementById("themeBtn").addEventListener("click",function(){
-  var l=!document.body.classList.contains("light");
-  document.body.classList.toggle("light",l);store.set("light",l?1:0);
-});
-if(store.get("light",0))document.body.classList.add("light");
 
 /* ================= PROGRESS ================= */
 var doneSet=store.get("done",[]),knownSet=store.get("known",[]);
@@ -2902,34 +2731,6 @@ function syncMarks(){
   document.querySelectorAll(".sbi[data-k]").forEach(function(b){b.classList.toggle("done",doneSet.indexOf(b.dataset.k)>-1)});
 }
 
-/* ================= SIDEBAR ================= */
-var sb=document.getElementById("sb"),sbB=document.getElementById("sbB"),sbT=document.getElementById("sbT"),sbL=document.getElementById("sbL");
-function openSb(){sb.classList.add("on");sbB.classList.add("on")}
-function closeSb(){sb.classList.remove("on");sbB.classList.remove("on")}
-sbT.addEventListener("click",function(){sb.classList.contains("on")?closeSb():openSb()});
-sbB.addEventListener("click",closeSb);
-document.getElementById("sbX").addEventListener("click",closeSb);
-(function(){
-  var lastCh="";
-  Object.keys(TOPICS).forEach(function(k){
-    var ch=TOPICS[k][2];
-    if(ch!==lastCh){
-      lastCh=ch;
-      var d=document.createElement("div");d.className="sbg";
-      d.textContent="CHAPTER "+ch+" · "+CHNAME[ch];sbL.appendChild(d);
-    }
-    var b=document.createElement("button");b.className="sbi";b.dataset.k="t"+k;
-    b.innerHTML='<span class="n">'+k.charAt(0)+"."+k.charAt(1)+'</span><span class="t">'+TOPICS[k][0]+'</span>';
-    b.addEventListener("click",function(){closeSb();jump("t"+k,"notes")});
-    sbL.appendChild(b);
-  });
-})();
-document.getElementById("sbF").addEventListener("input",function(){
-  var q=this.value.toLowerCase();
-  sbL.querySelectorAll(".sbi").forEach(function(b){
-    b.style.display=b.textContent.toLowerCase().indexOf(q)>-1?"":"none";
-  });
-});
 syncMarks();
 
 /* ================= FLASHCARDS ================= */
@@ -3264,23 +3065,6 @@ document.querySelectorAll("#paOpts .btn").forEach(function(b){
 });
 document.getElementById("paNew").addEventListener("click",paNew);paNew();
 
-/* ================= COURSE SWITCHER ================= */
-(function(){
-  var wrap=document.getElementById("csWrap"),btn=document.getElementById("logoBtn"),pop=document.getElementById("csPop");
-  if(!wrap||!btn||!pop)return;
-  function close(){pop.classList.remove("on");btn.setAttribute("aria-expanded","false")}
-  btn.addEventListener("click",function(e){
-    e.stopPropagation();
-    var open=!pop.classList.contains("on");
-    pop.classList.toggle("on",open);
-    btn.setAttribute("aria-expanded",open?"true":"false");
-  });
-  document.addEventListener("click",function(e){if(!wrap.contains(e.target))close()});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
-  var self=document.getElementById("csSelf");
-  if(self)self.addEventListener("click",function(e){e.preventDefault();close();showTab("home",true)});
-})();
-
 /* ================= GLOSSARY FILTER ================= */
 document.getElementById("acroF").addEventListener("input",function(){
   var q=this.value.toLowerCase(),rows=document.querySelectorAll("#acroT tr");
@@ -3305,41 +3089,10 @@ function boom(){
   }catch(e){}
 }
 
-/* ================= RAIL ================= */
-var railIds=[],railSel=document.getElementById("railSel");
-function buildRail(){
-  var list=Object.keys(TOPICS).map(function(k){return ["t"+k,k.charAt(0)+"."+k.charAt(1)+" · "+TOPICS[k][0].replace(/&amp;/g,"&")]});
-  if(railIds.join()===list.map(function(x){return x[0]}).join())return;
-  railIds=list.map(function(x){return x[0]});
-  railSel.innerHTML="";
-  list.forEach(function(x){railSel.add(new Option(x[1],x[0]))});
-}
-function syncRail(){
-  if(!railIds.length)return;
-  var best=0;
-  for(var i=0;i<railIds.length;i++){
-    var el=document.getElementById(railIds[i]);if(!el)continue;
-    if(el.getBoundingClientRect().top<=140)best=i;
-  }
-  if(railSel.selectedIndex!==best)railSel.selectedIndex=best;
-  document.getElementById("railPrev").disabled=best===0;
-  document.getElementById("railNext").disabled=best===railIds.length-1;
-}
-function railGo(i){
-  if(i<0||i>=railIds.length)return;
-  var el=document.getElementById(railIds[i]);
-  if(el){railSel.selectedIndex=i;el.scrollIntoView({behavior:"smooth"})}
-}
-railSel.addEventListener("change",function(){railGo(railSel.selectedIndex)});
-document.getElementById("railPrev").addEventListener("click",function(){railGo(railSel.selectedIndex-1)});
-document.getElementById("railNext").addEventListener("click",function(){railGo(railSel.selectedIndex+1)});
-document.getElementById("railTop").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
-document.addEventListener("keydown",function(e){
-  if(!document.body.classList.contains("hasrail"))return;
-  if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT"||e.target.tagName==="TEXTAREA")return;
-  if(e.key==="j"||e.key==="J")railGo(railSel.selectedIndex+1);
-  else if(e.key==="k"||e.key==="K")railGo(railSel.selectedIndex-1);
-});
+/* ================= SECTIONS =================
+   The Study Console frame draws the section bar and menu sub-items (J/K included). */
+function buildRail(){ if(window.StudyShell&&StudyShell.refreshSections) StudyShell.refreshSections(); }
+function syncRail(){}
 
 showTab(store.get("lastTab","home"));
 refreshReady();
@@ -3367,10 +3120,52 @@ refreshReady();
 <script src="./terms-ch678.js?v=20261020"></script>
 <script src="./final-exam.js?v=20261021"></script>
 <script src="./final-reading.js?v=20261022"></script>
-<script src="./course-switcher-hackathon.js?v=20260825"></script>
-<script src="./wifi-logo.js?v=20260817"></script>
 
-<script src="https://zann208.github.io/study/shared/v2/study-system.js?v=20260910-layout2"></script>
-<script src="https://zann208.github.io/study/shared/v2/reading.js?v=20260910-reading1" defer></script>
+<script>
+/* Study Console v3: this console's manifest. The frame (header, menu, sections, search,
+   theme, reading size, progress) is drawn by shared/v3/shell.js from this object. */
+(function () {
+  function chapterSections() {
+    return Array.prototype.filter.call(document.querySelectorAll('#notes [id]'), function (n) { return /^t\d\d$/.test(n.id); })
+      .map(function (n) {
+        var h = n.querySelector('h3'), b = n.querySelector('.badge');
+        return { id: n.id, title: h ? h.textContent.replace(/\s+/g, ' ').trim() : n.id, badge: b ? b.textContent.trim() : '' };
+      });
+  }
+  (window.StudyConsole = window.StudyConsole || []).push({
+    id: 'wnet',
+    title: 'Wireless Network Engineering',
+    subtitle: 'Nine chapters, RF lab, practice',
+    content: '#main',
+    defaultView: 'home',
+    restore: function () { return store.get('lastTab', 'home'); },
+    router: { show: function (view, anchor) { showTab(view, !!anchor); store.set('lastTab', view); } },
+    viewElement: function (id) { return document.getElementById(id); },
+    terms: CARDS.map(function (c) { return { title: c.q, meta: 'Flashcard', view: 'drills' }; }),
+    progress: {
+      read: function () {
+        var done = store.get('done', []), out = {};
+        if (done.length) out.notes = done.length >= NSEC ? 'done' : 'visited';
+        if (store.get('quizBest', -1) >= 0) out.drills = 'visited';
+        return out;
+      }
+    },
+    groups: [
+      { label: 'Start', views: [{ id: 'home', title: 'Home' }, { id: 'map', title: 'Course map' }] },
+      { label: 'Study', views: [
+        { id: 'notes', title: 'Chapters', badge: '1-9', children: chapterSections },
+        { id: 'lab', title: 'RF lab' },
+        { id: 'terms', title: 'Terms' }
+      ] },
+      { label: 'Practice', views: [
+        { id: 'drills', title: 'Drills' },
+        { id: 'asg', title: 'Assignments' },
+        { id: 'final', title: 'Final exam' }
+      ] },
+      { label: 'Reference', views: [{ id: 'cheat', title: 'Cheat sheet' }] }
+    ]
+  });
+})();
+</script>
 </body>
 </html>
