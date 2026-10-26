@@ -213,14 +213,14 @@ document.head.appendChild(css);
 
 function readSet(){return store.get("finalRead",[])}
 var h='<div class="ph"><span class="badge vi">READ</span><h2>Final prep reading</h2><span class="badge vi right" id="finReadN"></span></div>'+
-'<p class="sub2">Each chapter below gives the one big idea, then every key concept in three parts: <b>What it means</b> in plain words, <b>Why it matters</b>, and the <b>Exam trap</b>. Worked numbers show every step. Tick a chapter when you have read it. Every chapter starts with a <b>decoder</b> that spells out each acronym and term.</p>'+
+''+
 '<input class="fld decf" id="finDecF" placeholder="Look up any term or acronym (LPWAN, CAD, MED, jitter...)">';
 CH.forEach(function(c,ci){
   h+='<details class="rc"'+(ci===0?' open':'')+' data-ch="'+c.t+'"><summary><span class="badge '+c.color+'">CH'+c.t+'</span>'+c.name+
      '<label class="rdone" onclick="event.stopPropagation()"><input type="checkbox" data-rd="'+c.t+'"> read</label></summary><div class="rcb">'+
      '<div class="rone">'+c.one+'</div>'+
      '<details class="dec" open><summary>Decoder: what the words actually mean ('+DEC[c.t].length+' terms)</summary><div class="tscroll"><table>'+
-     '<tr><th>Term</th><th>Stands for</th><th>In plain words</th></tr>'+
+     '<tr><th>Term</th><th>Stands for</th><th>Meaning</th></tr>'+
      DEC[c.t].map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'}).join("")+
      '</table></div></details>';
   c.items.forEach(function(it){

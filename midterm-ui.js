@@ -40,7 +40,7 @@ var css=document.createElement("style");css.textContent='\
 @media(max-width:620px){.mtbd{grid-template-columns:repeat(2,1fr)}.mtnav{grid-template-columns:1fr 1fr}.mtnavpos{grid-column:1/-1;grid-row:1}.mtnav .btn:last-child{justify-self:stretch}.mtnav .btn{width:100%}}';document.head.appendChild(css);
 
 var p=document.createElement("div");p.className="panel mt";p.id="midtermPrep";
-p.innerHTML='<div class="ph"><span class="badge gr">MIDTERM</span><h2>Professor-Style MCQ Prep</h2><span class="badge gr right">'+QB.length+' POTENTIAL QUESTIONS</span></div>'+ 
+p.innerHTML='<div class="ph"><span class="badge gr">MIDTERM</span><h2>MCQ practice</h2><span class="badge gr right">'+QB.length+' QUESTIONS</span></div>'+ 
 '<div class="mtk"><div><b>30 × 5</b><span>chapter questions</span></div><div><b>150</b><span>full bank</span></div><div><b>3 × 50</b><span>fixed mocks</span></div><div><b id="mtBest">—</b><span>best mock score</span></div></div>'+ 
 '<div class="mtmap"><div><b>CH1-Q01 → Q30</b>Architecture</div><div><b>CH2-Q01 → Q30</b>Standards</div><div><b>CH3-Q01 → Q30</b>Connection</div><div><b>CH4-Q01 → Q30</b>Design</div><div><b>CH5-Q01 → Q30</b>Security</div></div>'+ 
 '<h4>Chapter decks — Previous / Next</h4><div class="mtrow" id="mtChips"></div>'+ 

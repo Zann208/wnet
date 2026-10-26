@@ -5,9 +5,7 @@ var sec=document.getElementById("terms"),table=document.getElementById("acroT");
 if(!sec||!table)return;
 
 var title=sec.querySelector("h1");
-if(title)title.innerHTML='<span class="pre">// GLOSSARY</span>Short form → full form → practical meaning';
-var lede=sec.querySelector(".lede");
-if(lede)lede.textContent="Compact definitions for the five chapters. Full forms are written explicitly, with an exam-use note only where the distinction matters.";
+if(title)title.textContent='Glossary';
 
 var st=document.createElement("style");
 st.textContent='\

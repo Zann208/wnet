@@ -50,8 +50,8 @@ document.head.appendChild(style);
 
 var panel=document.createElement("div");
 panel.className="panel ag";panel.id="answerGuide";
-panel.innerHTML='<div class="ph"><span class="badge cy">STUDY GUIDE</span><h2>150 Answer Guide</h2><span class="badge cy right">ALL ANSWER CHOICES</span></div>'+ 
-'<p class="sub2">Every question now shows <b>all four choices</b>. The correct choice is marked <b>✓ CORRECT</b> and the other three are marked <b>✕ WRONG</b>, followed by the explanation and memory cue.</p>'+ 
+panel.innerHTML='<div class="ph"><span class="badge cy">STUDY GUIDE</span><h2>Answer guide</h2><span class="badge cy right">ALL ANSWER CHOICES</span></div>'+ 
+''+ 
 '<div class="agtools"><button class="chip on" data-ag="all">ALL 150</button><button class="chip" data-ag="1">CH1 · 30</button><button class="chip" data-ag="2">CH2 · 30</button><button class="chip" data-ag="3">CH3 · 30</button><button class="chip" data-ag="4">CH4 · 30</button><button class="chip" data-ag="5">CH5 · 30</button><input class="agsearch" id="agSearch" type="search" placeholder="Search question, answer, or topic…"><span class="agcount" id="agCount">150 / 150</span></div>'+ 
 '<div class="aglist" id="agList"></div>';
 

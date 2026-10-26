@@ -56,10 +56,10 @@ document.head.appendChild(css);
 
 /* ============ page skeleton ============ */
 wrap.innerHTML=
-'<h1><span class="pre">// FINAL EXAM</span>Chapters 6 to 9. One sitting.</h1>'+
-'<p class="lede">Multiple choice, closed book, calculator allowed. Everything you need for the final in one place.</p>'+
+'<h1>Final exam</h1>'+
+'<p class="lede">Chapters 6–9 · multiple choice · closed book · calculator allowed</p>'+
 
-'<div class="panel pa" id="finInfo"><div class="ph"><span class="badge am">ANNOUNCED</span><h2>Final exam announcement</h2><span class="badge am right">TERM 1/2569</span></div>'+
+'<div class="panel pa" id="finInfo"><div class="ph"><h2>Exam details</h2><span class="badge am right">TERM 1/2569</span></div>'+
  '<div class="fx">'+
  '<div><b>Thu 22 Oct 2026</b><span>date</span></div><div><b>12:00 – 15:00</b><span>time · 3 hours</span></div><div><b>Room 2-307</b><span>where</span></div>'+
  '<div><b>60 MCQ</b><span>format</span></div><div><b>30 points</b><span>no more term paper</span></div><div><b>CH 6 · 7 · 8 · 9</b><span>chapters covered</span></div>'+
@@ -67,11 +67,10 @@ wrap.innerHTML=
  '<div class="cd" id="finCd"></div>'+
  '<p class="sub2" style="margin-top:12px" id="finPace"></p></div>'+
 
-'<div class="panel pg" id="finCov"><div class="ph"><h2>Where you stand</h2><span class="badge gr right" id="finCovTot"></span></div>'+
- '<p class="sub2">Section progress comes from the “mark done” boxes in CHAPTERS. Question counts are what this console can test you on. The real mix of questions per chapter is not announced, so the mock below uses an even 15 per chapter.</p>'+
+'<div class="panel pg" id="finCov"><div class="ph"><h2>Progress</h2><span class="badge gr right" id="finCovTot"></span></div>'+
  '<div class="cov" id="finCovGrid"></div></div>'+
 
-'<div class="panel pv"><div class="ph"><h2>Numbers and formulas to have cold</h2><span class="badge right">calculator allowed</span></div>'+
+'<div class="panel pv"><div class="ph"><h2>Formulas</h2></div>'+
  '<div class="tscroll"><table>'+
  '<tr><th>Eq</th><th>Formula</th><th>What to do with it</th></tr>'+
  '<tr><td class="mono ok">6.1</td><td class="mono">L = Ebattery / Pavg</td><td>Pavg = (1−d)·Isleep + d·Iactive. Lower duty cycle, longer life. 2400 mAh at 0.1% duty ≈ 6 years.</td></tr>'+
@@ -83,7 +82,7 @@ wrap.innerHTML=
  '</table></div>'+
  '<div class="calcs" id="finCalcs"></div></div>'+
 
-'<div class="panel pr"><div class="ph"><h2>High-yield contrasts</h2><span class="badge rd right">likely MCQ traps</span></div>'+
+'<div class="panel pr"><div class="ph"><h2>Common confusions</h2></div>'+
  '<div class="tscroll"><table>'+
  '<tr><th>Pair</th><th>Difference to remember</th></tr>'+
  '<tr><td><b>NB-IoT vs LTE-M</b></td><td>NB-IoT: low-rate, stationary, delay-tolerant, deep coverage. LTE-M: higher rate, lower latency, mobility.</td></tr>'+
@@ -101,8 +100,8 @@ wrap.innerHTML=
  '<tr><td><b>Delay vs jitter</b></td><td>Delay is time to traverse the network. Jitter is its variation. Same average delay can feel very different.</td></tr>'+
  '</table></div></div>'+
 
-'<div class="panel pa" id="finMock"><div class="ph"><span class="badge vi">MOCK</span><h2>Final practice exam</h2><span class="badge am right">best <b id="finBest">—</b></span></div>'+
- '<p class="sub2">Three fixed 60-question mocks (15 per chapter, shuffled) with a 3-hour timer, or work a chapter deck with instant feedback. Bank: <b id="finBank"></b> questions across CH6–CH9.</p>'+
+'<div class="panel pa" id="finMock"><div class="ph"><h2>Practice exam</h2><span class="badge am right">best <b id="finBest">—</b></span></div>'+
+ '<p class="sub2">Three 60-question mocks (15 per chapter) with a 3-hour timer, or practice by chapter. Bank: <b id="finBank"></b> questions across CH6–CH9.</p>'+
  '<div class="row" id="finModes"></div><div id="finBody"></div></div>';
 
 /* ============ countdown ============ */
@@ -112,7 +111,7 @@ function tick(){
   if(now>=EXAM_START){var r=Math.max(0,Math.floor((EXAM_END-now)/60000));el.innerHTML='<div><b>'+Math.floor(r/60)+'</b><span>hours left</span></div><div><b>'+pad(r%60)+'</b><span>min left</span></div>';pace.textContent="Exam in progress.";return}
   var ms=EXAM_START-now,d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
   el.innerHTML='<div><b>'+d+'</b><span>days</span></div><div><b>'+pad(h)+'</b><span>hours</span></div><div><b>'+pad(m)+'</b><span>minutes</span></div>';
-  pace.textContent="Pace: 60 questions in 180 minutes is 3 minutes each. Do the easy ones first, flag the calculations, leave 15 minutes to review.";
+  pace.textContent="60 questions in 180 minutes: 3 minutes per question.";
 }
 tick();setInterval(tick,30000);
 
