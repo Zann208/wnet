@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://zann208.github.io/study/shared/v3/boot.js?v=20261026-1" data-console="wnet" data-v2="index.v2.html"></script>
+<script src="https://zann208.github.io/study/shared/v3/boot.js?v=20261028-1" data-console="wnet" data-v2="index.v2.html"></script>
 <title>Wireless Network Engineering</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -3092,7 +3092,7 @@ refreshReady();
 <script src="./terms-upgrade.js?v=20261026-1"></script>
 <script src="./terms-cleanup.js?v=20260821b"></script>
 <script src="./terms-extra.js?v=20260822a"></script>
-<script src="./navigation-upgrade.js?v=20260821-instant"></script>
+<script src="./navigation-upgrade.js?v=20261028-1"></script>
 <script src="./chapter-upgrade.js?v=20260821a"></script>
 <script src="./chapter-layout.js?v=20260821-strongsplit"></script>
 <script src="./question-study.js?v=20260822-exact"></script>
@@ -3141,7 +3141,9 @@ refreshReady();
         { id: 'terms', title: 'Terms' }
       ] },
       { label: 'Practice', views: [
-        { id: 'drills', title: 'Drills' },
+        { id: 'drills', title: 'Drills', children: function () {
+          return Array.prototype.map.call(document.querySelectorAll('#drills .wrap > .panel[id]'), function (p) { var h = p.querySelector('h2'); return { id: p.id, title: h ? h.textContent.replace(/\s+/g, ' ').trim() : p.id }; });
+        } },
         { id: 'asg', title: 'Assignments' },
         { id: 'final', title: 'Final exam' }
       ] },

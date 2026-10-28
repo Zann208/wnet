@@ -79,7 +79,7 @@ var mocks=document.getElementById("mtMocks");if(mocks)mocks.id="drillMocks";
 var css=document.createElement("style");
 css.textContent='\
 #drillJump{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:55;width:116px;background:color-mix(in srgb,var(--panel) 95%,transparent);backdrop-filter:blur(10px);border:1px solid var(--line2);border-radius:12px;padding:8px;box-shadow:0 16px 40px rgba(0,0,0,.28);display:none}\
-#drillJump.on{display:block}\
+#drillJump,#drillJump.on{display:none}\
 .djtitle{font:700 9px var(--mono);letter-spacing:1.2px;color:var(--faint);text-transform:uppercase;margin:1px 2px 6px}\
 .djbtns{display:grid;grid-template-columns:1fr 1fr;gap:5px}\
 .djbtn{border:1px solid var(--line);background:var(--panel2);color:var(--dim);border-radius:6px;padding:6px 4px;font:700 9.5px var(--mono);cursor:pointer;transition:.13s}\
