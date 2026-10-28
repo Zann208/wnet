@@ -174,7 +174,7 @@ function findLab(title){
 }
 function targetFor(r){return r.eq?findEq(r.section,r.eq):findHeading(r.section,r.heading);}
 function instantTo(el){
-  if(!el)return;var root=document.documentElement,old=root.style.scrollBehavior;root.style.scrollBehavior="auto";
+  if(!el)return;if(window.StudyShell&&StudyShell.reveal)StudyShell.reveal(el);var root=document.documentElement,old=root.style.scrollBehavior;root.style.scrollBehavior="auto";
   var y=el.getBoundingClientRect().top+window.scrollY-78;window.scrollTo(0,Math.max(0,y));root.style.scrollBehavior=old;
   el.classList.add("qstudy-focus");setTimeout(function(){el.classList.remove("qstudy-focus")},1200);
 }

@@ -54,7 +54,7 @@ var sectionNames={
 
 function norm(s){return String(s||"").toLowerCase().replace(/[^a-z0-9.]+/g," ").replace(/\s+/g," ").trim()}
 function instant(el){
- if(!el)return;var root=document.documentElement,old=root.style.scrollBehavior;root.style.scrollBehavior="auto";
+ if(!el)return;if(window.StudyShell&&StudyShell.reveal)StudyShell.reveal(el);var root=document.documentElement,old=root.style.scrollBehavior;root.style.scrollBehavior="auto";
  var y=el.getBoundingClientRect().top+window.scrollY-72;window.scrollTo(0,Math.max(0,y));root.style.scrollBehavior=old;
 }
 function candidates(){return Array.from(notes.querySelectorAll("h2,h3,h4,.ph"));}
